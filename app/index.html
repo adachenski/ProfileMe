@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="profilemeApp">
+<head lang="en">
+
+    <meta charset="UTF-8">
+    <title>Profile Me</title>
+
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="./styles/profileme.css"/>
+
+</head>
+<body>
+
+
+<div ui-view="header"></div>
+<div ui-view="body"></div>
+<div ui-view="footer"></div>
+
+
+<script src="../bower_components/angular/angular.min.js" rel="javascript"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js" rel="javascript"></script>
+<script src="../bower_components/angular-resource/angular-resource.min.js" rel="javascript"></script>
+<script rel="javascript" src="./scripts/profilemeApp.js"></script>
+<script rel="javascript" src="./scripts/controllers.js"></script>
+</body>
+</html>
