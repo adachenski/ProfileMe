@@ -6,7 +6,7 @@
 
 angular.module('profilemeApp', ['ui.router', 'ngResource'])
     .config(function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/');
+
         $stateProvider
 
             // route for the home page
@@ -17,14 +17,23 @@ angular.module('profilemeApp', ['ui.router', 'ngResource'])
                         templateUrl: 'views/header.html',
                         controller: 'HeaderController'
                     },
-                    'body': {
-                        templateUrl: 'views/body.html'
+                    'body-container': {
+                        templateUrl: 'views/body-container.html'
                     },
                     'footer': {
                         templateUrl: 'views/footer.html'
                     }
                 }
 
-            });
-        
+            })
+            .state('app.login', {
+                url:'login',
+                views: {
+                    'body-container@': {
+                        templateUrl : 'views/login.html',
+                        controller  : 'HeaderController'
+                    }
+                }
+            })
+        $urlRouterProvider.otherwise('/');
     });
