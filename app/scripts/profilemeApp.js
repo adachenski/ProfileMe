@@ -14,11 +14,11 @@ angular.module('profilemeApp', ['ui.router', 'ngResource'])
                 url: '/',
                 views: {
                     'header': {
-                        templateUrl: 'views/header.html',
-                        controller: 'HeaderController'
+                        templateUrl: 'views/header.html'
                     },
                     'body-container': {
-                        templateUrl: 'views/body-container.html'
+                        templateUrl: 'views/body-container.html',
+                        controller: 'HeaderController'
                     },
                     'footer': {
                         templateUrl: 'views/footer.html'
@@ -31,7 +31,7 @@ angular.module('profilemeApp', ['ui.router', 'ngResource'])
                 views: {
                     'body-container@': {
                         templateUrl : 'views/login.html',
-                        controller  : 'HeaderController'
+                        controller  : 'GlobalCtrl'
                     }
                 }
             })

@@ -1,51 +1,67 @@
- body {
+body {
     position: relative;
     font-family: 'Open Sans', sans-serif;
-padding-top: 80px;
+
 }
+
+@media (max-width: 1051px) {
+    svg {
+        height: 350px;
+
+    }
+}
+
 @media (max-width: 767px) {
     .block {
         margin-left: -20px;
         margin-right: -20px;
     }
-    svg{
-        height: 550px;
 
-    }
-    .footer-content{
+    .footer-content {
         padding-top: 0;
         padding-left: 30px;
+        margin-left: 20px;
     }
-    .fill-screen{
+
+    .fill-screen {
 
         padding: 0 !important;
     }
-}
 
-@media (max-width: 980px) {
-    svg{
-        height: 350px;
+    svg {
+        height: 600px;
 
     }
+    .initial-nav {
+        padding: 0 !important;
+
+    }
+    div a>img {
+        width: 200px;
+        padding: 10px;
+    }
 }
+
 footer {
     width: 100%;
-position: relative;
+    position: relative;
     bottom: 0;
     z-index: 1;
 }
 
-.over-footer{
+.over-footer {
     position: absolute;
     width: 95%;
 
     bottom: 0;
     z-index: 2;
 }
-.footer-content{
+
+.footer-content {
     padding: 20px;
 }
-.footer-icons a{
+
+.footer-icons a {
 
     display: inline-block;
     text-align: center;
@@ -54,21 +70,20 @@ position: relative;
     font-size: 170%;
 }
 
-
-
-
 .fill-screen {
 
     background-size: cover;
     background-position: center;
     padding: 100px;
 }
+
 .fixed-attachment {
     background-attachment: fixed;
 }
+
 .text-banner {
     text-align: center;
-    margin: 40px 20px;
+    margin: 80px 20px;
 }
 
 .down-button {
@@ -77,6 +92,7 @@ position: relative;
     width: 100%;
     text-align: center;
 }
+
 .down-button i {
     color: white;
 }
@@ -84,24 +100,31 @@ position: relative;
 .activity-section {
     margin: 50px;
 }
+
 .activity-element {
     text-align: center;
 }
+
 .activity-element img {
     width: 150px;
     height: 150px;
 }
+
 .carousel .item {
     width: 100%; /*slider width*/
     max-height: 600px; /*slider height*/
 }
-.carousel-inner{height:100%;}
-.carousel{
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel {
     margin: 40px 0px;
 }
-.carousel .item img{
-    width: 100%;
 
+.carousel .item img {
+    width: 100%;
 
 }
 
@@ -112,14 +135,14 @@ position: relative;
     transition: all 0.5s;
     font-size: 1.2em;
 }
-.changed-nav{
+
+.changed-nav {
     margin-bottom: 0px;
-    padding: 30px 15px;
     -webkit-transition: all 0.5s;
     padding: 0;
 }
 
-.navbar-inverse .navbar-nav>li>a {
+.navbar-inverse .navbar-nav > li > a {
     color: #bbb;
 }
 
