@@ -1,24 +1,40 @@
-<div class="container-fluid">
-    <div class="login-wrapper">
+<div class="container-fluid" ng-cloak>
+    <div class="alert alert-{{alert.type}} animated main-alert"
+         ng-class="{'flipInY':alert.show,'flipOutY':!alert.show,'alert-hidden':!alert.hasBeenShown}">
+        <strong>{{alert.title}}</strong>{{alert.message}}
+    </div>
+
         <div class="card card-container">
             <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
             <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
             <p id="profile-name" class="profile-name-card"></p>
-            <form ng-submit="submit()" class="form-signin">
+
+            <form ng-submit="submit()" name="register"  class="form-signin" novalidate>
                 <span id="reauth-email" class="reauth-email"></span>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <input type="confirm-password" id="confirm-password" class="form-control" placeholder="Confirm Password" required>
+
+                <input type="email" name="email" ng-model="email"  class="form-control"
+                       placeholder="Email address" required autofocus>
+                <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Enter a valid E-mail!</p>
+
+                <input type="password" name="password" ng-model="password"
+                       class="form-control" placeholder="Password" required>
+
+                <input type="password" name="password_confirm" ng-model="password_confirm"
+                       class="form-control" placeholder="Confirm Password"  compare-register-passwords="password" required>
+
+
+                <p class="text-danger " ng-show="register.password_confirm.$dirty && register.password_confirm.$invalid">
+                    please match the passwords</p>
                 <div id="remember" class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> Remember me
                     </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Register</button>
+                <button ng-disabled="register.$invalid"  class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Register</button>
             </form><!-- /form -->
             <a href="#" class="forgot-password">
                 Forgot the password?
             </a>
         </div><!-- /card-container -->
+
     </div><!-- /container -->
-</div>

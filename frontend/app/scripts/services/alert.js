@@ -12,8 +12,9 @@ angular.module('profileMeApp')
                 hasBeenShown:true,
                 show:true,
                 type:type,
-                title:title,
-                message:message
+                message:message,
+                title:title
+
             };
             $timeout.cancel(alertTimeout);
             alertTimeout = $timeout(function(){

@@ -3,15 +3,23 @@
  */
 
 angular.module('profileMeApp')
-    .controller('RegisterController', ['$scope', '$http', function ($scope, $http) {
+    .controller('RegisterController', ['$scope', 'alert', 'auth', '$http', function ($scope, alert, auth, $http) {
+
         $scope.submit = function () {
-            var url = '/';
-            var user = {};
-            $http.post(url, user).success(function () {
-                console.log('good')
-            }).error(function () {
-                console.log('bad')
-            })
+            var url = 'http://localhost:3000/register';
+            var user = {
+                email: $scope.email,
+                password:$scope.password
+            };
+            //auth.register($scope.email, $scope.password)
+            $http.post(url, user)
+                .success(function (res) {
+                    alert('success', 'Successful register.');
+                    console.log('good')
+                }).error(function (err) {
+                    console.log('bad');
+                    alert('warning', 'Oops', 'Something went wrong :(');
+                })
         }
     }
     ]);

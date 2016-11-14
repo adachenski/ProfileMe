@@ -6,11 +6,9 @@
 
 angular.module('profileMeApp')
     .constant('API_URL','http://localhost:3000/')
-    .config(function ($stateProvider, $urlRouterProvider) {
-
+    .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
+        $urlRouterProvider.otherwise('/');
         $stateProvider
-
-            // route for the home page
             .state('app', {
                 url: '/',
                 views: {
@@ -44,6 +42,7 @@ angular.module('profileMeApp')
                         controller  : 'RegisterController'
                     }
                 }
-            })
-        $urlRouterProvider.otherwise('/');
+            });
+        $httpProvider.interceptors.push('authInterceptor');
+
     });
