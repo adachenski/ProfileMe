@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="profileMeApp">
+<head lang="en">
+
+    <meta charset="UTF-8">
+    <title>Profile Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../bower_components/bootstrap-social/bootstrap-social.css"/>
+    <link rel="stylesheet" href="styles/profileme.css"/>
+    <link rel="stylesheet" href="styles/login.css"/>
+
+</head>
+<body >
+
+
+<div ui-view="header"></div>
+
+<div  ui-view="body-container"></div>
+
+<div ui-view="footer"></div>
+
+<!-- bower:js -->
+<script src="../bower_components/angular/angular.min.js" rel="javascript"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js" rel="javascript"></script>
+<script src="../bower_components/angular-resource/angular-resource.min.js" rel="javascript"></script>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- endbower -->
+
+<script rel="javascript" src="scripts/app.js"></script>
+<script rel="javascript" src="scripts/app.config.js"></script>
+
+<script rel="javascript" src="scripts/profileme.js"></script>
+
+<script rel="javascript" src="scripts/controllers/controllers.js"></script>
+<script rel="javascript" src="scripts/controllers/register.js"></script>
+<script src="scripts/services/alert.js"></script>
+<script src="scripts/services/auth.js"></script>
+
+</body>
+</html>

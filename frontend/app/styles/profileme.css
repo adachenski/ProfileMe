@@ -1,0 +1,164 @@
+body {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+@media (max-width: 1051px) {
+    svg {
+        height: 350px;
+
+    }
+}
+
+@media (max-width: 767px) {
+    .block {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .footer-content {
+        padding-top: 0;
+        padding-left: 30px;
+        margin-left: 20px;
+    }
+
+    .fill-screen {
+
+        padding: 0 !important;
+    }
+
+    svg {
+        height: 600px;
+
+    }
+    .initial-nav {
+        padding: 0 !important;
+
+    }
+    div a>img {
+        width: 200px;
+        padding: 10px;
+    }
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    z-index: 1;
+}
+
+.over-footer {
+    position: absolute;
+    width: 95%;
+
+    bottom: 0;
+    z-index: 2;
+}
+
+.footer-content {
+    padding: 20px;
+}
+
+.footer-icons a {
+
+    display: inline-block;
+    text-align: center;
+    background-color: #ffffff;
+    width: 35px;
+    font-size: 170%;
+}
+
+.fill-screen {
+
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
+}
+
+.fixed-attachment {
+    background-attachment: fixed;
+}
+
+.text-banner {
+    text-align: center;
+    margin: 80px 20px;
+}
+
+.down-button {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.down-button i {
+    color: white;
+}
+
+.activity-section {
+    margin: 50px;
+}
+
+.activity-element {
+    text-align: center;
+}
+
+.activity-element img {
+    width: 150px;
+    height: 150px;
+}
+
+.carousel .item {
+    width: 100%; /*slider width*/
+    max-height: 600px; /*slider height*/
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel {
+    margin: 40px 0px;
+}
+
+.carousel .item img {
+    width: 100%;
+
+}
+
+.initial-nav {
+    margin-bottom: 0px;
+    padding: 30px 15px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    font-size: 1.2em;
+}
+
+.changed-nav {
+    margin-bottom: 0px;
+    -webkit-transition: all 0.5s;
+    padding: 0;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #bbb;
+}
+
+
+.alert{
+    background-color: lightsalmon;
+}
+.main-alert{
+    position: absolute;
+    top:70px;
+    left:5px;
+    right: 5px;
+    max-width: 400px;
+    margin:0 auto;
+}
+
+.alert-hidden{
+    visibility: hidden;
+}
