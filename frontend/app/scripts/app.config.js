@@ -13,7 +13,8 @@ angular.module('profileMeApp')
                 url: '/',
                 views: {
                     'header': {
-                        templateUrl: 'views/header.html'
+                        templateUrl: 'views/header.html',
+                        controller:'HeaderController'
                     },
                     'body-container': {
                         templateUrl: 'views/body-container.html',
@@ -31,6 +32,23 @@ angular.module('profileMeApp')
                     'body-container@': {
                         templateUrl : 'views/login.html',
                         controller  : 'LoginController'
+                    }
+                }
+            })
+            .state('app.logout', {
+                url:'logout',
+                views: {
+                    'body-container@': {
+                        controller  : 'LogoutController'
+                    }
+                }
+            })
+            .state('app.jobs', {
+                url:'jobs',
+                views: {
+                    'body-container@': {
+                        templateUrl:'views/jobs.html',
+                        controller  : 'JobsController'
                     }
                 }
             })

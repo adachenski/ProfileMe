@@ -4,8 +4,10 @@
 angular.module('profileMeApp')
     .service('auth', ['$http', 'authToken', 'API_URL', '$state',
         function ($http, authToken, API_URL, $state) {
+
             this.login = function (email, password) {
-                return ($http.post(API_URL + 'login', {email: email, password: password}));
+                return ($http.post(API_URL + 'login', {email: email, password: password}))
+                    .success(authSuccesfull)
             }
             this.register = function (email, password) {
                 return $http.post(API_URL + 'register', {email: email, password: password})

@@ -4,14 +4,11 @@
 'use strict';
 
 angular.module('profileMeApp')
-    .controller('HeaderController', ['$scope', function ($scope) {
+    .controller('HeaderController', ['$scope','authToken', function ($scope,authToken) {
         console.log('Header')
         $scope.nasko = "from header controller";
         $scope.myStylea = {color: 'red'};
 
+$scope.isAuthenticated = authToken.isAuthenticated;
 
-    }])
-    .controller('LoginController', ['$scope', function () {
-
-    }])
-    ;
+    }]);

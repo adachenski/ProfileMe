@@ -27,6 +27,26 @@ app.use(function (req, res, next) {
     next();
 });
 
+var jobs = [
+    'Nasko',
+    'Rally',
+    'html',
+    'Angular'
+];
+
+app.get('/jobs', function(req, res){
+
+    var token = req.headers.authorization.split(' ')[1];
+    var payload = jwt.decode(token,'naskoSecret');
+    if(!payload.sub){
+        return res.status(401).send({message:'Authentication failed'});
+    }
+    if(!req.headers.authorization){
+        return res.status(401).send({message:'You are not authorized'});
+    }
+    res.json(jobs);
+});
+
 app.post('/register', function(req, res){
     var user = req.body;
 
@@ -35,22 +55,50 @@ app.post('/register', function(req, res){
         password:user.password
     });
 
-    var payload ={
-        iss:req.hostname,
-        sub:req._id
-    };
-
-    var token =jwt.encode(payload,'nasko');
 
     newUser.save(function(err){
 
-        res.status(200).send({user:newUser.toJSON(),token:token});
+        createSendToken(newUser, res);
+
     })
 });
 
+app.post('/login', function(req, res){
 
+   req.user = req.body;
+    console.log(req.user);
+    var serchUser ={email:req.user.email};
 
+    User.findOne(serchUser,function(err, user){
+        if(err) throw err;
 
+        if(!user){
+           return res.status(401).send({message:"Wrong email/password"});
+        }
+
+        user.comparePasswords(req.user.password, function(err, isMatch){
+            if(err) throw err;
+
+            if(!isMatch){
+              return  res.status(401).send({message:"Wrong email/password"});
+            }
+            createSendToken(user, res);
+        });
+    });
+});
+
+function createSendToken(user, res){
+    var payload ={
+        sub:user.id
+    };
+
+    var token =jwt.encode(payload,'naskoSecret');
+
+    res.status(200).send({
+        user:user.toJSON(),
+        token:token
+    });
+};
 
 mongoose.connect('mongodb://localhost/ProfileMe');
 
