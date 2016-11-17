@@ -10,13 +10,71 @@ var express = require('express'),
     LocalStrategy = require('passport-local').Strategy;
 
 var User = require('./models/User');
- var app = express();
+var app = express();
 app.use(bodyParser.json());
 app.use(passport.initialize());
 
 passport.serializeUser(function (user, done) {
     done(null, user.id);
 });
+
+var loginStrategy = new LocalStrategy({usernameField: 'email'},
+    function (email, password, done) {
+        var serchUser = {email: email};
+        User.findOne(serchUser, function (err, user) {
+            if (err) return done(err);
+
+            if (!user) {
+                return done(null, false, {message: "Wrong email/password"});
+            }
+
+            user.comparePasswords(password, function (err, isMatch) {
+                if (err) return done(err);
+
+                if (!isMatch) {
+                    return done(null, false, {message: "passwords not mach"});
+                }
+                return done(null, user);
+            });
+        });
+
+    });
+
+var registerStrategy = new LocalStrategy({usernameField: 'email'},function(email, password, done){
+
+
+    var serachUser = {
+        email:email
+    };
+     User.findOne(serachUser, function(err, user){
+         if(err) return done(err);
+console.log('register+++++++++++'+user);
+         if(user) {
+             return done(null, false,{
+                 message: 'E-mail already exists!'
+             });
+         }
+
+
+         var newUser = new User({
+             email: email,
+             password: password
+         });
+
+         newUser.save(function (err) {
+
+             done(null,newUser);
+
+         });
+
+     });
+
+
+
+});
+
+passport.use('local-register',registerStrategy);
+passport.use('local-login',loginStrategy);
 
 app.use(function (req, res, next) {
 
@@ -34,69 +92,38 @@ var jobs = [
     'Angular'
 ];
 
-app.get('/jobs', function(req, res){
+app.get('/jobs', function (req, res) {
 
     var token = req.headers.authorization.split(' ')[1];
-    var payload = jwt.decode(token,'naskoSecret');
-    if(!payload.sub){
-        return res.status(401).send({message:'Authentication failed'});
+    var payload = jwt.decode(token, 'naskoSecret');
+    if (!payload.sub) {
+        return res.status(401).send({message: 'Authentication failed'});
     }
-    if(!req.headers.authorization){
-        return res.status(401).send({message:'You are not authorized'});
+    if (!req.headers.authorization) {
+        return res.status(401).send({message: 'You are not authorized'});
     }
     res.json(jobs);
 });
 
-app.post('/register', function(req, res){
-    var user = req.body;
+app.post('/register',passport.authenticate('local-register'), function (req, res) {
+createSendToken(req.user,res);
 
-    var newUser = new User({
-        email: user.email,
-        password:user.password
-    });
-
-
-    newUser.save(function(err){
-
-        createSendToken(newUser, res);
-
-    })
 });
 
-app.post('/login', function(req, res){
-
-   req.user = req.body;
-    console.log(req.user);
-    var serchUser ={email:req.user.email};
-
-    User.findOne(serchUser,function(err, user){
-        if(err) throw err;
-
-        if(!user){
-           return res.status(401).send({message:"Wrong email/password"});
-        }
-
-        user.comparePasswords(req.user.password, function(err, isMatch){
-            if(err) throw err;
-
-            if(!isMatch){
-              return  res.status(401).send({message:"Wrong email/password"});
-            }
-            createSendToken(user, res);
-        });
+app.post('/login',passport.authenticate('local-login'), function (req, res) {
+    createSendToken(req.user, res);
     });
-});
 
-function createSendToken(user, res){
-    var payload ={
-        sub:user.id
+function createSendToken(user, res) {
+    var payload = {
+        sub: user.id
     };
 
-    var token =jwt.encode(payload,'naskoSecret');
+    var token = jwt.encode(payload, 'naskoSecret');
 
     res.status(200).send({
-        user:user.toJSON(),
-        token:token
+        user: user.toJSON(),
+        token: token
     });
 };
 

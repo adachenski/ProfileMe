@@ -11,10 +11,9 @@ angular.module('profileMeApp')
                 auth.login($scope.email, $scope.password)
                     .success(function (res) {
                         alert('success', 'Welcome','Thanks for coming back '+res.user.email+'!');
-                      // authToken.setToken(res.token);
                         console.log('good')
                     }).error(function (err) {
-                        alert('warning', 'Oops', 'Nasko went wrong :('+err.message,3000);
+                        alert('warning', 'Oops', 'Something went wrong :('+err.message,3000);
                     })
             }
         }

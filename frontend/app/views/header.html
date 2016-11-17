@@ -18,7 +18,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#find-header">Home</a></li>
+                <li><a ui-sref="app">Home</a></li>
+
+                <li><a ui-sref="app.home-custom">Home Custom</a></li>
+                <li>
+                    <a ng-click="start()">Start</a>
+                </li>
                 <li>
                     <a ui-sref="app.jobs">Jobs</a>
                 </li>
@@ -28,6 +33,7 @@
                 <li ng-show="isAuthenticated()">
                     <a ui-sref="app.logout">Logout</a>
                 </li>
+
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

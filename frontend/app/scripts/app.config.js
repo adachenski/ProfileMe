@@ -17,14 +17,23 @@ angular.module('profileMeApp')
                         controller:'HeaderController'
                     },
                     'body-container': {
-                        templateUrl: 'views/body-container.html',
-                        controller: 'HeaderController'
+                        templateUrl: 'views/home.html',
+                        controller: 'HomeController'
                     },
                     'footer': {
                         templateUrl: 'views/footer.html'
                     }
                 }
 
+            })
+            .state('app.home-custom',{
+                url:'home-custom',
+                views:{
+                    'body-container@':{
+                        templateUrl:'views/home-custom.html',
+                        controller:'HomeCustomController'
+                    }
+                }
             })
             .state('app.login', {
                 url:'login',

@@ -3,8 +3,8 @@
  */
 
 angular.module('profileMeApp')
-    .controller('RegisterController', ['$scope', 'alert', 'auth', '$http','authToken','API_URL',
-        function ($scope, alert, auth, $http, authToken, API_URL) {
+    .controller('RegisterController', ['$scope', 'alert', 'auth',
+        function ($scope, alert, auth) {
 
         $scope.submit = function () {
 
