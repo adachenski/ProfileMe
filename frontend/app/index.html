@@ -16,16 +16,16 @@
     <link rel="stylesheet" href="styles/login.css"/>
 
 </head>
-<body >
+<body>
 
 
 <div ui-view="header"></div>
+
 <div ng-include="'views/alert.html'"></div>
 
-    <div class="ui-view-container">
-        <div  ui-view="body-container"></div>
-    </div>
-
+<div class="ui-view-container">
+    <div ui-view="body-container"></div>
+</div>
 
 
 <div ui-view="footer"></div>
@@ -43,7 +43,7 @@
 <script rel="javascript" src="scripts/app.config.js"></script>
 
 <script src="scripts/controllers/home.js"></script>
-<script src="scripts/controllers/homeCustom.js"></script>
+<script src="scripts/controllers/home.js"></script>
 <script rel="javascript" src="scripts/profileme.js"></script>
 <script src="scripts/directives/passwordCompare.js"></script>
 <script rel="javascript" src="scripts/controllers/header.js"></script>
@@ -56,5 +56,8 @@
 <script src="scripts/services/authToken.js"></script>
 <script src="scripts/services/authInterceptor.js"></script>
 <script src="scripts/controllers/login.js"></script>
+<script src="scripts/factory/customUrls.js"></script>
+<script src="scripts/controllers/showCustomUrl.js"></script>
+
 </body>
 </html>

@@ -7,7 +7,7 @@
 angular.module('profileMeApp')
     .constant('API_URL','http://localhost:3000/')
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
-        $urlRouterProvider.otherwise('/');
+        //$urlRouterProvider.otherwise('/');
         $stateProvider
             .state('app', {
                 url: '/',
@@ -26,12 +26,12 @@ angular.module('profileMeApp')
                 }
 
             })
-            .state('app.home-custom',{
-                url:'home-custom',
+            .state('app.custom',{
+                url:'custom/:id',
                 views:{
-                    'body-container@':{
-                        templateUrl:'views/home-custom.html',
-                        controller:'HomeCustomController'
+                    'body-container@': {
+                        templateUrl:'views/show-custom.html',
+                        controller  : 'ShowCustomUrlController'
                     }
                 }
             })
@@ -61,6 +61,7 @@ angular.module('profileMeApp')
                     }
                 }
             })
+
             .state('app.register', {
                 url:'register',
                 views: {

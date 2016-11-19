@@ -9,7 +9,6 @@
                 <li data-target="#carousel" data-slide-to="2"></li>
             </ol>
 
-
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
@@ -61,94 +60,35 @@
         </div>
     </div>
 
-
     <section class="row text-banner" id="userDetails">
-        <div class="row">
-            <div class="col-sm-10" ng-hide="editMain">
-                <h1 ng-style="myStylea">{{headerMain}}</h1>
-
-                <p>
-                    {{contentMain}}
-                </p>
-
-            </div>
-
-            <div class="col-sm-10" ng-show="editMain">
-                <label for="">Edit Header</label>
-                <input style="width: 100%" ng-model="headerMain" type="text"/>
-                <label for="">Edit Content</label>
-                <textarea style="width: 100%" ng-model="contentMain" name="" id=""  rows="5"></textarea>
-            </div>
-
-            <div class="col-sm-2">
-                <button ng-click="editMainContent()" class="btn btn-block btn-warning">Edit</button>
-                <button ng-click="saveMainContent()" class="btn btn-block btn-success">Save</button>
-            </div>
-        </div>
-
-
-
+        <h1 ng-style="myStylea">{{customUrl.mainHeader}}</h1>
+        <p>{{customUrl.mainContent}}</p>
     </section>
 
     <section class="row" id="sports">
         <div class="fill-screen stellar-bg fixed-attachment"
              data-steller-background-ratio="0.2"
-
-             style="background-image: url({{middleBackgroundImage}})">
+             style="background-image: url('{{customUrl.mainBackground}}')">
             <section class="row activity-section">
                 <div class="activity-element col-md-4" style="color: #ffffff">
 
-                    <div ng-hide="editMiddleLeft">
-                        <h2>{{middleContentLeftHead}}</h2>
+                    <h2>Orienteering</h2>
 
-                        <p>{{middleContentLeftBody}}</p>
-                    </div>
-
-
-                        <div ng-show="editMiddleLeft">
-                            <label  for="">Edit Header</label>
-                            <input style="background-color: #00405f"  style="width: 100%" ng-model="middleContentLeftHead" type="text"/>
-                            <label for="">Edit Content</label>
-                            <textarea style="background-color: #00405f; width: 100%"   ng-model="middleContentLeftBody" name="" id=""  rows="5"></textarea>
-                        </div>
-
-
-                    <div>
-                        <button ng-click="editMiddleContentLeft()" class="btn btn-warning">Edit</button>
-                        <button ng-click="saveMiddleContentLeft()" class="btn btn-success">Done</button>
-                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet atque consectetur doloribus et,
+                        ipsam itaque nemo ratione tempora temporibus vel veniam. Expedita hic laboriosam natus
+                        reprehenderit veritatis! Iure, sequi! </p>
                 </div>
 
                 <div class="activity-element col-md-4">
-                    <button ng-click="editMiddleBackground()" class="btn btn-warning">Edit Background</button>
-                    <button ng-click="saveMiddleBackground()" class="btn btn-success">Save Background</button>
-                    <div ng-show="middleBackgroundShow">
-                        <h2 style="color: #ffffff">Coppy and Paste img url</h2>
-                        <input style="width: 100%" type="text" ng-model="middleBackgroundImage"/>
-                    </div>
-
                 </div>
 
                 <div class="activity-element col-md-4" style="color:#ffffff">
 
-                    <div>
-                        <h2>{{middleContentRightHead}}</h2>
+                    <h2>Backpacking</h2>
 
-                        <p>{{middleContentRightBody}}</p>
-                    </div>
-
-
-
-                    <div ng-show="editMiddleRight">
-                        <label for="">Edit Header</label>
-                        <input style="width: 100%" ng-model="headerMain" type="text"/>
-                        <label for="">Edit Content</label>
-                        <textarea style="width: 100%" ng-model="contentMain" name="" id=""  rows="5"></textarea>
-                    </div>
-                    <div>
-                        <button class="btn  btn-warning">Edit</button>
-                        <button class="btn  btn-success">Done</button>
-                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur facere ipsum
+                        laboriosam nobis tempore veniam vitae? Dolores facilis ipsum laudantium magnam molestiae officia
+                        officiis, perferendis quos vel voluptas voluptatibus. </p>
                 </div>
 
             </section>

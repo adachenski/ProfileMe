@@ -10,6 +10,7 @@ var express = require('express'),
     LocalStrategy = require('passport-local').Strategy;
 
 var User = require('./models/User');
+var userSettings = require('./routes/userSettingRouter');
 var app = express();
 app.use(bodyParser.json());
 app.use(passport.initialize());
@@ -40,41 +41,41 @@ var loginStrategy = new LocalStrategy({usernameField: 'email'},
 
     });
 
-var registerStrategy = new LocalStrategy({usernameField: 'email'},function(email, password, done){
+var registerStrategy = new LocalStrategy({usernameField: 'email'}, function (email, password, done) {
 
 
     var serachUser = {
-        email:email
+        email: email
     };
-     User.findOne(serachUser, function(err, user){
-         if(err) return done(err);
-console.log('register+++++++++++'+user);
-         if(user) {
-             return done(null, false,{
-                 message: 'E-mail already exists!'
-             });
-         }
+    User.findOne(serachUser, function (err, user) {
+        if (err) return done(err);
+        console.log('register+++++++++++' + user);
+        if (user) {
+            return done(null, false, {
+                message: 'E-mail already exists!'
+            });
+        }
 
 
-         var newUser = new User({
-             email: email,
-             password: password
-         });
+        var newUser = new User({
+            email: email,
+            password: password
+        });
 
-         newUser.save(function (err) {
+        newUser.save(function (err) {
 
-             done(null,newUser);
+            done(null, newUser);
 
-         });
+        });
 
-     });
-
+    });
 
 
 });
 
-passport.use('local-register',registerStrategy);
-passport.use('local-login',loginStrategy);
+passport.use('local-register', registerStrategy);
+passport.use('local-login', loginStrategy);
+
 
 app.use(function (req, res, next) {
 
@@ -91,6 +92,7 @@ var jobs = [
     'html',
     'Angular'
 ];
+app.use('/custom',userSettings);
 
 app.get('/jobs', function (req, res) {
 
@@ -105,14 +107,14 @@ app.get('/jobs', function (req, res) {
     res.json(jobs);
 });
 
-app.post('/register',passport.authenticate('local-register'), function (req, res) {
-createSendToken(req.user,res);
+app.post('/register', passport.authenticate('local-register'), function (req, res) {
+    createSendToken(req.user, res);
 
 });
 
-app.post('/login',passport.authenticate('local-login'), function (req, res) {
+app.post('/login', passport.authenticate('local-login'), function (req, res) {
     createSendToken(req.user, res);
-    });
+});
 
 function createSendToken(user, res) {
     var payload = {
