@@ -22,6 +22,24 @@ userSettingsRouter.route('/')
               res.json(userSettings);
           });
   })
+   // .put(Verify.verifyUser, function (req, res, next) {
+   //     console.log(req.decoded.sub);
+   //     UserSettings.findOne({'postedBy': req.decoded.sub})
+   //         .populate('postedBy')
+   //         .exec(function (err, userSettings) {
+   //             if (err) throw err;
+   //             console.log("========================================")
+   //             console.log(userSettings);
+   //             console.log("========================================")
+   //            var fav = new UserSettings({
+   //                mainHeader: userSettings.mainHeader,
+   //                mainContent: userSettings.mainContent,
+   //                mainBackground: req.body.mainBackground,
+   //                postedBy: req.decoded.sub
+   //            });
+   //            res.json(userSettings);
+   //         });
+   // })
 
     //.get(function (req, res, next) {
 //
@@ -50,6 +68,7 @@ userSettingsRouter.route('/')
         });
 
     })
+
     //.post(Verify.verifyUser,function (req, res, next) {
 //
     //   UserSettings.create(req.body, function (err, userSettings) {

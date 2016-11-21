@@ -6,10 +6,12 @@ angular.module('profileMeApp')
     .controller('HomeController', ['$scope', 'customUrlFactory', '$http', '$stateParams','$state','HomeModelFactory',
         function ($scope, customUrlFactory, $http, $stateParams,$state,HomeModelFactory) {
            // var x = 'Default Header';
+            var scopeId;
             $scope.customUrl = customUrlFactory.get({id: $stateParams.id})
                 .$promise.then(
                 function (response) {
-                    console.log($stateParams.id);
+                    scopeId = response._id;
+                    console.log(response._id);
                     var dataFromDB = response;
 
                     $scope.headerMain = dataFromDB.mainHeader;
@@ -81,22 +83,23 @@ angular.module('profileMeApp')
             // );
             $scope.saveSettings = function () {
 
+
+                $http.put('http://localhost:3000/custom/'+scopeId, {
+                    mainHeader: $scope.headerMain,
+                    mainContent: $scope.contentMain,
+                    mainBackground: $scope.middleBackgroundImage
+                }, {
+                    'Content-Type': 'application/json;'
+                })
+                    .then(
+                    function (response) {
+                        console.log(response);
+                    },
+                    function (response) {
+                        // failure callback
+                    }
+                );
                 $state.go('app.custom');
-                //$http.post('http://localhost:3000/custom', {
-                //    mainHeader: $scope.headerMain,
-                //    mainContent: $scope.contentMain,
-                //    mainBackground: $scope.middleBackgroundImage
-                //}, {
-                //    'Content-Type': 'application/json;'
-                //})
-                //    .then(
-                //    function (response) {
-                //        console.log(response);
-                //    },
-                //    function (response) {
-                //        // failure callback
-                //    }
-                //);
             }
 
 
