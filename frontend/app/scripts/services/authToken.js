@@ -13,7 +13,8 @@ angular.module('profileMeApp')
     },
     getToken: function () {
       if (!cashedToken) {
-        storage.getItem(userToken);
+
+       cashedToken= storage.getItem(userToken);
       }
       return cashedToken;
     },

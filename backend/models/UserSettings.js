@@ -8,7 +8,11 @@ var Schema = mongoose.Schema;
 var UserSettingsSchema = new Schema({
     mainHeader: String,
     mainContent: String,
-    mainBackground: String
+    mainBackground: String,
+    postedBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
 },{timestamps: true});
 
 

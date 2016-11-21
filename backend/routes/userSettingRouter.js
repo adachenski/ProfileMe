@@ -7,33 +7,77 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose');
 
+var Verify = require('./verify');
 var UserSettings = require('../models/UserSettings');
 userSettingsRouter.use(bodyParser.json());
+var User = require('../models/User');
 
 userSettingsRouter.route('/')
-.get(function(req,res){
-        //res.json({"message":"Hard to get User SEttINgS"});
-        UserSettings.find({}, function (err, userSettings) {
-            if (err) {
-                console.log('Error obtaining the promotions: ' + err);
-            }
-            res.json(userSettings);
-        })
+  .get(Verify.verifyUser, function (req, res, next) {
+  console.log(req.decoded.sub);
+      UserSettings.findOne({'postedBy': req.decoded.sub})
+          .populate('postedBy')
+          .exec(function (err, userSettings) {
+              if (err) throw err;
+              res.json(userSettings);
+          });
+  })
+
+    //.get(function (req, res, next) {
+//
+   //
+    //    UserSettings.find({})
+    //        .populate('postedBy')
+    //        .exec(function (err, userSettings) {
+    //            if (err) {
+    //                console.log('Error obtaining the userSettings: ' + err);
+    //            }
+    //            res.json(userSettings);
+    //        })
+    //})
+    .post(Verify.verifyUser, function (req, res, next) {
+
+        var fav = new UserSettings({
+            mainHeader: req.body.mainHeader,
+            mainContent: req.body.mainContent,
+            mainBackground: req.body.mainBackground,
+            postedBy: req.decoded.sub
+        });
+        fav.save(function (err, fav) {
+            if (err) throw err;
+
+            res.json(fav);
+        });
+
     })
-.post(function(req, res, next){
-        UserSettings.create(req.body,function(err,userSettings){
-            if(err){
-                console.log('Cant create userrSettings '+err);
+    //.post(Verify.verifyUser,function (req, res, next) {
+//
+    //   UserSettings.create(req.body, function (err, userSettings) {
+    //       if (err) {
+    //           console.log('Cant create userSettings ' + err);
+    //       }
+    //       console.log(userSettings);
+    //       var id = userSettings._id;
+    //       var postedBy= req.decoded.sub;
+    //       //var id = req.sub;
+    //       res.writeHead(200, {'Content-Type': 'text/plain'});
+    //       res.end('UserSettings added with id: ' + id);
+    //   })
+    //})
+    .delete(function (req, res, next) {
+        //res.end('All dishes will be deleted');
+        UserSettings.remove({}, function (err, response) {
+            if (err) {
+                throw err;
             }
-            var id = userSettings._id;
-            res.writeHead(200, {'Content-Type': 'text/plain'});
-            res.end('UserSettings added with id: ' + id);
+            res.json(response);
         })
     });
 
 
 userSettingsRouter.route('/:userSettingsId')
     .get(function (req, res, next) {
+        // console.log(req.decoded.sub);
         UserSettings.findById(req.params.userSettingsId, function (err, userSettings) {
             if (err) {
                 console.log("Error getting user settings: " + err);
@@ -51,4 +95,5 @@ userSettingsRouter.route('/:userSettingsId')
             })
 
     });
+
 module.exports = userSettingsRouter;

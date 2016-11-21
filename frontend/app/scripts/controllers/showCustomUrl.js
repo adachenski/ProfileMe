@@ -5,7 +5,6 @@
 angular.module('profileMeApp')
     .controller('ShowCustomUrlController',['$scope','$stateParams','customUrlFactory',
         function($scope,$stateParams,customUrlFactory){
-console.log('SHowCustom');
             $scope.customUrl = customUrlFactory.get({
                 id: $stateParams.id
             })

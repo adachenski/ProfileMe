@@ -10,6 +10,7 @@ var express = require('express'),
     LocalStrategy = require('passport-local').Strategy;
 
 var User = require('./models/User');
+var verify = require('./routes/verify');
 var userSettings = require('./routes/userSettingRouter');
 var app = express();
 app.use(bodyParser.json());
@@ -18,6 +19,7 @@ app.use(passport.initialize());
 passport.serializeUser(function (user, done) {
     done(null, user.id);
 });
+
 
 var loginStrategy = new LocalStrategy({usernameField: 'email'},
     function (email, password, done) {
@@ -49,7 +51,6 @@ var registerStrategy = new LocalStrategy({usernameField: 'email'}, function (ema
     };
     User.findOne(serachUser, function (err, user) {
         if (err) return done(err);
-        console.log('register+++++++++++' + user);
         if (user) {
             return done(null, false, {
                 message: 'E-mail already exists!'
@@ -92,18 +93,10 @@ var jobs = [
     'html',
     'Angular'
 ];
-app.use('/custom',userSettings);
+app.use('/custom', userSettings);
 
-app.get('/jobs', function (req, res) {
+app.get('/jobs',verify.verifyUser, function (req, res, next) {
 
-    var token = req.headers.authorization.split(' ')[1];
-    var payload = jwt.decode(token, 'naskoSecret');
-    if (!payload.sub) {
-        return res.status(401).send({message: 'Authentication failed'});
-    }
-    if (!req.headers.authorization) {
-        return res.status(401).send({message: 'You are not authorized'});
-    }
     res.json(jobs);
 });
 
