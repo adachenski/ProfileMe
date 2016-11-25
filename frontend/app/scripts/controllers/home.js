@@ -15,7 +15,7 @@ angular.module('profileMeApp')
                     scopeId = response._id;
                     username = response.username;
                     console.log(scopeId);
-
+                console.log(response);
                     $scope.dataFromDB = response;
                     //$scope.contentMainText = $scope.dataFromDB.mainContent;
                     //$scope.middleBackgroundImage = $scope.dataFromDB.mainBackground;
@@ -36,37 +36,27 @@ angular.module('profileMeApp')
             );
 
             $scope.editMain = false;
+            $scope.middleBackgroundShow = false;
+            $scope.middleBackgroundTextLeftShow = false;
+            $scope.middleBackgroundTextRightShow = false;
 
             $scope.editMainContent = function () {
-                $scope.editMain = true;
+                $scope.editMain = !$scope.editMain;
             };
-            $scope.saveMainContent = function () {
-                $scope.editMain = false;
-            };
-
-            $scope.middleContentLeftHead = "Left Header";
-            $scope.middleContentLeftBody = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet atque consectetur doloribus et,ipsam itaque nemo ratione tempora temporibus vel veniam. Expedita hic laboriosam natusreprehenderit veritatis! Iure, sequi! ";
-            $scope.middleContentRightHead = "Right Header";
-            $scope.middleContentRightBody = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet atque consectetur doloribus et,ipsam itaque nemo ratione tempora temporibus vel veniam. Expedita hic laboriosam natusreprehenderit veritatis! Iure, sequi! ";
-
-            $scope.editMiddleLeft = false;
-            $scope.editMiddleRigh = false;
-
-            $scope.editMiddleContentLeft = function () {
-                $scope.editMiddleLeft = true;
-            };
-            $scope.saveMiddleContentLeft = function () {
-                $scope.editMiddleLeft = false;
-            };
-
-            $scope.middleBackgroundShow = false;
 
             $scope.editMiddleBackground = function () {
-                $scope.middleBackgroundShow = true;
+                $scope.middleBackgroundShow = !$scope.middleBackgroundShow;
             };
-            $scope.saveMiddleBackground = function () {
-                $scope.middleBackgroundShow = false;
+
+            $scope.editMiddleBackgroundTextLeft = function () {
+                $scope.middleBackgroundTextLeftShow = !$scope.middleBackgroundTextLeftShow;
             };
+
+            $scope.editMiddleBackgroundTextRight = function () {
+                $scope.middleBackgroundTextRightShow = !$scope.middleBackgroundTextRightShow;
+            };
+
+
 
 
             // $scope.saveSettings = customUrlFactory.post({
@@ -89,7 +79,9 @@ angular.module('profileMeApp')
 
                 $http.put('http://localhost:3000/custom/'+scopeId, {
                     contentMain: $scope.dataFromDB.contentMain,
-                    mainBackground: $scope.dataFromDB.middleBackgroundImage
+                    mainBackground: $scope.dataFromDB.mainBackground,
+                    mainBackgroundTextLeft: $scope.dataFromDB.mainBackgroundTextLeft,
+                    mainBackgroundTextRight: $scope.dataFromDB.mainBackgroundTextRight
                 }, {
                     'Content-Type': 'application/json;'
                 })

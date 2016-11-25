@@ -9,6 +9,8 @@ var UserSettingsSchema = new Schema({
     username: String,
     contentMain:String,
     mainBackground: String,
+    mainBackgroundTextLeft:String,
+    mainBackgroundTextRight:String,
     postedBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'

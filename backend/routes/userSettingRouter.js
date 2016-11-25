@@ -55,8 +55,10 @@ userSettingsRouter.route('/')
 
         var fav = new UserSettings({
             username:req.body.username,
-            contentMain: req.body.mainContent,
+            contentMain: req.body.contentMain,
             mainBackground: req.body.mainBackground,
+            mainBackgroundTextLeft:req.body.mainBackgroundTextLeft,
+            mainBackgroundTextRight:req.body.mainBackgroundTextRight,
             postedBy: req.decoded.sub
         });
         fav.save(function (err, fav) {

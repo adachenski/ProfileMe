@@ -1,4 +1,3 @@
-
 <div class="container-fluid" ng-cloak>
 
     <div class="row block">
@@ -66,18 +65,18 @@
         <div class="row">
 
             <div class="col-sm-10" ng-hide="editMain">
-                <div  ng-bind-html="dataFromDB.contentMain"></div>
+                <div ng-bind-html="dataFromDB.contentMain"></div>
             </div>
 
             <div ng-show="editMain">
-                <div  class="col-sm-10" text-angular   ng-model="dataFromDB.contentMain"></div>
+                <div class="col-sm-10" text-angular ng-model="dataFromDB.contentMain"></div>
 
             </div>
 
 
             <div class="col-sm-2">
-                <button ng-click="editMainContent()" class="btn btn-block btn-warning">Edit</button>
-                <button ng-click="saveMainContent()" class="btn btn-block btn-success">Save</button>
+                <button ng-click="editMainContent()" class="btn btn-block btn-warning">MEdit</button>
+                <button ng-click="editMainContent()" class="btn btn-block btn-success">Save</button>
             </div>
         </div>
     </section>
@@ -90,58 +89,58 @@
             <section class="row activity-section">
                 <div class="activity-element col-md-4" style="color: #ffffff">
 
-                    <div ng-hide="editMiddleLeft">
+                    <div ng-hide="middleBackgroundTextLeftShow">
 
-                        <div  ng-bind-html="middleContentLeftBody"></div>
+                        <div ng-bind-html="dataFromDB.mainBackgroundTextLeft"></div>
 
                     </div>
 
 
-                    <div ng-show="editMiddleLeft">
+                    <div ng-show="middleBackgroundTextLeftShow">
 
                         <label for="">Edit Content</label>
-                        <textarea style="background-color: #00405f;
-                        width: 100%" text-angular  ng-model="middleContentLeftBody"  rows="5">
 
-                        </textarea>
+                        <div style="background-color: #00405f;
+                        width: 100%" text-angular ng-model="dataFromDB.mainBackgroundTextLeft">
+                        </div>
                     </div>
 
 
                     <div>
-                        <button ng-click="editMiddleContentLeft()" class="btn btn-warning">Edit</button>
-                        <button ng-click="saveMiddleContentLeft()" class="btn btn-success">Done</button>
+                        <button ng-click="editMiddleBackgroundTextLeft()" class="btn btn-warning">Edit</button>
+                        <button ng-click="editMiddleBackgroundTextLeft()" class="btn btn-success">Done</button>
                     </div>
                 </div>
 
                 <div class="activity-element col-md-4">
                     <button ng-click="editMiddleBackground()" class="btn btn-warning">Edit Background</button>
-                    <button ng-click="saveMiddleBackground()" class="btn btn-success">Save Background</button>
+                    <button ng-click="editMiddleBackground()" class="btn btn-success">Save Background</button>
                     <div ng-show="middleBackgroundShow">
-                        <h2 style="color: #ffffff">Coppy and Paste img url</h2>
-                        <input style="width: 100%" type="text" ng-model="middleBackgroundImage"/>
+                        <h2 style="color: #ffffff">Copy and Paste img url</h2>
+                        <input style="width: 100%" type="text" ng-model="dataFromDB.mainBackground"/>
                     </div>
 
                 </div>
 
                 <div class="activity-element col-md-4" style="color:#ffffff">
 
-                    <div>
-                        <h2>{{middleContentRightHead}}</h2>
-
-                        <p>{{middleContentRightBody}}</p>
+                    <div ng-hide="middleBackgroundTextRightShow">
+                        <div ng-bind-html="dataFromDB.mainBackgroundTextRight"></div>
                     </div>
 
 
-
-                    <div ng-show="editMiddleRight">
-                        <label for="">Edit Header</label>
-                        <input style="width: 100%" ng-model="headerMain" type="text"/>
+                    <div ng-show="middleBackgroundTextRightShow">
                         <label for="">Edit Content</label>
-                        <textarea style="width: 100%" ng-model="contentMain" name="" id=""  rows="5"></textarea>
+
+                        <div style="background-color: #00405f;
+                        width: 100%" text-angular ng-model="dataFromDB.mainBackgroundTextRight">
+                        </div>
                     </div>
+
+
                     <div>
-                        <button class="btn  btn-warning">Edit</button>
-                        <button class="btn  btn-success">Done</button>
+                        <button class="btn  btn-warning" ng-click="editMiddleBackgroundTextRight()">Edit</button>
+                        <button class="btn  btn-success" ng-click="editMiddleBackgroundTextRight()">Done</button>
                     </div>
                 </div>
 
@@ -175,7 +174,7 @@
         </div>
     </section>
     <div>
-        <button ng-click="saveSettings()"  class="btn btn-block btn-lg btn-success" type="submit">Save settings</button>
+        <button ng-click="saveSettings()" class="btn btn-block btn-lg btn-success" type="submit">Save settings</button>
     </div>
 </div>
 

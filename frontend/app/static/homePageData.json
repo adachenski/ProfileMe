@@ -1,4 +1,6 @@
 {
   "contentMain":"<h1>Content from json</h1><p>some random staff edited. </p>",
-  "mainBackground" :"https://images.pexels.com/photos/3247/nature-forest-industry-rails.jpg?w=940&h=650&auto=compress&cs=tinysrgb"
+  "mainBackground" :"https://images.pexels.com/photos/3247/nature-forest-industry-rails.jpg?w=940&h=650&auto=compress&cs=tinysrgb",
+  "mainBackgroundTextLeft":"<h1>Left text</h1><p>some random background text from json. </p>",
+  "mainBackgroundTextRight":"<h1>Right text</h1><p>Right side random background text from json. </p>"
 }

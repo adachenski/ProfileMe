@@ -14,13 +14,15 @@ angular.module('profileMeApp')
                     alert('success', 'Successful register.','Welcome, '+res.user.email+'!');
 
                     HomeModelFactory.fetch().then(function(data) {
-                        var customUrl = data;
+                        $scope.dataFromJson = data;
 
                         $http.post('http://localhost:3000/custom', {
-                            username:"",
 
-                            mainContent: customUrl.contentMain,
-                            mainBackground: customUrl.middleBackgroundImage
+                            username:"",
+                            contentMain: $scope.dataFromJson.contentMain,
+                            mainBackground: $scope.dataFromJson.mainBackground,
+                            mainBackgroundTextLeft: $scope.dataFromJson.mainBackgroundTextLeft,
+                            mainBackgroundTextRight: $scope.dataFromJson.mainBackgroundTextRight
                         }, {
                             'Content-Type': 'application/json;'
                         })
