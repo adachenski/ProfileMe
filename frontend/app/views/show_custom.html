@@ -61,14 +61,13 @@
     </div>
 
     <section class="row text-banner" id="userDetails">
-        <h1 ng-style="myStylea">{{customUrl.mainHeader}}</h1>
-        <p>{{customUrl.mainContent}}</p>
+        <div ng-bind-html="showCustomUrl.contentMain"></div>
     </section>
 
     <section class="row" id="sports">
         <div class="fill-screen stellar-bg fixed-attachment"
              data-steller-background-ratio="0.2"
-             style="background-image: url('{{customUrl.mainBackground}}')">
+             style="background-image: url('{{showCustomUrl.mainBackground}}')">
             <section class="row activity-section">
                 <div class="activity-element col-md-4" style="color: #ffffff">
 

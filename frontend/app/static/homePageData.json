@@ -1,5 +1,4 @@
 {
-  "headerMain":"Header Main from Json",
-  "contentMain":"From Json. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-  "middleBackgroundImage" :"https://images.pexels.com/photos/3247/nature-forest-industry-rails.jpg?w=940&h=650&auto=compress&cs=tinysrgb"
+  "contentMain":"<h1>Content from json</h1><p>some random staff edited. </p>",
+  "mainBackground" :"https://images.pexels.com/photos/3247/nature-forest-industry-rails.jpg?w=940&h=650&auto=compress&cs=tinysrgb"
 }

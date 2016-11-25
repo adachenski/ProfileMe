@@ -1,6 +1,4 @@
 
-
-
 <div class="container-fluid" ng-cloak>
 
     <div class="row block">
@@ -64,55 +62,48 @@
         </div>
     </div>
 
-
     <section class="row text-banner" id="userDetails">
         <div class="row">
+
             <div class="col-sm-10" ng-hide="editMain">
-                <h1 ng-style="myStylea">{{headerMain}}</h1>
+                <div  ng-bind-html="dataFromDB.contentMain"></div>
+            </div>
 
-                <p>
-                    {{contentMain}}
-                </p>
+            <div ng-show="editMain">
+                <div  class="col-sm-10" text-angular   ng-model="dataFromDB.contentMain"></div>
 
             </div>
 
-            <div class="col-sm-10" ng-show="editMain">
-                <label for="">Edit Header</label>
-                <input style="width: 100%" ng-model="headerMain" type="text"/>
-                <label for="">Edit Content</label>
-                <textarea style="width: 100%" ng-model="contentMain" name="" id=""  rows="5"></textarea>
-            </div>
 
             <div class="col-sm-2">
                 <button ng-click="editMainContent()" class="btn btn-block btn-warning">Edit</button>
                 <button ng-click="saveMainContent()" class="btn btn-block btn-success">Save</button>
             </div>
         </div>
-
-
-
     </section>
 
     <section class="row" id="sports">
         <div class="fill-screen stellar-bg fixed-attachment"
              data-steller-background-ratio="0.2"
 
-             style="background-image: url({{middleBackgroundImage}})">
+             style="background-image: url({{dataFromDB.mainBackground}})">
             <section class="row activity-section">
                 <div class="activity-element col-md-4" style="color: #ffffff">
 
                     <div ng-hide="editMiddleLeft">
-                        <h2>{{middleContentLeftHead}}</h2>
 
-                        <p>{{middleContentLeftBody}}</p>
+                        <div  ng-bind-html="middleContentLeftBody"></div>
+
                     </div>
 
 
                     <div ng-show="editMiddleLeft">
-                        <label  for="">Edit Header</label>
-                        <input style="background-color: #00405f"  style="width: 100%" ng-model="middleContentLeftHead" type="text"/>
+
                         <label for="">Edit Content</label>
-                        <textarea style="background-color: #00405f; width: 100%"   ng-model="middleContentLeftBody" name="" id=""  rows="5"></textarea>
+                        <textarea style="background-color: #00405f;
+                        width: 100%" text-angular  ng-model="middleContentLeftBody"  rows="5">
+
+                        </textarea>
                     </div>
 
 

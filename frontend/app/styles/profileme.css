@@ -1,7 +1,12 @@
 body {
     position: relative;
     font-family: 'Open Sans', sans-serif;
-padding-top: 40px;
+}
+.form-control{
+    height: auto;
+}
+.ta-hidden-input{
+    display: none;
 }
 
 @media (max-width: 1051px) {
@@ -122,9 +127,11 @@ footer {
     height: 100%;
 }
 
+/*
 .carousel {
     margin: 40px 0px;
 }
+*/
 
 .carousel .item img {
     width: 100%;
@@ -147,6 +154,17 @@ footer {
 
 .navbar-inverse .navbar-nav > li > a {
     color: #bbb;
+}
+.nabar-default{
+    opacity: 0;
+}
+.initial-nav>.container-fluid>.collapse>.nav>li>a{
+    color: ivory;
+    font-size: large;
+    text-shadow: 0 0 3px #000000, 0 0 5px #0000FF;
+}
+.initial-nav>.container-fluid>.collapse>.nav>li>a:hover{
+
 }
 
 

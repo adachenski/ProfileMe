@@ -41,23 +41,21 @@ userSettingsRouter.route('/')
    //         });
    // })
 
-    //.get(function (req, res, next) {
-//
-   //
-    //    UserSettings.find({})
-    //        .populate('postedBy')
-    //        .exec(function (err, userSettings) {
-    //            if (err) {
-    //                console.log('Error obtaining the userSettings: ' + err);
-    //            }
-    //            res.json(userSettings);
-    //        })
-    //})
+//.get(function (req, res, next) {
+//    UserSettings.find({})
+//        .populate('postedBy')
+//        .exec(function (err, userSettings) {
+//            if (err) {
+//                console.log('Error obtaining the userSettings: ' + err);
+//            }
+//            res.json(userSettings);
+//        })
+//})
     .post(Verify.verifyUser, function (req, res, next) {
 
         var fav = new UserSettings({
-            mainHeader: req.body.mainHeader,
-            mainContent: req.body.mainContent,
+            username:req.body.username,
+            contentMain: req.body.mainContent,
             mainBackground: req.body.mainBackground,
             postedBy: req.decoded.sub
         });

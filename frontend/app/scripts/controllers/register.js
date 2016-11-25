@@ -17,7 +17,8 @@ angular.module('profileMeApp')
                         var customUrl = data;
 
                         $http.post('http://localhost:3000/custom', {
-                            mainHeader: customUrl.headerMain,
+                            username:"",
+
                             mainContent: customUrl.contentMain,
                             mainBackground: customUrl.middleBackgroundImage
                         }, {

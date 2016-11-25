@@ -30,7 +30,7 @@ angular.module('profileMeApp')
                 url:'custom/:id',
                 views:{
                     'body-container@': {
-                        templateUrl:'views/show-custom.html',
+                        templateUrl:'views/show_custom.html',
                         controller  : 'ShowCustomUrlController'
                     }
                 }

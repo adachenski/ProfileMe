@@ -6,4 +6,11 @@
     <h1>Jobs</h1>
 
     <div ng-repeat="job in jobs">{{job}}</div>
+    <div>{{jobsContent}}</div>
+
+    <div class="container">
+        <label for="username">Username</label>
+        <input name="username" type="text" ng-model="username" class="form-control"  />
+        <button class="btn btn-block btn-success" type="submit" ng-click="submitSettings()">Button</button>
+    </div>
 </div>

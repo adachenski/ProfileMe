@@ -3,16 +3,26 @@
  */
 
 angular.module('profileMeApp')
-    .controller('ShowCustomUrlController',['$scope','$stateParams','customUrlFactory',
-        function($scope,$stateParams,customUrlFactory){
-            $scope.customUrl = customUrlFactory.get({
+    .controller('ShowCustomUrlController',['$scope','$stateParams','customUrlFactory','$sce',
+        function($scope,$stateParams,customUrlFactory,$sce){
+            $scope.fromCustom= customUrlFactory.get({
                 id: $stateParams.id
             })
                 .$promise.then(
                 function (response) {
+                   // $scope.deliberatelyTrustDangerousSnippet = function() {
+                   //     return $sce.trustAsHtml(response.mainContent);
+                   // };
+                    console.log('nasko');
                     console.log($stateParams.id);
-                    $scope.customUrl = response;
-                    $scope.showDish = true;
+                    console.log('nasko');
+                    $scope.showCustomUrl = response;
+
+                    //$scope.customUrl.contentMain = $scope.deliberatelyTrustDangerousSnippet();
+                   //$scope.showDish = true;
+                   //$scope.contentMain = response;
+                   //$scope.contentMain = $scope.dataFromDB.mainContent;
+                   //$scope.middleBackgroundImage = $scope.dataFromDB.mainBackground;
                 },
                 function (response) {
                     $scope.message = "Error: " + response.status + " " + response.statusText;

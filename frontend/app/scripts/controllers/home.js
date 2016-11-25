@@ -7,32 +7,33 @@ angular.module('profileMeApp')
         function ($scope, customUrlFactory, $http, $stateParams,$state,HomeModelFactory) {
            // var x = 'Default Header';
             var scopeId;
-            $scope.customUrl = customUrlFactory.get({id: $stateParams.id})
+            var username;
+            customUrlFactory.get({id: $stateParams.id})
                 .$promise.then(
                 function (response) {
+
                     scopeId = response._id;
-                    console.log(response._id);
-                    var dataFromDB = response;
+                    username = response.username;
+                    console.log(scopeId);
 
-                    $scope.headerMain = dataFromDB.mainHeader;
-                    $scope.contentMain = dataFromDB.mainContent;
-                    $scope.middleBackgroundImage = dataFromDB.mainBackground;
+                    $scope.dataFromDB = response;
+                    //$scope.contentMainText = $scope.dataFromDB.mainContent;
+                    //$scope.middleBackgroundImage = $scope.dataFromDB.mainBackground;
 
 
-                    //$scope.headerMain ? $scope.customUrl.headerMain :'Hello from home-custom';
                 },
                 function (response) {
                     HomeModelFactory.fetch().then(function(data) {
-                        var dataFromFile = data;
-                        $scope.headerMain = dataFromFile.headerMain;
-                        $scope.contentMain = dataFromFile.contentMain;
-                        $scope.middleBackgroundImage = dataFromFile.middleBackgroundImage;
+                        console.log(data);
+                        $scope.dataFromDB = data;
+
+
+                       //$scope.dataFromDB.contentMain = $scope.dataFromFile.contentMain;
+                       //$scope.middleBackgroundImage = $scope.dataFromFile.middleBackgroundImage;
                     });
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
             );
-
-
 
             $scope.editMain = false;
 
@@ -81,32 +82,34 @@ angular.module('profileMeApp')
             //         $scope.message = "Error: " + response.status + " " + response.statusText;
             //     }
             // );
+
             $scope.saveSettings = function () {
 
 
+
                 $http.put('http://localhost:3000/custom/'+scopeId, {
-                    mainHeader: $scope.headerMain,
-                    mainContent: $scope.contentMain,
-                    mainBackground: $scope.middleBackgroundImage
+                    contentMain: $scope.dataFromDB.contentMain,
+                    mainBackground: $scope.dataFromDB.middleBackgroundImage
                 }, {
                     'Content-Type': 'application/json;'
                 })
                     .then(
                     function (response) {
+                        console.log('Succsess from home PUT:')
                         console.log(response);
                     },
                     function (response) {
-                        // failure callback
+                        console.log('Error from home PUT:')
+                        console.log(response);
                     }
                 );
-                $state.go('app.custom');
+                $state.go('app.custom',{id:scopeId});
             }
 
 
             // $scope.saveSettings = function(){
 //
-            //     customUrlFactory.create({
-            //         mainHeader:$scope.headerMain,
+            //     customUrlFactory.create(
             //         mainContent:$scope.contentMain,
             //         mainBackground: $scope.middleBackgroundImage
             //     })

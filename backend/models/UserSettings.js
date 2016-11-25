@@ -6,8 +6,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var UserSettingsSchema = new Schema({
-    mainHeader: String,
-    mainContent: String,
+    username: String,
+    contentMain:String,
     mainBackground: String,
     postedBy: {
         type: mongoose.Schema.Types.ObjectId,
