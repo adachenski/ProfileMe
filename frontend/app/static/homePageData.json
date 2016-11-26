@@ -2,5 +2,15 @@
   "contentMain":"<h1>Content from json</h1><p>some random staff edited. </p>",
   "mainBackground" :"https://images.pexels.com/photos/3247/nature-forest-industry-rails.jpg?w=940&h=650&auto=compress&cs=tinysrgb",
   "mainBackgroundTextLeft":"<h1>Left text</h1><p>some random background text from json. </p>",
-  "mainBackgroundTextRight":"<h1>Right text</h1><p>Right side random background text from json. </p>"
+  "mainBackgroundTextRight":"<h1>Right text</h1><p>Right side random background text from json. </p>",
+  "carouselImgOne":"https://wallpaperscraft.com/image/stars_sky_shore_84534_1920x1080.jpg",
+  "carouselImgOneText":"<h1>⇩⇩⇩</h1>",
+  "carouselImgTwo":"https://image.tmdb.org/t/p/w1280/cqeAgBh9qIQ99stHqSwhrRTezvE.jpg",
+  "carouselImgTwoText":"<h1>Edit text for Image Two..</h1><p>Here you can edit the text for the current image.<p>",
+  "carouselImgThree":"http://museperk.com/wp-content/uploads/2015/04/vader68sml.jpg",
+  "carouselImgThreeText":"<h1>Edit text for Image three..</h1><p>Here you can edit the text for the current image.<p>",
+  "bottomLeftObject":"<img src='./static/images/pic.png'/><h2>Orienteering</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.</p>",
+  "bottomMiddleObject":"<img src='./static/images/map.png'/><h2>Orienteering</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.</p>",
+  "bottomRightObject":"<img src='./static/images/backpack.png'/><h2>Orienteering</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.</p>"
+
 }

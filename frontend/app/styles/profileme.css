@@ -8,6 +8,12 @@ body {
 .ta-hidden-input{
     display: none;
 }
+ul, ol {
+    list-style: none;
+}
+#accordion1 li.panel{
+    margin-bottom: 0px;
+}
 
 @media (max-width: 1051px) {
     svg {
@@ -90,7 +96,7 @@ footer {
 }
 
 .text-banner {
-    text-align: center;
+
     margin: 80px 20px;
 }
 

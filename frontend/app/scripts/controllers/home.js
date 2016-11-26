@@ -8,6 +8,7 @@ angular.module('profileMeApp')
            // var x = 'Default Header';
             var scopeId;
             var username;
+
             customUrlFactory.get({id: $stateParams.id})
                 .$promise.then(
                 function (response) {
@@ -15,7 +16,7 @@ angular.module('profileMeApp')
                     scopeId = response._id;
                     username = response.username;
                     console.log(scopeId);
-                console.log(response);
+                    console.log(response);
                     $scope.dataFromDB = response;
                     //$scope.contentMainText = $scope.dataFromDB.mainContent;
                     //$scope.middleBackgroundImage = $scope.dataFromDB.mainBackground;
@@ -36,9 +37,14 @@ angular.module('profileMeApp')
             );
 
             $scope.editMain = false;
+            $scope.carouselImagesShow = false;
             $scope.middleBackgroundShow = false;
             $scope.middleBackgroundTextLeftShow = false;
             $scope.middleBackgroundTextRightShow = false;
+            $scope.bottomLeftObjectShow = false;
+            $scope.bottomMiddleObjectShow = false;
+            $scope.bottomRightObjectShow = false;
+
 
             $scope.editMainContent = function () {
                 $scope.editMain = !$scope.editMain;
@@ -46,6 +52,10 @@ angular.module('profileMeApp')
 
             $scope.editMiddleBackground = function () {
                 $scope.middleBackgroundShow = !$scope.middleBackgroundShow;
+            };
+
+            $scope.editCarouselImages = function(){
+                $scope.carouselImagesShow = !$scope.carouselImagesShow;
             };
 
             $scope.editMiddleBackgroundTextLeft = function () {
@@ -56,6 +66,15 @@ angular.module('profileMeApp')
                 $scope.middleBackgroundTextRightShow = !$scope.middleBackgroundTextRightShow;
             };
 
+            $scope.editBottomLeftObjectShow = function(){
+                $scope.bottomLeftObjectShow = !$scope.bottomLeftObjectShow;
+            };
+            $scope.editBottomMiddleObjectShow = function(){
+                $scope.bottomMiddleObjectShow = !$scope.bottomMiddleObjectShow;
+            };
+            $scope.editBottomRightObjectShow = function(){
+                $scope.bottomRightObjectShow = !$scope.bottomRightObjectShow;
+            };
 
 
 
@@ -75,13 +94,20 @@ angular.module('profileMeApp')
 
             $scope.saveSettings = function () {
 
-
-
                 $http.put('http://localhost:3000/custom/'+scopeId, {
                     contentMain: $scope.dataFromDB.contentMain,
                     mainBackground: $scope.dataFromDB.mainBackground,
                     mainBackgroundTextLeft: $scope.dataFromDB.mainBackgroundTextLeft,
-                    mainBackgroundTextRight: $scope.dataFromDB.mainBackgroundTextRight
+                    mainBackgroundTextRight: $scope.dataFromDB.mainBackgroundTextRight,
+                    carouselImgOne:$scope.dataFromDB.carouselImgOne,
+                    carouselImgOneText:$scope.dataFromDB.carouselImgOneText,
+                    carouselImgTwo:$scope.dataFromDB.carouselImgTwo,
+                    carouselImgTwoText:$scope.dataFromDB.carouselImgTwoText,
+                    carouselImgThree:$scope.dataFromDB.carouselImgThree,
+                    carouselImgThreeText:$scope.dataFromDB.carouselImgThreeText,
+                    bottomLeftObject: $scope.dataFromDB.bottomLeftObject,
+                    bottomMiddleObject: $scope.dataFromDB.bottomMiddleObject,
+                    bottomRightObject:$scope.dataFromDB.bottomRightObject
                 }, {
                     'Content-Type': 'application/json;'
                 })

@@ -11,6 +11,15 @@ var UserSettingsSchema = new Schema({
     mainBackground: String,
     mainBackgroundTextLeft:String,
     mainBackgroundTextRight:String,
+    carouselImgOne:String,
+    carouselImgOneText:String,
+    carouselImgTwo:String,
+    carouselImgTwoText:String,
+    carouselImgThree:String,
+    carouselImgThreeText:String,
+    bottomLeftObject:String,
+    bottomMiddleObject: String,
+    bottomRightObject:String,
     postedBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'

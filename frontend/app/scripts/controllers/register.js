@@ -22,7 +22,16 @@ angular.module('profileMeApp')
                             contentMain: $scope.dataFromJson.contentMain,
                             mainBackground: $scope.dataFromJson.mainBackground,
                             mainBackgroundTextLeft: $scope.dataFromJson.mainBackgroundTextLeft,
-                            mainBackgroundTextRight: $scope.dataFromJson.mainBackgroundTextRight
+                            mainBackgroundTextRight: $scope.dataFromJson.mainBackgroundTextRight,
+                            carouselImgOne:$scope.dataFromJson.carouselImgOne,
+                            carouselImgOneText:$scope.dataFromJson.carouselImgOneText,
+                            carouselImgTwo:$scope.dataFromJson.carouselImgTwo,
+                            carouselImgTwoText:$scope.dataFromJson.carouselImgTwoText,
+                            carouselImgThree:$scope.dataFromJson.carouselImgThree,
+                            carouselImgThreeText:$scope.dataFromJson.carouselImgThreeText,
+                            bottomLeftObject: $scope.dataFromJson.bottomLeftObject,
+                            bottomMiddleObject: $scope.dataFromJson.bottomMiddleObject,
+                            bottomRightObject:$scope.dataFromJson.bottomRightObject
                         }, {
                             'Content-Type': 'application/json;'
                         })

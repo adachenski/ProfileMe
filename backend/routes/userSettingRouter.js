@@ -59,7 +59,16 @@ userSettingsRouter.route('/')
             mainBackground: req.body.mainBackground,
             mainBackgroundTextLeft:req.body.mainBackgroundTextLeft,
             mainBackgroundTextRight:req.body.mainBackgroundTextRight,
-            postedBy: req.decoded.sub
+            postedBy: req.decoded.sub,
+            carouselImgOne:req.body.carouselImgOne,
+            carouselImgOneText:req.body.carouselImgOneText,
+            carouselImgTwo:req.body.carouselImgTwo,
+            carouselImgTwoText:req.body.carouselImgTwoText,
+            carouselImgThree:req.body.carouselImgThree,
+            carouselImgThreeText:req.body.carouselImgThreeText,
+            bottomLeftObject: req.body.bottomLeftObject,
+            bottomMiddleObject: req.body.bottomMiddleObject,
+            bottomRightObject:req.body.bottomRightObject
         });
         fav.save(function (err, fav) {
             if (err) throw err;
