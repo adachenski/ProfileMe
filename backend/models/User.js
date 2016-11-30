@@ -13,8 +13,6 @@ var UserSchema = mongoose.Schema({
 
 });
 
-
-
 UserSchema.methods.toJSON = function(){
 
     var user = this.toObject();

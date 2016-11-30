@@ -11,6 +11,7 @@ angular.module('profileMeApp')
             auth.register($scope.email, $scope.password)
 
                 .success(function (res) {
+                    console.log(res);
                     alert('success', 'Successful register.','Welcome, '+res.user.email+'!');
 
                     HomeModelFactory.fetch().then(function(data) {
@@ -31,7 +32,8 @@ angular.module('profileMeApp')
                             carouselImgThreeText:$scope.dataFromJson.carouselImgThreeText,
                             bottomLeftObject: $scope.dataFromJson.bottomLeftObject,
                             bottomMiddleObject: $scope.dataFromJson.bottomMiddleObject,
-                            bottomRightObject:$scope.dataFromJson.bottomRightObject
+                            bottomRightObject:$scope.dataFromJson.bottomRightObject,
+                            postedBy:res.user._id
                         }, {
                             'Content-Type': 'application/json;'
                         })

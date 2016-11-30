@@ -1,9 +1,4 @@
 <style>
-
-    .button-group {
-        padding: 10px;
-    }
-
     .center-item {
         text-align: center;
     }
@@ -12,208 +7,65 @@
         background-color: #00405f;
         width: 100%;
     }
+    .btn{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
 </style>
-<div class="container-fluid" ng-cloak>
 
-    <div class="row block">
-        <div id="carousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel" data-slide-to="1"></li>
-                <li data-target="#carousel" data-slide-to="2"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img ng-src="{{dataFromDB.carouselImgOne || './static/images/no-image-available.jpg'}}"
-                         alt="No data">
+<div>
 
-                    <div class="carousel-caption">
-                        <div ng-bind-html="dataFromDB.carouselImgOneText"></div>
-                    </div>
-
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
                 </div>
-                <div class="item">
-                    <img ng-src="{{dataFromDB.carouselImgTwo || './static/images/no-image-available.jpg'}}"
-                         alt="...">
-
-                    <div class="carousel-caption">
-                        <div ng-bind-html="dataFromDB.carouselImgTwoText"></div>
+                <div class="modal-body">
+                    <div class="rol">
+                        <div class="col-xs-6">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Yes</button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button type="button" class="btn btn-warning" data-dismiss="modal">No</button>
+                        </div>
                     </div>
                 </div>
-
-                <div class="item">
-                    <img ng-src="{{dataFromDB.carouselImgThree || './static/images/no-image-available.jpg'}}"
-                         alt="...">
-
-                    <div class="carousel-caption">
-                        <div ng-bind-html="dataFromDB.carouselImgThreeText"></div>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
-
             </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </div>
+</div>
 
-    <section>
-        <div class="row text-banner">
+<div class="container-fluid">
 
-            <div class="col-sm-8" ng-hide="carouselImagesShow">
-                <h2>Edit the images and text above
-                    <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-                </h2>
-            </div>
-
-            <div class="col-sm-10" ng-show="carouselImagesShow" >
-
-                <div class="row">
-                    <div class="col-sm-12">
-                        <ul class="nav nav-stacked" id="accordion1">
-
-                            <li class="panel">
-                                <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
-                                    <h4>
-                                        <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                                        Image One Settings
-                                    </h4>
-                                </a>
-
-                                <ul id="firstLink" class="collapse">
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-
-                                                <h4>Copy and Paste URL for img One</h4>
-                                                <input class="form-control" style="width: 100%" type="text"
-                                                       ng-model="dataFromDB.carouselImgOne" value="true"/>
-
-                                            </div>
-
-                                            <div class="col-sm-12">
-                                                <h4>Edit Text for Image One</h4>
-
-                                                <div class="form-control text-area" text-angular
-                                                     ng-model="dataFromDB.carouselImgOneText">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                </ul>
-
-                            </li>
-                            <li class="panel">
-                                <a data-toggle="collapse" data-parent="#accordion1" href="#secondLink">
-                                    <h4>
-                                        <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                                        Image Two Settings
-                                    </h4>
-                                </a>
-
-                                <ul id="secondLink" class="collapse">
-                                    <li>
-                                        <div class="row">
-
-                                            <div class="col-sm-12">
-
-                                                <h4>Copy and Paste URL for img Two</h4>
-                                                <input class="form-control" type="text"
-                                                       ng-model="dataFromDB.carouselImgTwo"/>
-                                            </div>
-                                            <div class="col-sm-12">
-
-
-                                                <h4>Edit Text for Image Two</h4>
-
-                                                <div class="form-control text-area"
-                                                     text-angular ng-model="dataFromDB.carouselImgTwoText">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="panel">
-                                <a data-toggle="collapse" data-parent="#accordion1" href="#thirdLink">
-                                    <h4>
-                                        <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                                        Image Three Settings
-                                    </h4>
-                                </a>
-
-                                <ul id="thirdLink" class="collapse">
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-
-                                                <h4>Copy and Paste URL for img Three</h4>
-                                                <input class="form-control" type="text"
-                                                       ng-model="dataFromDB.carouselImgThree"/>
-                                            </div>
-                                            <div class="col-sm-12">
-
-
-                                                <h4>Edit Text for Image Three</h4>
-
-                                                <div class="form-control text-area" text-angular
-                                                     ng-model="dataFromDB.carouselImgThreeText">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-2">
-                <button ng-hide="carouselImagesShow" ng-click="editCarouselImages()" class="btn btn-block btn-warning">
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    Edit Images
-                </button>
-                <button ng-show="carouselImagesShow" ng-click="editCarouselImages()" class="btn btn-block btn-success">
-                    <i class="fa fa-floppy-o" aria-hidden="true"></i>  Save Images
-                </button>
-            </div>
-
-        </div>
-    </section>
-
+    <div ng-include="'views/carousel.html'"></div>
 
     <section id="userDetails">
         <div class="row text-banner">
 
-            <div class="col-sm-8" ng-hide="editMain">
+            <div class="col-sm-8 shake" ng-hide="editMain">
                 <div ng-bind-html="dataFromDB.contentMain"></div>
             </div>
 
-            <div class="col-sm-10" ng-show="editMain">
+            <div class="col-sm-10 shake" ng-show="editMain">
                 <div class="form-control text-area" text-angular ng-model="dataFromDB.contentMain"></div>
             </div>
 
             <div class="col-sm-2">
-                <button ng-hide="editMain" ng-click="editMainContent()" class="btn btn-block btn-warning">
+                <button ng-hide="editMain" ng-click="editMain = !editMain" class="btn btn-block btn-warning">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Main
                 </button>
-                <button ng-show="editMain" ng-click="editMainContent()" class="btn btn-block btn-success">
+                <button ng-show="editMain" ng-click="editMain = !editMain" class="btn btn-block btn-success">
+
                     <i class="fa fa-floppy-o" aria-hidden="true"></i> Save Main
                 </button>
             </div>
-
         </div>
     </section>
 
@@ -226,27 +78,30 @@
                 <div class="activity-element col-md-4" style="color: #ffffff">
 
                     <div>
-                        <button ng-hide="middleBackgroundTextLeftShow" ng-click="editMiddleBackgroundTextLeft()"
+                        <button ng-hide="middleBackgroundTextLeftShow"
+                                ng-click="middleBackgroundTextLeftShow = !middleBackgroundTextLeftShow"
                                 class="btn btn-warning">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             Edit
                         </button>
-                        <button ng-show="middleBackgroundTextLeftShow" ng-click="editMiddleBackgroundTextLeft()"
+                        <button ng-show="middleBackgroundTextLeftShow"
+                                ng-click="middleBackgroundTextLeftShow = !middleBackgroundTextLeftShow"
                                 class="btn btn-success">
                             <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
                         </button>
                     </div>
 
-                    <div ng-hide="middleBackgroundTextLeftShow">
+                    <div class="shake" ng-hide="middleBackgroundTextLeftShow">
 
                         <div ng-bind-html="dataFromDB.mainBackgroundTextLeft"></div>
 
                     </div>
 
 
-                    <div ng-show="middleBackgroundTextLeftShow">
+                    <div class="shake" ng-show="middleBackgroundTextLeftShow">
 
-                        <label for=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Content</label>
+                        <label for=""><i class="fa fa-pencil-square-o" aria-hidden="true">
+                        </i> Edit Content</label>
 
                         <div class="form-control text-area" text-angular ng-model="dataFromDB.mainBackgroundTextLeft">
                         </div>
@@ -255,38 +110,47 @@
                 </div>
 
                 <div class="activity-element col-md-4">
-                    <button ng-hide="middleBackgroundShow" ng-click="editMiddleBackground()" class="btn btn-warning">
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>  Edit Background
+
+                    <button ng-hide="middleBackgroundShow" ng-click="middleBackgroundShow = !middleBackgroundShow"
+                            class="btn btn-warning">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Background
                     </button>
-                    <button ng-show="middleBackgroundShow" ng-click="editMiddleBackground()" class="btn btn-success">
+                    <button ng-show="middleBackgroundShow" ng-click="middleBackgroundShow =!middleBackgroundShow"
+                            class="btn btn-success">
                         <i class="fa fa-floppy-o" aria-hidden="true"></i>
                         Save Background
                     </button>
-                    <div ng-show="middleBackgroundShow">
-                        <h2 style="color: #ffffff">Copy and Paste img url</h2>
+
+                    <div class="shake" ng-show="middleBackgroundShow">
+                        <label style="color: #ffffff">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            Copy and Paste img url
+                        </label>
                         <input class="form-control" type="text" ng-model="dataFromDB.mainBackground"/>
                     </div>
 
                 </div>
 
                 <div class="activity-element col-md-4" style="color:#ffffff">
+
                     <div>
                         <button ng-hide="middleBackgroundTextRightShow" class="btn  btn-warning"
-                                ng-click="editMiddleBackgroundTextRight()">
+                                ng-click="middleBackgroundTextRightShow = !middleBackgroundTextRightShow">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             Edit
                         </button>
                         <button ng-show="middleBackgroundTextRightShow" class="btn  btn-success"
-                                ng-click="editMiddleBackgroundTextRight()">
+                                ng-click="middleBackgroundTextRightShow = !middleBackgroundTextRightShow">
                             <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
                         </button>
                     </div>
-                    <div ng-hide="middleBackgroundTextRightShow">
+
+                    <div class="shake" ng-hide="middleBackgroundTextRightShow">
                         <div ng-bind-html="dataFromDB.mainBackgroundTextRight"></div>
                     </div>
 
 
-                    <div ng-show="middleBackgroundTextRightShow">
+                    <div class="shake" ng-show="middleBackgroundTextRightShow">
                         <label for=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Content</label>
 
                         <div class="form-control text-area" text-angular ng-model="dataFromDB.mainBackgroundTextRight">
@@ -302,57 +166,97 @@
 
     <section class="row activity-section" id="activities">
         <div class="activity-element col-md-4">
+
             <div>
-                <button ng-hide="bottomLeftObjectShow" class="btn  btn-warning" ng-click="editBottomLeftObjectShow()">
+                <button ng-hide="bottomLeftObjectShow" class="btn  btn-warning button-group"
+                        ng-click="bottomLeftObjectShow = !bottomLeftObjectShow">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
                 </button>
-                <button ng-show="bottomLeftObjectShow" class="btn  btn-success" ng-click="editBottomLeftObjectShow()">
+                <button ng-show="bottomLeftObjectShow" class="btn  btn-success button-group"
+                        ng-click="bottomLeftObjectShow = !bottomLeftObjectShow">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>
                     Save
                 </button>
             </div>
-            <div ng-show="bottomLeftObjectShow" class="form-control text-area" text-angular
-                 ng-model="dataFromDB.bottomLeftObject">
+
+            <div class="shake" ng-hide="bottomLeftObjectShow" ng-bind-html="dataFromDB.bottomLeftObject"></div>
+            <div class="shake" ng-show="bottomLeftObjectShow">
+                <label for=""><i class="fa fa-pencil-square-o" aria-hidden="true">
+                </i> Edit Content</label>
+
+                <div class="form-control text-area" text-angular
+                     ng-model="dataFromDB.bottomLeftObject">
+                </div>
+
             </div>
-            <div ng-hide="bottomLeftObjectShow" ng-bind-html="dataFromDB.bottomLeftObject"></div>
+
         </div>
         <div class="activity-element col-md-4">
             <div>
-                <button ng-hide="bottomMiddleObjectShow" class="btn  btn-warning" ng-click="editBottomMiddleObjectShow()">
+                <button ng-hide="bottomMiddleObjectShow" class="btn  btn-warning button-group"
+                        ng-click="bottomMiddleObjectShow = !bottomMiddleObjectShow">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
                 </button>
-                <button ng-show="bottomMiddleObjectShow" class="btn  btn-success" ng-click="editBottomMiddleObjectShow()">
+                <button ng-show="bottomMiddleObjectShow" class="btn  btn-success button-group"
+                        ng-click="bottomMiddleObjectShow = !bottomMiddleObjectShow">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>
                     Save
                 </button>
             </div>
-            <div ng-show="bottomMiddleObjectShow" class="form-control text-area" text-angular
-                 ng-model="dataFromDB.bottomMiddleObject">
+
+            <div class="shake" ng-show="bottomMiddleObjectShow">
+                <label for=""><i class="fa fa-pencil-square-o" aria-hidden="true">
+                </i> Edit Content</label>
+
+                <div class="form-control text-area" text-angular
+                     ng-model="dataFromDB.bottomMiddleObject">
+                </div>
             </div>
-            <div ng-hide="bottomMiddleObjectShow" ng-bind-html="dataFromDB.bottomMiddleObject"></div>
+            <div class="shake" ng-hide="bottomMiddleObjectShow" ng-bind-html="dataFromDB.bottomMiddleObject"></div>
         </div>
 
-        <div class="activity-element col-md-4">
-            <div>
-                <button ng-hide="bottomRightObjectShow" class="btn  btn-warning" ng-click="editBottomRightObjectShow()">
+        <div class="activity-element col-md-4 move-down">
+            <div class="button-group">
+                <button ng-hide="bottomRightObjectShow" class="btn  btn-warning static-btn"
+                        ng-click="bottomRightObjectShow =!bottomRightObjectShow">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
                 </button>
-                <button ng-show="bottomRightObjectShow" class="btn  btn-success" ng-click="editBottomRightObjectShow()">
+                <button ng-show="bottomRightObjectShow" class="btn  btn-success static-btn"
+                        ng-click="bottomRightObjectShow = !bottomRightObjectShow">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
                 </button>
             </div>
-            <div ng-show="bottomRightObjectShow" class="form-control text-area" text-angular
-                 ng-model="dataFromDB.bottomRightObject">
+
+            <div class="shake" ng-show="bottomRightObjectShow">
+                <label for=""><i class="fa fa-pencil-square-o" aria-hidden="true">
+                </i> Edit Content</label>
+
+                <div class="form-control text-area" text-angular
+                     ng-model="dataFromDB.bottomRightObject">
+                </div>
             </div>
-            <div ng-hide="bottomRightObjectShow" ng-bind-html="dataFromDB.bottomRightObject"></div>
+
+            <div class="shake" ng-hide="bottomRightObjectShow" ng-bind-html="dataFromDB.bottomRightObject"></div>
         </div>
     </section>
     <div class="center-item">
-        <button style="padding-top: 5px" ng-click="saveSettings()" class="btn btn-lg btn-success" type="submit">
-            <i class="fa fa-floppy-o" aria-hidden="true"></i> Save settings
+        <button style="padding-top: 5px" ng-click="saveSettings()" class="btn btn-lg btn-primary button-group"
+                type="submit">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i> Save all settings
         </button>
     </div>
+
 </div>
+
+<div>
+    <svg viewBox="0 -20 700 110" width="100%" height="250" preserveAspectRatio="none">
+        <path transform="translate(0, -15)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700"
+              fill="#CEB964"/>
+        <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#00273F"/>
+
+    </svg>
+</div>
+
 
 <script>
     $(window).stellar();

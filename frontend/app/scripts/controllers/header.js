@@ -13,7 +13,7 @@ angular.module('profileMeApp')
                 $anchorScroll();
             };
 
-
+            $scope.isIndented = false;
             $scope.isAuthenticated = authToken.isAuthenticated;
             console.log($scope.isAuthenticated() );
 

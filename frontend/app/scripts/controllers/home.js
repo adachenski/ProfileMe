@@ -3,9 +3,8 @@
  */
 
 angular.module('profileMeApp')
-    .controller('HomeController', ['$scope', 'customUrlFactory', '$http', '$stateParams','$state','HomeModelFactory',
-        function ($scope, customUrlFactory, $http, $stateParams,$state,HomeModelFactory) {
-           // var x = 'Default Header';
+    .controller('HomeController', ['$scope', 'customUrlFactory', '$http', '$stateParams', '$state', 'HomeModelFactory', '$log',
+        function ($scope, customUrlFactory, $http, $stateParams, $state, HomeModelFactory, $log) {
             var scopeId;
             var username;
 
@@ -20,17 +19,13 @@ angular.module('profileMeApp')
                     $scope.dataFromDB = response;
                     //$scope.contentMainText = $scope.dataFromDB.mainContent;
                     //$scope.middleBackgroundImage = $scope.dataFromDB.mainBackground;
-
-
                 },
                 function (response) {
-                    HomeModelFactory.fetch().then(function(data) {
+                    HomeModelFactory.fetch().then(function (data) {
                         console.log(data);
                         $scope.dataFromDB = data;
-
-
-                       //$scope.dataFromDB.contentMain = $scope.dataFromFile.contentMain;
-                       //$scope.middleBackgroundImage = $scope.dataFromFile.middleBackgroundImage;
+                        //$scope.dataFromDB.contentMain = $scope.dataFromFile.contentMain;
+                        //$scope.middleBackgroundImage = $scope.dataFromFile.middleBackgroundImage;
                     });
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
@@ -46,91 +41,38 @@ angular.module('profileMeApp')
             $scope.bottomRightObjectShow = false;
 
 
-            $scope.editMainContent = function () {
-                $scope.editMain = !$scope.editMain;
+            $scope.saveSettings1 = function (object) {
+                customUrlFactory.update({
+                    id: scopeId
+                }, {contentMain: object});
             };
-
-            $scope.editMiddleBackground = function () {
-                $scope.middleBackgroundShow = !$scope.middleBackgroundShow;
-            };
-
-            $scope.editCarouselImages = function(){
-                $scope.carouselImagesShow = !$scope.carouselImagesShow;
-            };
-
-            $scope.editMiddleBackgroundTextLeft = function () {
-                $scope.middleBackgroundTextLeftShow = !$scope.middleBackgroundTextLeftShow;
-            };
-
-            $scope.editMiddleBackgroundTextRight = function () {
-                $scope.middleBackgroundTextRightShow = !$scope.middleBackgroundTextRightShow;
-            };
-
-            $scope.editBottomLeftObjectShow = function(){
-                $scope.bottomLeftObjectShow = !$scope.bottomLeftObjectShow;
-            };
-            $scope.editBottomMiddleObjectShow = function(){
-                $scope.bottomMiddleObjectShow = !$scope.bottomMiddleObjectShow;
-            };
-            $scope.editBottomRightObjectShow = function(){
-                $scope.bottomRightObjectShow = !$scope.bottomRightObjectShow;
-            };
-
-
-
-            // $scope.saveSettings = customUrlFactory.post({
-            //     id: $stateParams.id
-            // })
-            //     .$promise.then(
-            //     function (response) {
-            //         console.log($stateParams.id);
-            //         $scope.customUrl = response;
-            //         $scope.showDish = true;
-            //     },
-            //     function (response) {
-            //         $scope.message = "Error: " + response.status + " " + response.statusText;
-            //     }
-            // );
 
             $scope.saveSettings = function () {
 
-                $http.put('http://localhost:3000/custom/'+scopeId, {
+                customUrlFactory.update({id: scopeId}, {
                     contentMain: $scope.dataFromDB.contentMain,
                     mainBackground: $scope.dataFromDB.mainBackground,
                     mainBackgroundTextLeft: $scope.dataFromDB.mainBackgroundTextLeft,
                     mainBackgroundTextRight: $scope.dataFromDB.mainBackgroundTextRight,
-                    carouselImgOne:$scope.dataFromDB.carouselImgOne,
-                    carouselImgOneText:$scope.dataFromDB.carouselImgOneText,
-                    carouselImgTwo:$scope.dataFromDB.carouselImgTwo,
-                    carouselImgTwoText:$scope.dataFromDB.carouselImgTwoText,
-                    carouselImgThree:$scope.dataFromDB.carouselImgThree,
-                    carouselImgThreeText:$scope.dataFromDB.carouselImgThreeText,
+                    carouselImgOne: $scope.dataFromDB.carouselImgOne,
+                    carouselImgOneText: $scope.dataFromDB.carouselImgOneText,
+                    carouselImgTwo: $scope.dataFromDB.carouselImgTwo,
+                    carouselImgTwoText: $scope.dataFromDB.carouselImgTwoText,
+                    carouselImgThree: $scope.dataFromDB.carouselImgThree,
+                    carouselImgThreeText: $scope.dataFromDB.carouselImgThreeText,
                     bottomLeftObject: $scope.dataFromDB.bottomLeftObject,
                     bottomMiddleObject: $scope.dataFromDB.bottomMiddleObject,
-                    bottomRightObject:$scope.dataFromDB.bottomRightObject
-                }, {
-                    'Content-Type': 'application/json;'
-                })
-                    .then(
-                    function (response) {
-                        console.log('Succsess from home PUT:')
-                        console.log(response);
-                    },
-                    function (response) {
-                        console.log('Error from home PUT:')
-                        console.log(response);
+                    bottomRightObject: $scope.dataFromDB.bottomRightObject
+                }, function (err, numberAffected, rawResponse) {
+                    if (err) {
+                        $log.debug(err);
+                        //throw 'Error pushing data to server: '+err;
                     }
-                );
-                $state.go('app.custom',{id:scopeId});
-            }
-
-
-            // $scope.saveSettings = function(){
-//
-            //     customUrlFactory.create(
-            //         mainContent:$scope.contentMain,
-            //         mainBackground: $scope.middleBackgroundImage
-            //     })
-            // }
-
+                    console.log('before');
+                    console.log(numberAffected);
+                    console.log(rawResponse);
+                    console.log('before');
+                });
+                $state.go('app.custom', {id: scopeId});
+            };
         }]);

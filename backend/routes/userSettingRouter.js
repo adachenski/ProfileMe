@@ -51,47 +51,46 @@ userSettingsRouter.route('/')
 //            res.json(userSettings);
 //        })
 //})
-    .post(Verify.verifyUser, function (req, res, next) {
+ //  .post(Verify.verifyUser, function (req, res, next) {
 
-        var fav = new UserSettings({
-            username:req.body.username,
-            contentMain: req.body.contentMain,
-            mainBackground: req.body.mainBackground,
-            mainBackgroundTextLeft:req.body.mainBackgroundTextLeft,
-            mainBackgroundTextRight:req.body.mainBackgroundTextRight,
-            postedBy: req.decoded.sub,
-            carouselImgOne:req.body.carouselImgOne,
-            carouselImgOneText:req.body.carouselImgOneText,
-            carouselImgTwo:req.body.carouselImgTwo,
-            carouselImgTwoText:req.body.carouselImgTwoText,
-            carouselImgThree:req.body.carouselImgThree,
-            carouselImgThreeText:req.body.carouselImgThreeText,
-            bottomLeftObject: req.body.bottomLeftObject,
-            bottomMiddleObject: req.body.bottomMiddleObject,
-            bottomRightObject:req.body.bottomRightObject
-        });
-        fav.save(function (err, fav) {
-            if (err) throw err;
+ //      var fav = new UserSettings({
+ //          username:req.body.username,
+ //          contentMain: req.body.contentMain,
+ //          mainBackground: req.body.mainBackground,
+ //          mainBackgroundTextLeft:req.body.mainBackgroundTextLeft,
+ //          mainBackgroundTextRight:req.body.mainBackgroundTextRight,
+ //          postedBy: req.decoded.sub,
+ //          carouselImgOne:req.body.carouselImgOne,
+ //          carouselImgOneText:req.body.carouselImgOneText,
+ //          carouselImgTwo:req.body.carouselImgTwo,
+ //          carouselImgTwoText:req.body.carouselImgTwoText,
+ //          carouselImgThree:req.body.carouselImgThree,
+ //          carouselImgThreeText:req.body.carouselImgThreeText,
+ //          bottomLeftObject: req.body.bottomLeftObject,
+ //          bottomMiddleObject: req.body.bottomMiddleObject,
+ //          bottomRightObject:req.body.bottomRightObject
+ //      });
+ //      fav.save(function (err, fav) {
+ //          if (err) throw err;
 
-            res.json(fav);
-        });
+ //          res.json(fav);
+ //      });
 
-    })
+ //  })
 
-    //.post(Verify.verifyUser,function (req, res, next) {
-//
-    //   UserSettings.create(req.body, function (err, userSettings) {
-    //       if (err) {
-    //           console.log('Cant create userSettings ' + err);
-    //       }
-    //       console.log(userSettings);
-    //       var id = userSettings._id;
-    //       var postedBy= req.decoded.sub;
-    //       //var id = req.sub;
-    //       res.writeHead(200, {'Content-Type': 'text/plain'});
-    //       res.end('UserSettings added with id: ' + id);
-    //   })
-    //})
+.post(Verify.verifyUser,function (req, res, next) {
+
+   UserSettings.create(req.body, function (err, userSettings) {
+       if (err) {
+           console.log('Cant create userSettings ' + err);
+       }
+       console.log(userSettings);
+       var id = userSettings._id;
+       //var id = req.sub;
+       res.writeHead(200, {'Content-Type': 'text/plain'});
+       res.end('UserSettings added with id: ' + id);
+   });
+})
     .delete(function (req, res, next) {
         //res.end('All dishes will be deleted');
         UserSettings.remove({}, function (err, response) {
@@ -113,7 +112,7 @@ userSettingsRouter.route('/:userSettingsId')
             res.json(userSettings);
         });
     })
-    .put(function (req, res, next) {
+    .put(Verify.verifyUser,function (req, res, next) {
         UserSettings.findByIdAndUpdate(req.params.userSettingsId, {$set: req.body}, {new: true},
             function (err, userSettings) {
                 if (err) {
