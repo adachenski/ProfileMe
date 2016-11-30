@@ -5,7 +5,13 @@ html, body {
     position: relative;
     font-family: 'Open Sans', sans-serif;
 }
-
+.container-fluid {
+    height: 100%;
+    overflow-y: hidden; /* don't show content that exceeds my height */
+}
+div[ng-view]{
+    height: 100%;
+}
 .form-control{
     height: auto;
 }
