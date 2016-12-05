@@ -20,6 +20,8 @@ var UserSettingsSchema = new Schema({
     bottomLeftObject:String,
     bottomMiddleObject: String,
     bottomRightObject:String,
+    viewOne:Boolean,
+    viewTwo:Boolean,
     postedBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'

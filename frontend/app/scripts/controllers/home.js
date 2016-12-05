@@ -3,10 +3,12 @@
  */
 
 angular.module('profileMeApp')
-    .controller('HomeController', ['$scope', 'customUrlFactory', '$http', '$stateParams', '$state', 'HomeModelFactory', '$log',
-        function ($scope, customUrlFactory, $http, $stateParams, $state, HomeModelFactory, $log) {
+    .controller('HomeController', ['$scope', 'customUrlFactory', '$http', '$stateParams',
+        '$state', 'HomeModelFactory', '$log','UserSettings',
+        function ($scope, customUrlFactory, $http, $stateParams, $state, HomeModelFactory, $log,UserSettings) {
             var scopeId;
             var username;
+            $scope.UserSetting = UserSettings.data;
 
             customUrlFactory.get({id: $stateParams.id})
                 .$promise.then(
@@ -30,6 +32,9 @@ angular.module('profileMeApp')
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
             );
+
+           //$scope.UserSetting.templateOne = false;
+           //$scope.UserSetting.templateTwo = false;
 
             $scope.editMain = false;
             $scope.carouselImagesShow = false;
@@ -62,7 +67,9 @@ angular.module('profileMeApp')
                     carouselImgThreeText: $scope.dataFromDB.carouselImgThreeText,
                     bottomLeftObject: $scope.dataFromDB.bottomLeftObject,
                     bottomMiddleObject: $scope.dataFromDB.bottomMiddleObject,
-                    bottomRightObject: $scope.dataFromDB.bottomRightObject
+                    bottomRightObject: $scope.dataFromDB.bottomRightObject,
+                    viewOne:$scope.dataFromDB.viewOne,
+                    viewTwo:$scope.dataFromDB.viewTwo
                 }, function (err, numberAffected, rawResponse) {
                     if (err) {
                         $log.debug(err);

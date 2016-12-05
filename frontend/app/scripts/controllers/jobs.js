@@ -3,26 +3,27 @@
  */
 
 angular.module('profileMeApp')
-    .controller('JobsController', ['$scope', '$http', '$stateParams', '$state', 'API_URL', 'alert', 'customUrlFactory',
-        function ($scope, $http, $stateParams, $state, API_URL, alert, customUrlFactory) {
+    .controller('JobsController', ['$scope', '$http', '$stateParams', '$state', 'API_URL', 'alert', 'customUrlFactory', 'UserSettings',
+        function ($scope, $http, $stateParams, $state, API_URL, alert, customUrlFactory, UserSettings) {
             var scopeId = $stateParams.id;
-            $http.get(API_URL + 'jobs')
-                .success(function (jobs) {
+            $scope.UserSetting = UserSettings.data;
 
-                    $scope.jobs = jobs;
-                })
-                .error(function (err) {
-                    alert('warning', 'Unable to get Jobs', err.message);
-                });
+            // $http.get(API_URL + 'jobs')
+            //     .success(function (jobs) {
 
-            console.log(scopeId);
+            //         $scope.jobs = jobs;
+            //     })
+            //     .error(function (err) {
+            //         alert('warning', 'Unable to get Jobs', err.message);
+            //     });
+
+            // console.log(scopeId);
 
 
             customUrlFactory.get({})
                 .$promise.then(
                 function (response) {
                     scopeId = response._id;
-                    console.log(scopeId);
 
                     $scope.jobsContent = response;
 
@@ -33,24 +34,39 @@ angular.module('profileMeApp')
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
             );
+            $scope.submitView = function () {
 
-            $scope.submitSettings = function () {
+                customUrlFactory.update({id: scopeId}, {
+                    viewOne: $scope.UserSetting.templateOne,
+                    viewTwo: $scope.UserSetting.templateTwo
+
+                }, function (err, numberAffected, rawResponse) {
+                    if (err) {
+                        //throw 'Error pushing data to server: '+err;
+                    }
+                    console.log('before');
+                    // console.log(numberAffected);
+                    alert('success', 'Awesome! \n',' Successfully Changed View. ');
+                    console.log(rawResponse);
+                    console.log('before');
+                });
+            };
+
+            $scope.submitUsername = function () {
 
 
-                $http.patch('http://localhost:3000/custom/' + scopeId, {
+                customUrlFactory.update({id: scopeId}, {
                     username: $scope.username
 
-                }, {
-                    'Content-Type': 'application/json;'
-                })
-                    .then(
-                    function (response) {
-                        console.log(response);
-                    },
-                    function (response) {
-                        // failure callback
+                }, function (err, numberAffected, rawResponse) {
+                    if (err) {
+                        //throw 'Error pushing data to server: '+err;
                     }
-                );
+                    console.log('before');
+                    // console.log(numberAffected);
+                    console.log(rawResponse);
+                    console.log('before');
+                });
                 $state.go('app.custom', {id: scopeId});
             }
         }]);

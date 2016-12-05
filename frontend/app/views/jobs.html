@@ -5,12 +5,19 @@
     <h1>Jobs</h1>
     <h1>Jobs</h1>
 
-    <div ng-repeat="job in jobs">{{job}}</div>
-    <div>{{jobsContent}}</div>
+    <!--<div ng-repeat="job in jobs">{{job}}</div>-->
+    <!--<div>{{jobsContent}}</div>-->
+
+    <div>
+        <h1>PicK up a template</h1>
+
+        <input ng-click="UserSetting.templateOne= true; UserSetting.templateTwo= false;submitView()"   type="submit" value="Option One"/>
+        <input ng-click="UserSetting.templateTwo= true;UserSetting.templateOne= false;submitView()"  type="submit" value="Option Two"/>
+    </div>
 
     <div class="container">
-        <label for="username">Username</label>
+        <label  for="username">Username</label>
         <input name="username" type="text" ng-model="username" class="form-control"  />
-        <button class="btn btn-block btn-success" type="submit" ng-click="submitSettings()">Button</button>
+        <button class="btn btn-block btn-success" type="submit" ng-click="submitUsername()">Button</button>
     </div>
 </div>
