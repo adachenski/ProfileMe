@@ -34,7 +34,10 @@ angular.module('profileMeApp')
                             bottomMiddleObject: $scope.dataFromJson.bottomMiddleObject,
                             bottomRightObject:$scope.dataFromJson.bottomRightObject,
                             viewOne:$scope.dataFromJson.viewOne,
-                             viewTwo:$scope.dataFromJson.viewTwo,
+                            viewTwo:$scope.dataFromJson.viewTwo,
+                            bodyColor:$scope.dataFromJson.backgroundColor,
+                            logo:$scope.dataFromJson.logo,
+                            startButton:$scope.dataFromJson.startButton,
                             postedBy:res.user._id
                         }, {
                             'Content-Type': 'application/json;'

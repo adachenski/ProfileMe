@@ -50,6 +50,7 @@ angular.module('profileMeApp')
                     console.log(rawResponse);
                     console.log('before');
                 });
+
             };
 
             $scope.submitUsername = function () {

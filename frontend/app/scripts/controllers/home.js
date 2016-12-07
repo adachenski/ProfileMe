@@ -33,6 +33,7 @@ angular.module('profileMeApp')
                 }
             );
 
+
            //$scope.UserSetting.templateOne = false;
            //$scope.UserSetting.templateTwo = false;
 
@@ -46,11 +47,11 @@ angular.module('profileMeApp')
             $scope.bottomRightObjectShow = false;
 
 
-            $scope.saveSettings1 = function (object) {
-                customUrlFactory.update({
-                    id: scopeId
-                }, {contentMain: object});
-            };
+           // $scope.saveSettings1 = function (object) {
+           //     customUrlFactory.update({
+           //         id: scopeId
+           //     }, {contentMain: object});
+           // };
 
             $scope.saveSettings = function () {
 
@@ -69,7 +70,8 @@ angular.module('profileMeApp')
                     bottomMiddleObject: $scope.dataFromDB.bottomMiddleObject,
                     bottomRightObject: $scope.dataFromDB.bottomRightObject,
                     viewOne:$scope.dataFromDB.viewOne,
-                    viewTwo:$scope.dataFromDB.viewTwo
+                    viewTwo:$scope.dataFromDB.viewTwo,
+                    bodyColor:$scope.dataFromDB.backgroundColor
                 }, function (err, numberAffected, rawResponse) {
                     if (err) {
                         $log.debug(err);

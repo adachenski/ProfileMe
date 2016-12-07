@@ -20,6 +20,9 @@ var UserSettingsSchema = new Schema({
     bottomLeftObject:String,
     bottomMiddleObject: String,
     bottomRightObject:String,
+    bodyColor:String,
+    logo:String,
+    startButton:String,
     viewOne:Boolean,
     viewTwo:Boolean,
     postedBy: {

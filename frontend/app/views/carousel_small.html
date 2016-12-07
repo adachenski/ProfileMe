@@ -24,25 +24,25 @@
 
     }
 </style>
-<div class="row peace" style="background-color:dodgerblue;
-margin-top: 120px;font-family: Helvetica,Helvetica,Arial,sans-serif;" >
+<div class="row peace" style="background-color:dodgerblue;font-family: Helvetica,Helvetica,Arial,sans-serif;" >
     <!--<div data-toggle="modal" data-target="#myModal" class="overlay"><h1>Click to edit content</h1></div>-->
-    <div class="col-sm-2" >
+    <div style="height: 120px; background-color: #00405f">
+        <!--<img  src="http://i264.photobucket.com/albums/ii193/Spirill/DIVIDERS/AutumnLeaveall.gif" alt=""/>-->
+    </div>
+    <div class="col-md-1" >
 
     </div>
-    <div class="col-sm-4" style="max-height: 250px; overflow: auto">
+    <div class="col-md-5" style="max-height: 250px; overflow: auto">
 
         <section >
             <div class="small-carousel-left">
-                <h1>Build Your Own
-                    Free Professional Website</h1>
-                <h3>Choose from Thousands of Templates</h3>
+
+                    <div ng-bind-html="dataFromDB.carouselImgOneText"></div>
             </div>
 
             <div class="row">
                 <div class="col-sm-10">
-
-                    <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Open Modal</button>
+                    <button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#myModal">Settings</button>
                 </div>
 
                 <!--Modal Start-->
@@ -64,17 +64,46 @@ margin-top: 120px;font-family: Helvetica,Helvetica,Arial,sans-serif;" >
                                 </button>
                                 <div class="row" ng-show="carouselImagesShow" >
                                         <div class="col-sm-12">
-                                            <ul class="nav nav-stacked" id="accordion1">
+                                            <ul class="nav nav-stacked" id="accordion2">
 
                                                 <li class="panel">
-                                                    <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
+                                                    <a data-toggle="collapse" data-parent="#accordion2" href="#initialLink">
+                                                        <h4>
+                                                            <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                                            Main text Settings
+                                                        </h4>
+                                                    </a>
+
+                                                    <ul id="initialLink" class="collapse">
+                                                        <li>
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+
+                                                                    <h4>Edit the Main Text</h4>
+                                                                    <div class="col-sm-12">
+
+                                                                        <div class="form-control text-area" text-angular
+                                                                             ng-model="dataFromDB.carouselImgOneText">
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </li>
+
+                                                    </ul>
+
+                                                </li>
+
+                                                <li class="panel">
+                                                    <a data-toggle="collapse" data-parent="#accordion2" href="#firstLink2">
                                                         <h4>
                                                             <i class="fa fa-file-image-o" aria-hidden="true"></i>
                                                             Image One Settings
                                                         </h4>
                                                     </a>
 
-                                                    <ul id="firstLink" class="collapse">
+                                                    <ul id="firstLink2" class="collapse">
                                                         <li>
                                                             <div class="row">
                                                                 <div class="col-sm-12">
@@ -85,28 +114,22 @@ margin-top: 120px;font-family: Helvetica,Helvetica,Arial,sans-serif;" >
 
                                                                 </div>
 
-                                                                <div class="col-sm-12">
-                                                                    <h4>Edit Text for Image One</h4>
-
-                                                                    <div class="form-control text-area" text-angular
-                                                                         ng-model="dataFromDB.carouselImgOneText">
-                                                                    </div>
-                                                                </div>
                                                             </div>
                                                         </li>
 
                                                     </ul>
 
                                                 </li>
+
                                                 <li class="panel">
-                                                    <a data-toggle="collapse" data-parent="#accordion1" href="#secondLink">
+                                                    <a data-toggle="collapse" data-parent="#accordion2" href="#secondLink2">
                                                         <h4>
                                                             <i class="fa fa-file-image-o" aria-hidden="true"></i>
                                                             Image Two Settings
                                                         </h4>
                                                     </a>
 
-                                                    <ul id="secondLink" class="collapse">
+                                                    <ul id="secondLink2" class="collapse">
                                                         <li>
                                                             <div class="row">
 
@@ -130,14 +153,14 @@ margin-top: 120px;font-family: Helvetica,Helvetica,Arial,sans-serif;" >
                                                     </ul>
                                                 </li>
                                                 <li class="panel">
-                                                    <a data-toggle="collapse" data-parent="#accordion1" href="#thirdLink">
+                                                    <a data-toggle="collapse" data-parent="#accordion2" href="#thirdLink2">
                                                         <h4>
                                                             <i class="fa fa-file-image-o" aria-hidden="true"></i>
                                                             Image Three Settings
                                                         </h4>
                                                     </a>
 
-                                                    <ul id="thirdLink" class="collapse">
+                                                    <ul id="thirdLink2" class="collapse">
                                                         <li>
                                                             <div class="row">
                                                                 <div class="col-sm-12">
@@ -175,7 +198,7 @@ margin-top: 120px;font-family: Helvetica,Helvetica,Arial,sans-serif;" >
             </div>
         </section>
     </div>
-    <div class="col-sm-4" style="min-width: 400px; overflow: hidden">
+    <div class="col-md-5" style="min-width: 400px; overflow: hidden">
         <div class="row">
             <div  id="carousel_small" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -191,7 +214,7 @@ margin-top: 120px;font-family: Helvetica,Helvetica,Arial,sans-serif;" >
                              alt="No data">
 
                         <div class="carousel-caption">
-                            <div ng-bind-html="dataFromDB.carouselImgOneText"></div>
+                            <i class="fa fa-arrow-circle-o-down fa-lg" aria-hidden="true"></i>
                         </div>
 
                     </div>
@@ -228,7 +251,8 @@ margin-top: 120px;font-family: Helvetica,Helvetica,Arial,sans-serif;" >
         </div>
 
     </div>
-    <div class="col-sm-2">
+    <div class="col-md-1">
 
     </div>
+
 </div>

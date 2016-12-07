@@ -91,8 +91,7 @@ ul, ol {
 }
 
 .text-banner {
-
-    margin: 80px 20px;
+    margin: 40px 20px;
 }
 
 .down-button {
@@ -215,6 +214,13 @@ hr{
 .shake.ng-hide-remove      {
     -webkit-animation:0.5s flipInX ease;
     animation:0.5s flipInX ease;
+}
+.center-item {
+    text-align: center;
+}
+
+ .login-background{
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%);
 }
 
 /* ANIMATIONS (FROM ANIMATE.CSS) */

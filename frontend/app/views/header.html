@@ -1,5 +1,74 @@
-<nav class="navbar navbar-fixed-top initial-nav find-header menu" id="find-header"
+
+<!-- Modal -->
+<div  class="modal fade" id="headerModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2>Edit Header Setting</h2>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-stacked" id="accordion3">
+
+                    <li class="panel">
+                        <a data-toggle="collapse" data-parent="#accordion3" href="#initialLink3">
+                            <h4>
+                                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                               Change Logo
+                            </h4>
+                        </a>
+
+                        <ul id="initialLink3" class="collapse">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <h4>Copy and past logo URL</h4>
+                                        <input class="form-control" ng-model="headerContent.logo" type="text"/>
+
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="panel">
+                        <a data-toggle="collapse" data-parent="#accordion2" href="#firstLink3">
+                            <h4>
+                                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                Button Start
+                            </h4>
+                        </a>
+
+                        <ul id="firstLink3" class="collapse">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <h4>Change name of the Start button</h4>
+                                        <input class="form-control" style="width: 100%" type="text"
+                                               ng-model="headerContent.startButton" value="true"/>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" ng-click="headerSave()">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<nav  class="navbar navbar-fixed-top initial-nav find-header menu" id="find-header"
      role="navigation">
+
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -11,8 +80,13 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="#top" >
-                <img src="./static/images/CustomTwo6.png"/>
+
+                <img  ng-src="{{headerContent.logo}}"/>
             </a>
+            <a data-toggle="modal" data-target="#headerModal"
+               class="btn btn-warning" href="#/">Header Settings
+            </a>
+
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -27,7 +101,7 @@
 
                 <li><a ui-sref="app.custom">Custom</a></li>
                 <li>
-                    <a ng-click="start()">Start</a>
+                    <a ng-click="start()">{{headerContent.startButton}}</a>
                 </li>
                 <li>
                     <a ui-sref="app.jobs">Jobs</a>
@@ -45,3 +119,4 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
+
