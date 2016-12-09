@@ -8,6 +8,7 @@ angular.module('profileMeApp')
         '$location','$stateParams','customUrlFactory','HomeModelFactory','alert',
         function ($scope,$state, authToken, $anchorScroll, $location,$stateParams,
                   customUrlFactory,HomeModelFactory,alert) {
+
             var scopeId = $stateParams.id;
             console.log('scopeId header before get : '+scopeId);
             $scope.start = function () {
@@ -49,6 +50,9 @@ angular.module('profileMeApp')
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
             );
+
+
+            $scope.backgroundColor = ""
             $scope.headerSave = function () {
 
                 customUrlFactory.update({id: scopeId}, {

@@ -12,8 +12,7 @@
 
 </style>
 
-
-<div class="container-fluid" style="background-color: {{dataFromDB.bodyColor}}">
+<div class="container-fluid ng-cloak" style="background-color: {{dataFromDB.bodyColor}}">
 
     <div ng-show="dataFromDB.viewOne" ng-include="'views/carousel.html'"></div>
 
@@ -227,7 +226,7 @@
         </div>
     </section>
     <div class="center-item">
-        <button style="padding-top: 5px" ng-click="saveSettings()" class="btn btn-lg btn-primary button-group"
+        <button style="padding-top: 5px" ng-click="saveSettings()" class="btn btn-lg btn-success button-group"
                 type="submit">
             <i class="fa fa-floppy-o" aria-hidden="true"></i> Save all settings
         </button>

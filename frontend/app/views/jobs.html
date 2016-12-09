@@ -70,14 +70,14 @@
 
             <div class="settings-main-images peace">
                 <div class="overlay"><h1>Select view One</h1></div>
-                <img ng-click="UserSetting.templateTwo= true;UserSetting.templateOne= false;submitView()" src="./static/images/banner_beauty.jpg" alt=""/>
+                <img ng-click="updateViewOne();submitView()" src="./static/images/banner_beauty.jpg" alt=""/>
 
             </div>
         </div>
         <div class="col-md-3 col-xs-5">
             <div class="settings-main-images peace">
                 <div  class="overlay"><h1>Select view Two</h1></div>
-                <img ng-click="UserSetting.templateOne= true; UserSetting.templateTwo= false;submitView()" src="./static/images/banner_photography.jpg" alt=""/>
+                <img ng-click="updateViewTwo();submitView()" src="./static/images/banner_photography.jpg" alt=""/>
 
             </div>
         </div>

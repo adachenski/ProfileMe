@@ -4,11 +4,11 @@
 
 angular.module('profileMeApp')
     .controller('HomeController', ['$scope', 'customUrlFactory', '$http', '$stateParams',
-        '$state', 'HomeModelFactory', '$log','UserSettings',
-        function ($scope, customUrlFactory, $http, $stateParams, $state, HomeModelFactory, $log,UserSettings) {
+        '$state', 'HomeModelFactory', '$log',
+        function ($scope, customUrlFactory, $http, $stateParams, $state, HomeModelFactory, $log) {
             var scopeId;
             var username;
-            $scope.UserSetting = UserSettings.data;
+          //  $scope.UserSetting = UserSettings.data;
 
             customUrlFactory.get({id: $stateParams.id})
                 .$promise.then(

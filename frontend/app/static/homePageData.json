@@ -14,6 +14,11 @@
   "bottomRightObject":"<img src='./static/images/backpack.png'/><h2>Orienteering</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.</p>",
   "viewOne":true,
   "viewTwo":false,
+
+  "navbarStatic":"navbar-fixed-top initial-nav find-header",
+
+  "navbarFooterColor": null,
+
   "backgroundColor":"#ccffff",
   "logo":"./static/images/Header_Logo.png",
   "startButton":"Start"

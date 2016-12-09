@@ -7,21 +7,21 @@
 angular.module('profileMeApp')
     .constant('API_URL','http://localhost:3000/')
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
-        //$urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/');
         $stateProvider
             .state('app', {
                 url: '/',
                 views: {
                     'header': {
-                        templateUrl: 'views/header.html',
+                        templateUrl: 'views/header.html#/',
                         controller:'HeaderController'
                     },
                     'body-container': {
-                        templateUrl: 'views/home.html',
+                        templateUrl: 'views/home.html#/',
                         controller: 'HomeController'
                     },
                     'footer': {
-                        templateUrl: 'views/footer.html',
+                        templateUrl: 'views/footer.html#/',
                         controller:'HeaderController'
                     }
                 }

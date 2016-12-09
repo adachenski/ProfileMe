@@ -25,6 +25,8 @@ var UserSettingsSchema = new Schema({
     startButton:String,
     viewOne:Boolean,
     viewTwo:Boolean,
+    navbarStatic:String,
+    navbarFooterColor:String,
     postedBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'

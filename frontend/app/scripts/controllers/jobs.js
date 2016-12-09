@@ -3,10 +3,11 @@
  */
 
 angular.module('profileMeApp')
-    .controller('JobsController', ['$scope', '$http', '$stateParams', '$state', 'API_URL', 'alert', 'customUrlFactory', 'UserSettings',
-        function ($scope, $http, $stateParams, $state, API_URL, alert, customUrlFactory, UserSettings) {
+    .controller('JobsController', ['$scope', '$http', '$stateParams', '$state', 'API_URL', 'alert', 'customUrlFactory',
+        function ($scope, $http, $stateParams, $state, API_URL, alert, customUrlFactory) {
             var scopeId = $stateParams.id;
-            $scope.UserSetting = UserSettings.data;
+            var templateTwo;
+            var templateOne;
 
             // $http.get(API_URL + 'jobs')
             //     .success(function (jobs) {
@@ -34,11 +35,23 @@ angular.module('profileMeApp')
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
             );
+            $scope.updateViewOne = function(){
+                templateTwo= true;
+                templateOne= false;
+                //$scope.UserSetting.loseHeader = "";
+                //$scope.UserSetting.findHeader = "";
+                //$scope.UserSetting.steadyHeader = "";
+            }
+            $scope.updateViewTwo = function(){
+                templateTwo= false;
+                templateOne= true;
+
+            }
             $scope.submitView = function () {
 
                 customUrlFactory.update({id: scopeId}, {
-                    viewOne: $scope.UserSetting.templateOne,
-                    viewTwo: $scope.UserSetting.templateTwo
+                    viewOne: templateOne,
+                    viewTwo: templateTwo
 
                 }, function (err, numberAffected, rawResponse) {
                     if (err) {

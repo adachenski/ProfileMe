@@ -38,6 +38,9 @@ angular.module('profileMeApp')
                             bodyColor:$scope.dataFromJson.backgroundColor,
                             logo:$scope.dataFromJson.logo,
                             startButton:$scope.dataFromJson.startButton,
+                            navbarStatic:$scope.dataFromJson.navbarStatic,
+                            navbarFooterColor: $scope.dataFromJson.navbarFooterColor,
+
                             postedBy:res.user._id
                         }, {
                             'Content-Type': 'application/json;'

@@ -37,10 +37,71 @@
                     </li>
 
                     <li class="panel">
+                        <a data-toggle="collapse" data-parent="#accordion2" href="#firstLink4">
+                            <h4>
+                                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                Position
+                            </h4>
+                        </a>
+
+                        <ul id="firstLink4" class="collapse">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-12 row">
+
+                                        <h4>Change the position of the navigation bar</h4>
+
+                                        <div class="col-sm-4">
+                                            <input type="radio"
+                                                   ng-model="headerContent.navbarStatic"
+                                                   value="navbar-fixed-top initial-nav find-header"/>Active
+
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input type="radio"
+                                                   ng-model="headerContent.navbarStatic"
+                                                   value="navbar-fixed-top changed-nav navigation-footer-color custom-header" />Static
+
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input type="radio"
+                                                   ng-model="headerContent.navbarStatic"
+                                                   value="changed-nav navigation-footer-color custom-header reset-border-radius" />Fixed
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="panel">
+                        <a data-toggle="collapse" data-parent="#accordion2" href="#firstLink5">
+                            <h4>
+                                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                Start Button
+                            </h4>
+                        </a>
+
+                        <ul id="firstLink5" class="collapse">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <h4>Change name of the Start button</h4>
+                                        <input  style="width: 100%" type="color"
+                                               ng-model="headerContent.navbarFooterColor" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="panel">
                         <a data-toggle="collapse" data-parent="#accordion2" href="#firstLink3">
                             <h4>
                                 <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                                Button Start
+                                Start Button
                             </h4>
                         </a>
 
@@ -66,7 +127,8 @@
         </div>
     </div>
 </div>
-<nav  class="navbar navbar-fixed-top initial-nav find-header menu" id="find-header"
+
+<nav style="background-color: {{headerContent.navbarFooterColor}}!important;"  class="navbar {{headerContent.navbarStatic}}"
      role="navigation">
 
     <div class="container-fluid">
@@ -81,10 +143,10 @@
             </button>
             <a href="#top" >
 
-                <img  ng-src="{{headerContent.logo}}"/>
+                <img class="logo-header"  ng-src="{{headerContent.logo}}"/>
             </a>
-            <a data-toggle="modal" data-target="#headerModal"
-               class="btn btn-warning" href="#/">Header Settings
+            <a ng-class="reset-margin" data-toggle="modal" data-target="#headerModal"
+               class="btn btn-warning" href="#/">Header <i class="fa fa-cogs" aria-hidden="true"></i>
             </a>
 
         </div>

@@ -16,14 +16,14 @@
     <link rel="stylesheet" href="styles/login.css"/>
 
 </head>
-<body ng-cloak>
+<body>
 
 
-<div ui-view="header"></div>
+<div ng-cloak ui-view="header"></div>
 
-<div ng-include="'views/alert.html'"></div>
+<div  ng-include="'views/alert.html'"></div>
 
-<div  class="ui-view-container">
+<div class="ng-cloak" class="ui-view-container">
     <div ui-view="body-container "></div>
 </div>
 
