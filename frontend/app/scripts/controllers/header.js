@@ -50,24 +50,37 @@ angular.module('profileMeApp')
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
             );
-
-
-            $scope.backgroundColor = ""
-            $scope.headerSave = function () {
-
+            $scope.footerSave = function(){
                 customUrlFactory.update({id: scopeId}, {
-                    logo: $scope.headerContent.logo,
-                    startButton: $scope.headerContent.startButton
+                    footerTitle: $scope.headerContent.footerTitle,
+                    footerLeft: $scope.headerContent.footerLeft,
+                    footerMuddle:$scope.headerContent.footerMiddle,
+                    footerRight: $scope.headerContent.footerRight
 
                 }, function (err, numberAffected, rawResponse) {
                     if (err) {
                         //throw 'Error pushing data to server: '+err;
                     }
-                    console.log('before');
-                    // console.log(numberAffected);
+
                     alert('success', 'Awesome! \n',' Successfully Changed View. ');
-                    console.log(rawResponse);
-                    console.log('before');
+
+                });
+            };
+
+            $scope.headerSave = function () {
+                console.log(scopeId);
+                customUrlFactory.update({id: scopeId}, {
+                    logo: $scope.headerContent.logo,
+                    startButton: $scope.headerContent.startButton,
+                    navbarStatic:$scope.headerContent.navbarStatic
+
+                }, function (err, numberAffected, rawResponse) {
+                    if (err) {
+                        //throw 'Error pushing data to server: '+err;
+                    }
+
+                    alert('success', 'Awesome! \n',' Successfully Changed View. ');
+
                 });
 
             };

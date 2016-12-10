@@ -6,6 +6,10 @@ html, body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.footer-button{
+    margin-top:20px;
+}
+
 .form-control{
     height: auto;
 }
@@ -140,7 +144,7 @@ ul, ol {
     max-height: 49px;
 }
 .logo-footer{
-    max-height: 100px;
+    max-height: 90px;
 }
 @media only screen and (max-width : 47.9375em) {
     .logo-header{
@@ -148,7 +152,7 @@ ul, ol {
     }
 }
 .reset-margin{
-    margin: 0;
+    margin: 0 !important;
 }
 .carousel .item img {
     width: 100%;

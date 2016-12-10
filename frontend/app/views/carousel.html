@@ -60,12 +60,31 @@
                 <i class="fa fa-floppy-o" aria-hidden="true"></i>  Save Images
             </button>
         </div>
-        <div class="col-md-10 col-md-pull-2 shake center-item" ng-hide="carouselImagesShow">
-            <h2>
-                Edit the images and text above
-                <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-            </h2>
+
+        <div class="col-md-2 col-md-pull-2 shake center-item" ng-hide="carouselImagesShow">
+            <!--<h2>-->
+                <!--Edit the images and text above-->
+                <!--<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>-->
+            <!--</h2>-->
+
+            <label class="btn btn-block  btn-warning" for="background-color"> Background Color</label>
+                    <input style="display: none" class="btn  btn-warning" ng-model="dataFromDB.bodyColor" id="background-color" type="color" />
+
+
+
         </div>
+        <div class="col-md-2 col-md-push-1  shake center-item" ng-hide="carouselImagesShow">
+
+                <button ng-hide="editMain" ng-click="editMain = !editMain" class="btn btn-block btn-warning">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Main
+                </button>
+                <button ng-show="editMain" ng-click="editMain = !editMain" class="btn btn-block btn-success">
+
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Save Main
+                </button>
+
+            </div>
+
 
         <div class="col-md-10 col-md-pull-2 shake" ng-show="carouselImagesShow" >
 
@@ -174,5 +193,25 @@
 
 
 
+    </div>
+</section>
+<section id="userDetails">
+    <div class="row text-banner">
+        <!--<div class="col-md-2 col-md-push-10">-->
+        <!--<button ng-hide="editMain" ng-click="editMain = !editMain" class="btn btn-block btn-warning">-->
+        <!--<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Main-->
+        <!--</button>-->
+        <!--<button ng-show="editMain" ng-click="editMain = !editMain" class="btn btn-block btn-success">-->
+
+        <!--<i class="fa fa-floppy-o" aria-hidden="true"></i> Save Main-->
+        <!--</button>-->
+        <!--</div>-->
+        <div class="col-sm-12  shake" ng-hide="editMain">
+            <div ng-bind-html="dataFromDB.contentMain"></div>
+        </div>
+
+        <div class="col-sm-12  shake" ng-show="editMain">
+            <div class="form-control text-area" text-angular ng-model="dataFromDB.contentMain"></div>
+        </div>
     </div>
 </section>

@@ -40,6 +40,11 @@ angular.module('profileMeApp')
                             startButton:$scope.dataFromJson.startButton,
                             navbarStatic:$scope.dataFromJson.navbarStatic,
                             navbarFooterColor: $scope.dataFromJson.navbarFooterColor,
+                            footerTitle: $scope.dataFromJson.footerTitle,
+                            footerLeft: $scope.dataFromJson.footerLeft,
+                            footerMiddle: $scope.dataFromJson.footerMiddle,
+                            footerRight: $scope.dataFromJson.footerRight,
+
 
                             postedBy:res.user._id
                         }, {

@@ -3,6 +3,122 @@
 
     }
 </style>
+<div  class="modal fade" id="footerModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2>Edit Footer</h2>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-stacked" id="accordion-footer">
+
+                    <li class="panel">
+                        <a data-toggle="collapse" data-parent="#accordion-footer" href="#initialLink-footer">
+                            <h4>
+                                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                Headline
+                            </h4>
+                        </a>
+
+                        <ul id="initialLink-footer" class="collapse">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <h4>Edit Footer headline</h4>
+                                        <div class="form-control text-area"
+                                             text-angular ng-model="headerContent.footerTitle">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="panel">
+                        <a data-toggle="collapse" data-parent="#accordion-footer" href="#firstLink-footer">
+                            <h4>
+                                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                Left Paragraph
+                            </h4>
+                        </a>
+
+                        <ul id="firstLink-footer" class="collapse">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <h4>Edit Left paragraph</h4>
+
+                                        <div class="form-control text-area"
+                                             text-angular ng-model="headerContent.footerLeft">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="panel">
+                        <a data-toggle="collapse" data-parent="#accordion-footer" href="#secondLink-footer">
+                            <h4>
+                                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                Middle Paragraph
+                            </h4>
+                        </a>
+
+                        <ul id="secondLink-footer" class="collapse">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <h4>Edit middle paragraph</h4>
+                                        <div class="form-control text-area"
+                                             text-angular ng-model="headerContent.footerMiddle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="panel">
+                        <a data-toggle="collapse" data-parent="#accordion-footer" href="#thirdLink-footer">
+                            <h4>
+                                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                Right Paragraph
+                            </h4>
+                        </a>
+
+                        <ul id="thirdLink-footer" class="collapse">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <h4>Edit right paragraph</h4>
+                                        <div class="form-control text-area"
+                                             text-angular ng-model="headerContent.footerRight">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" ng-click="footerSave()">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 <footer>
 
         <!--<svg viewBox="0 -20 700 110" width="100%" height="300" preserveAspectRatio="none">-->
@@ -15,54 +131,31 @@
 
     <div class="navigation-footer-color">
         <div class="row">
-            <div class="col-sm-2"></div>
+            <div class="col-sm-2 center-item footer-button">
+                <a data-toggle="modal" data-target="#footerModal"
+                   class="btn btn-warning" href="#/">Footer <i class="fa fa-cogs" aria-hidden="true"></i>
+                </a>
+            </div>
             <div class="col-sm-8">
                 <div class="row">
-                    <div class="footer-top">Header stuff</div>
+                    <div class="footer-top">
+                        <div ng-bind-html="headerContent.footerTitle"></div>
+                    </div>
                 </div>
                 <hr/>
                 <div class="row">
                     <div class="col-sm-4 footer-content">
 
-                        <h4>
-                            Contact info</h4>
-                        <div>
-                            <p>
-                                <i class="fa fa-map-marker fa-lg"> </i>
-                                <span>Phone: </span> +123-456-7890
-                            </p>
-                        </div>
-                        <div>
-                            <p><i class="fa fa-phone fa-lg"> </i>
-                                <span>21 Revolution Street</span> Paris, France</p>
-                        </div>
-                        <div>
-                            <p><i class="fa fa-envelope fa-lg"> </i>
-                                <span>Email:</span> nasko@nasko.com</p>
-                        </div>
+                        <div ng-bind-html="headerContent.footerLeft" ></div>
 
                     </div>
                     <div class="col-sm-4 footer-content">
+                        <div ng-bind-html="headerContent.footerMiddle"></div>
 
-                        <h4>
-
-                            About the company
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        </h4>
-                        Lorem ipsum dolor sit amet, consectateur adispicing elit, eu Fusce euismod convallis velit, eu auctor
-                        lacus vehicula sit amet.
                     </div>
                     <div class="col-sm-4 footer-content">
                         <div class="footer-icons">
-                            <h4>
-
-                                Like us
-                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                            </h4>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-github"></i></a>
+                            <div ng-bind-html="headerContent.footerRight"></div>
                         </div>
                     </div>
                 </div>

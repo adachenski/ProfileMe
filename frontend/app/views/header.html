@@ -7,16 +7,16 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h2>Edit Header Setting</h2>
+                <h2>Edit Header</h2>
             </div>
             <div class="modal-body">
-                <ul class="nav nav-stacked" id="accordion3">
+                <ul class="nav nav-stacked" id="accordion-header">
 
                     <li class="panel">
-                        <a data-toggle="collapse" data-parent="#accordion3" href="#initialLink3">
+                        <a data-toggle="collapse" data-parent="#accordion-header" href="#initialLink3">
                             <h4>
                                 <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                               Change Logo
+                               Logo
                             </h4>
                         </a>
 
@@ -37,14 +37,14 @@
                     </li>
 
                     <li class="panel">
-                        <a data-toggle="collapse" data-parent="#accordion2" href="#firstLink4">
+                        <a data-toggle="collapse" data-parent="#accordion-header" href="#firstLink3">
                             <h4>
                                 <i class="fa fa-file-image-o" aria-hidden="true"></i>
                                 Position
                             </h4>
                         </a>
 
-                        <ul id="firstLink4" class="collapse">
+                        <ul id="firstLink3" class="collapse">
                             <li>
                                 <div class="row">
                                     <div class="col-sm-12 row">
@@ -76,19 +76,19 @@
                     </li>
 
                     <li class="panel">
-                        <a data-toggle="collapse" data-parent="#accordion2" href="#firstLink5">
+                        <a data-toggle="collapse" data-parent="#accordion-header" href="#firstLink4">
                             <h4>
                                 <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                                Start Button
+                                Color
                             </h4>
                         </a>
 
-                        <ul id="firstLink5" class="collapse">
+                        <ul id="firstLink4" class="collapse">
                             <li>
                                 <div class="row">
                                     <div class="col-sm-12">
 
-                                        <h4>Change name of the Start button</h4>
+                                        <h4>Change color of the navigation bar</h4>
                                         <input  style="width: 100%" type="color"
                                                ng-model="headerContent.navbarFooterColor" />
                                     </div>
@@ -98,14 +98,14 @@
                     </li>
 
                     <li class="panel">
-                        <a data-toggle="collapse" data-parent="#accordion2" href="#firstLink3">
+                        <a data-toggle="collapse" data-parent="#accordion-header" href="#firstLink5">
                             <h4>
                                 <i class="fa fa-file-image-o" aria-hidden="true"></i>
                                 Start Button
                             </h4>
                         </a>
 
-                        <ul id="firstLink3" class="collapse">
+                        <ul id="firstLink5" class="collapse">
                             <li>
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -142,11 +142,10 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="#top" >
-
                 <img class="logo-header"  ng-src="{{headerContent.logo}}"/>
             </a>
-            <a ng-class="reset-margin" data-toggle="modal" data-target="#headerModal"
-               class="btn btn-warning" href="#/">Header <i class="fa fa-cogs" aria-hidden="true"></i>
+            <a  data-toggle="modal" data-target="#headerModal"
+               class="btn btn-warning reset-margin" href="#/">Header <i class="fa fa-cogs" aria-hidden="true"></i>
             </a>
 
         </div>
