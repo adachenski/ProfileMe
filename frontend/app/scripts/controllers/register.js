@@ -44,8 +44,6 @@ angular.module('profileMeApp')
                             footerLeft: $scope.dataFromJson.footerLeft,
                             footerMiddle: $scope.dataFromJson.footerMiddle,
                             footerRight: $scope.dataFromJson.footerRight,
-
-
                             postedBy:res.user._id
                         }, {
                             'Content-Type': 'application/json;'

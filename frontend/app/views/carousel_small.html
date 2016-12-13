@@ -24,11 +24,10 @@
 
     }
 </style>
+
 <div class="row peace" style="background-color:dodgerblue;font-family: Helvetica,Helvetica,Arial,sans-serif;" >
     <!--<div data-toggle="modal" data-target="#myModal" class="overlay"><h1>Click to edit content</h1></div>-->
-    <div style="height: 120px; background-color: #00405f">
-        <!--<img  src="http://i264.photobucket.com/albums/ii193/Spirill/DIVIDERS/AutumnLeaveall.gif" alt=""/>-->
-    </div>
+
     <div class="col-md-1" >
 
     </div>
@@ -255,3 +254,23 @@
     </div>
 
 </div>
+<section id="userDetails">
+    <div class="row text-banner">
+        <!--<div class="col-md-2 col-md-push-10">-->
+        <!--<button ng-hide="editMain" ng-click="editMain = !editMain" class="btn btn-block btn-warning">-->
+        <!--<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Main-->
+        <!--</button>-->
+        <!--<button ng-show="editMain" ng-click="editMain = !editMain" class="btn btn-block btn-success">-->
+
+        <!--<i class="fa fa-floppy-o" aria-hidden="true"></i> Save Main-->
+        <!--</button>-->
+        <!--</div>-->
+        <div class="col-sm-12  shake" ng-hide="editMain">
+            <div ng-bind-html="dataFromDB.contentMain"></div>
+        </div>
+
+        <div class="col-sm-12  shake" ng-show="editMain">
+            <div class="form-control text-area" text-angular ng-model="dataFromDB.contentMain"></div>
+        </div>
+    </div>
+</section>

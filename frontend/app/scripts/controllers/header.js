@@ -17,14 +17,14 @@ angular.module('profileMeApp')
                 $anchorScroll();
             };
 
-            $scope.isHome = false;
-           console.log($location.path());
-            if($location.path()!='/'){
-                $scope.isHome = true;
-            }
-            else{
-                $scope.isHome = false;
-            }
+           // $scope.isHome = false;
+           //console.log($location.path());
+           // if($location.path()!='/'){
+           //     $scope.isHome = true;
+           // }
+           // else{
+           //     $scope.isHome = false;
+           // }
             $scope.isAuthenticated = authToken.isAuthenticated;
             console.log($scope.isAuthenticated() );
 

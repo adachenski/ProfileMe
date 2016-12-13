@@ -5,7 +5,7 @@
 // Checking if user has scrolled to change the height of the navbar
 $(document).ready(function () {
     $('.carousel').carousel({
-        interval: 6000
+        interval: 3000
     });
     var $window = $(window);
 

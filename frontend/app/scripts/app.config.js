@@ -36,6 +36,15 @@ angular.module('profileMeApp')
                     }
                 }
             })
+            .state('app.messages',{
+                url:'custom/:id/messages',
+                views:{
+                    'body-container@': {
+                        templateUrl:'views/messages.html',
+                        controller  : 'MessageController'
+                    }
+                }
+            })
             .state('app.login', {
                 url:'login',
                 views: {

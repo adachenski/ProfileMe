@@ -19,11 +19,11 @@
 <body>
 
 
-<div ng-cloak ui-view="header"></div>
+<div ui-view="header"></div>
 
 <div  ng-include="'views/alert.html'"></div>
 
-<div class="ng-cloak" class="ui-view-container">
+<div class="ui-view-container">
     <div ui-view="body-container "></div>
 </div>
 
@@ -63,7 +63,9 @@
 <script src="scripts/controllers/login.js"></script>
 <script src="scripts/factory/customUrls.js"></script>
 <script src="scripts/controllers/showCustomUrl.js"></script>
-<script src="scripts/services/userSettings.js"></script>
+<!--<script src="scripts/services/userSettings.js"></script>-->
+<script src="scripts/factory/messagesFactory.js"></script>
+<script src="scripts/controllers/message.js"></script>
 
 </body>
 </html>
