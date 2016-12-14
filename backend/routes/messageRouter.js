@@ -13,15 +13,11 @@ messagesRouter.use(bodyParser.json());
 
 messagesRouter.route('/')
 .get(function (req, res, next) {
-        console.log('reqStert');
-console.log(req.query.Url);
-        console.log('reqFinish');
+
         Messages.find({postedById:req.query.Url})
         .populate('postedBy')
         .exec(function (err, userSettings) {
-               console.log('start');
-               //console.log(userSettings);
-               console.log('finish');
+
             if (err) throw err;
             res.json(userSettings);
         });
@@ -38,7 +34,16 @@ console.log(req.query.Url);
             res.writeHead(200, {'Content-Type': 'text/plain'});
             res.end('UserSettings added with id: ' + id);
         });
-    });
+    })
+    .delete(function (req, res, next) {
+        //res.end('All dishes will be deleted');
+        Messages.remove({}, function (err, response) {
+            if (err) {
+                throw err;
+            }
+            res.json(response);
+        })
+    });;
 messagesRouter.route('/:messegeId')
     .get(function (req, res, next) {
         // console.log(req.decoded.sub);

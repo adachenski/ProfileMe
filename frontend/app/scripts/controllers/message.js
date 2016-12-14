@@ -23,10 +23,11 @@ angular.module('profileMeApp').controller('MessageController',['$scope','$resour
         //        console.log(ress.data[i].title);
         //    }
         //});
-        $scope.addUser = function(){
-            messagesFactory.update({
-            title:"rally",
-            content:"rally",
+
+        $scope.submitMessage = function(){
+            messagesFactory.save({
+            title:$scope.message.title,
+            content:$scope.message.content,
             postedById:$stateParams.id
         },function(res){
                 console.log(res)
