@@ -16,6 +16,7 @@ messagesRouter.route('/')
 
         Messages.find({postedById:req.query.Url})
         .populate('postedBy')
+            .sort([['updatedAt', 'descending']])
         .exec(function (err, userSettings) {
 
             if (err) throw err;

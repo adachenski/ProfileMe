@@ -5,6 +5,7 @@
 angular.module('profileMeApp')
     .controller('ShowCustomUrlController',['$scope','$stateParams','customUrlFactory','$sce',
         function($scope,$stateParams,customUrlFactory,$sce){
+
             $scope.fromCustom= customUrlFactory.get({
                 id: $stateParams.id
             })
@@ -13,7 +14,7 @@ angular.module('profileMeApp')
                    // $scope.deliberatelyTrustDangerousSnippet = function() {
                    //     return $sce.trustAsHtml(response.mainContent);
                    // };
-                    console.log('$stateparams.id');
+
                     console.log($stateParams.id);
                     $scope.showCustomUrl = response;
                 },

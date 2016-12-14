@@ -13,15 +13,15 @@ angular.module('profileMeApp')
                 url: '/',
                 views: {
                     'header': {
-                        templateUrl: 'views/header.html#/',
+                        templateUrl: 'views/header.html',
                         controller:'HeaderController'
                     },
                     'body-container': {
-                        templateUrl: 'views/home.html#/',
+                        templateUrl: 'views/home.html',
                         controller: 'HomeController'
                     },
                     'footer': {
-                        templateUrl: 'views/footer.html#/',
+                        templateUrl: 'views/footer.html',
                         controller:'HeaderController'
                     }
                 }
@@ -29,7 +29,12 @@ angular.module('profileMeApp')
             })
             .state('app.custom',{
                 url:'custom/:id',
+
                 views:{
+                    'header@': {
+                        templateUrl: 'views/header_custom.html',
+                        controller:'HeaderCustomController'
+                    },
                     'body-container@': {
                         templateUrl:'views/show_custom.html',
                         controller  : 'ShowCustomUrlController'
@@ -39,6 +44,10 @@ angular.module('profileMeApp')
             .state('app.messages',{
                 url:'custom/:id/messages',
                 views:{
+                    'header@': {
+                        templateUrl: 'views/header_custom.html',
+                        controller:'HeaderCustomController'
+                    },
                     'body-container@': {
                         templateUrl:'views/messages.html',
                         controller  : 'MessageController'

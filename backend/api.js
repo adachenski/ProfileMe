@@ -95,6 +95,7 @@ var jobs = [
     'Angular'
 ];
 app.use('/custom', userSettings);
+
 app.use('/messages',messages);
 
 app.get('/jobs',verify.verifyUser, function (req, res, next) {
