@@ -7,27 +7,21 @@
 'use strict';
 
 angular.module('profileMeApp')
-    .controller('HeaderCustomController', ['$scope','$stateParams','customUrlFactory','returnIdFactory',
-        function ($scope,$stateParams,customUrlFactory,returnIdFactory) {
+    .controller('HeaderCustomController', ['$scope','$stateParams','customUrlFactory',
+        'returnIdFactory','$location','$state',
+        function ($scope,$stateParams,customUrlFactory,returnIdFactory,$location, $state) {
 
-           // console.log(returnIdFactory.finalUrl);
+           console.log($location.path());
+
+
             $scope.tempUrlId = returnIdFactory.finalUrl;
+            $scope.myBool = true;
+
             $scope.start = function () {
 
                 $location.hash("userDetails");
                 $anchorScroll();
             };
-
-            // $scope.isHome = false;
-            //console.log($location.path());
-            // if($location.path()!='/'){
-            //     $scope.isHome = true;
-            // }
-            // else{
-            //     $scope.isHome = false;
-            // }
-            //$scope.isAuthenticated = authToken.isAuthenticated;
-            //console.log($scope.isAuthenticated() );
 
             console.log('hi custom header');
             $scope.fromCustom= customUrlFactory.get({

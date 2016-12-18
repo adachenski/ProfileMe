@@ -3,13 +3,13 @@
  */
 
 'use strict';
-angular.module('profileMeApp').controller('MessageController',['$scope','$resource','$http','messagesFactory','$stateParams',
-    function($scope,$resource,$http,messagesFactory,$stateParams){
+angular.module('profileMeApp').controller('MessageController',['$scope','$resource','$http','messagesFactory','$stateParams','$state',
+    function($scope,$resource,$http,messagesFactory,$stateParams,$state){
 
         console.log('id from message ',$stateParams);
 
         $scope.messages = messagesFactory.query();
-        console.log($scope.messages);
+       // console.log($scope.messages);
 
         $scope.currentMessage = function(message){
 
@@ -30,9 +30,11 @@ angular.module('profileMeApp').controller('MessageController',['$scope','$resour
             content:$scope.message.content,
             postedById:$stateParams.id
         },function(res){
+
                 console.log(res)
             })
         };
+
      //  $scope.postMessage = function(){
      //      $http.post('http://localhost:3000/messages',{
      //          title:"Current Green",

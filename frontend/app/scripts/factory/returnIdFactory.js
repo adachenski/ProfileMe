@@ -20,10 +20,11 @@ angular.module('profileMeApp').factory('returnIdFactory',['$resource', 'API_URL'
         }
         console.log(tempUrl);
         console.log('second parth '+secondPart);
-        var finalUrl = tempUrl.slice(0,secondPart-1);
+        var finalUrlId = tempUrl.slice(0,secondPart-1);
 
         return {
-            finalUrl:finalUrl
+            finalUrl:finalUrlId,
+
         };
         //return $resource(API_URL + "messages/:id", null, {
         //    'update': {

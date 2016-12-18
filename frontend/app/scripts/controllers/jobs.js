@@ -6,26 +6,14 @@ angular.module('profileMeApp')
     .controller('JobsController', ['$scope', '$http', '$stateParams', '$state', 'API_URL', 'alert', 'customUrlFactory',
         function ($scope, $http, $stateParams, $state, API_URL, alert, customUrlFactory) {
             var scopeId = $stateParams.id;
+            console.log(scopeId);
             var templateTwo;
             var templateOne;
-
-            // $http.get(API_URL + 'jobs')
-            //     .success(function (jobs) {
-
-            //         $scope.jobs = jobs;
-            //     })
-            //     .error(function (err) {
-            //         alert('warning', 'Unable to get Jobs', err.message);
-            //     });
-
-            // console.log(scopeId);
-
 
             customUrlFactory.get({})
                 .$promise.then(
                 function (response) {
                     scopeId = response._id;
-
                     $scope.jobsContent = response;
 
 
@@ -58,12 +46,13 @@ angular.module('profileMeApp')
                         //throw 'Error pushing data to server: '+err;
                     }
                     console.log('before');
-                    // console.log(numberAffected);
                     alert('success', 'Awesome! \n',' Successfully Changed View. ');
-                    console.log(rawResponse);
-                    console.log('before');
                 });
 
+            };
+
+            $scope.preview = function(){
+                $state.go('app.custom',{id:scopeId});
             };
 
             $scope.submitUsername = function () {
@@ -76,10 +65,6 @@ angular.module('profileMeApp')
                     if (err) {
                         //throw 'Error pushing data to server: '+err;
                     }
-                    console.log('before');
-                    // console.log(numberAffected);
-                    console.log(rawResponse);
-                    console.log('before');
                 });
                 $state.go('app.custom', {id: scopeId});
             }

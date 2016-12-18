@@ -22,22 +22,20 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a ui-sref="app.custom({id:'{{tempUrlId}}'})">
+                    <a ui-sref="app.custom({id:'{{tempUrlId}}'})"  >
                         <i class="fa fa-home" aria-hidden="false"></i>
                         Home
                     </a>
                 </li>
 
                 <li>
-                    <a ng-click="start()">{{headerCustomContent.startButton}}</a>
+                    <a ng-show="myBool" ng-click="start()">{{headerCustomContent.startButton}}</a>
                 </li>
 
                 <li ng-hide="isAuthenticated()">
                     <a ui-sref="app.login">Login</a>
                 </li>
-                <li ng-show="isAuthenticated()">
-                    <a ui-sref="app.logout">Logout</a>
-                </li>
+
                 <li >
                     <a ui-sref="app.messages({id:'{{tempUrlId}}'})">Messages</a>
                 </li>
