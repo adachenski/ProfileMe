@@ -125,7 +125,10 @@ function createSendToken(user, res) {
     });
 };
 
-mongoose.connect('mongodb://localhost/ProfileMe');
+//mongoose.connect('mongodb://localhost/ProfileMe');
+
+mongoose.connect('mongodb://adachenski:fbd78f5321@ds141118.mlab.com:41118/profileme');
+
 
 //console.log(jwt.encode('hi','secret'));
 

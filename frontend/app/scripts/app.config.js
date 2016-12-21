@@ -3,7 +3,7 @@
  */
 
 'use strict';
-
+//.constant('API_URL','https://profile-me.mybluemix.net/')
 angular.module('profileMeApp')
     .constant('API_URL','http://localhost:3000/')
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {

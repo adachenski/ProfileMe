@@ -8,12 +8,12 @@ angular.module('profileMeApp')
         '$location','$stateParams','customUrlFactory','HomeModelFactory','alert',
         function ($scope,$state, authToken, $anchorScroll, $location,$stateParams,
                   customUrlFactory,HomeModelFactory,alert) {
-            $scope.cuttentID = 'nasko';
+           // $scope.cuttentID = 'nasko';
 
             var scopeId = $stateParams._id;
             console.log('scopeId header before get : '+scopeId);
             $scope.start = function () {
-
+                $state.go('app');
                 $location.hash("userDetails");
                 $anchorScroll();
             };
@@ -34,8 +34,8 @@ angular.module('profileMeApp')
             customUrlFactory.get({})
                 .$promise.then(
                 function (response) {
-                    scopeId = $stateParams._id;
-                    $scope.cuttentID = response._id;
+                    scopeId = response._id;
+                       // $scope.cuttentID = response._id;
                     console.log('scopeId header after get : '+scopeId);
 
                     $scope.headerContent = response;

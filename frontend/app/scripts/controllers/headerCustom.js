@@ -15,10 +15,9 @@ angular.module('profileMeApp')
 
 
             $scope.tempUrlId = returnIdFactory.finalUrl;
-            $scope.myBool = true;
 
             $scope.start = function () {
-
+                $state.go('app');
                 $location.hash("userDetails");
                 $anchorScroll();
             };
