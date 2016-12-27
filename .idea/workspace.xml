@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f40ddeae-0b2b-4c93-8b1c-149e2a919ffd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/carousel.html" afterPath="$PROJECT_DIR$/frontend/app/views/carousel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/home.html" afterPath="$PROJECT_DIR$/frontend/app/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/home.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/static/homePageData.json" afterPath="$PROJECT_DIR$/frontend/app/static/homePageData.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/styles/profileme.css" afterPath="$PROJECT_DIR$/frontend/app/styles/profileme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/show_custom.html" afterPath="$PROJECT_DIR$/frontend/app/views/show_custom.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/show_custom_carousel.html" afterPath="$PROJECT_DIR$/frontend/app/views/show_custom_carousel.html" />
     </list>
     <ignored path="Profile Me.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="carousel.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="carousel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/views/carousel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3328" vertical-offset="4148" max-vertical-offset="7590">
-              <caret line="198" column="96" selection-start-line="198" selection-start-column="96" selection-end-line="198" selection-end-column="96" />
+            <state vertical-scroll-proportion="-6.368421" vertical-offset="4477" max-vertical-offset="6116">
+              <caret line="220" column="51" selection-start-line="220" selection-start-column="51" selection-end-line="220" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -73,6 +72,16 @@
                 <element signature="n#style#0;n#div#0;n#div#1;n#li#0;n#ul#0;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#li#1;n#ul#0;n#div#3;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_custom_carousel.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/app/views/show_custom_carousel.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5268817" vertical-offset="1373" max-vertical-offset="2200">
+              <caret line="78" column="34" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/views/messages.html">
+      <file leaf-file-name="carousel_small.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/views/carousel_small.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.612904" vertical-offset="0" max-vertical-offset="2530">
-              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="55" />
+            <state vertical-scroll-proportion="29.387096" vertical-offset="5531" max-vertical-offset="6182">
+              <caret line="210" column="39" selection-start-line="210" selection-start-column="39" selection-end-line="210" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -100,7 +109,7 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/views/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0" vertical-offset="427" max-vertical-offset="4686">
+            <state vertical-scroll-proportion="59.2807" vertical-offset="3863" max-vertical-offset="4686">
               <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
@@ -112,9 +121,11 @@
       <file leaf-file-name="show_custom.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/views/show_custom.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.096774" vertical-offset="44" max-vertical-offset="1452">
-              <caret line="12" column="58" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="58" />
-              <folding />
+            <state vertical-scroll-proportion="2.8387096" vertical-offset="198" max-vertical-offset="1408">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#section#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,18 +133,8 @@
       <file leaf-file-name="profileme.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/styles/profileme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-100.80769" vertical-offset="723" max-vertical-offset="8602">
-              <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="carousel_small.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/views/carousel_small.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4356" max-vertical-offset="6182">
-              <caret line="210" column="39" selection-start-line="210" selection-start-column="39" selection-end-line="210" selection-end-column="74" />
+            <state vertical-scroll-proportion="-5.923077" vertical-offset="0" max-vertical-offset="10032">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -169,7 +170,6 @@
         <option value="$PROJECT_DIR$/backend/models/UserSettings.js" />
         <option value="$PROJECT_DIR$/frontend/app/views/footer.html" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/profileme.js" />
-        <option value="$PROJECT_DIR$/frontend/app/views/show_custom.html" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/factory/customUrls.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/register.js" />
         <option value="$PROJECT_DIR$/backend/models/Messages.js" />
@@ -189,15 +189,16 @@
         <option value="$PROJECT_DIR$/frontend/app/views/show_custom_carousel_small.html" />
         <option value="$PROJECT_DIR$/frontend/app/views/carousel_small.html" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/app.config.js" />
-        <option value="$PROJECT_DIR$/frontend/app/views/show_custom_carousel.html" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/showCustomUrl.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/frontend/app/index.html" />
-        <option value="$PROJECT_DIR$/frontend/app/styles/profileme.css" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/home.js" />
         <option value="$PROJECT_DIR$/frontend/app/static/homePageData.json" />
         <option value="$PROJECT_DIR$/frontend/app/views/home.html" />
+        <option value="$PROJECT_DIR$/frontend/app/views/show_custom.html" />
+        <option value="$PROJECT_DIR$/frontend/app/styles/profileme.css" />
         <option value="$PROJECT_DIR$/frontend/app/views/carousel.html" />
+        <option value="$PROJECT_DIR$/frontend/app/views/show_custom_carousel.html" />
       </list>
     </option>
   </component>
@@ -884,13 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/views/show_custom_carousel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.4838705" vertical-offset="462" max-vertical-offset="1210">
-          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/showCustomUrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="682">
@@ -925,14 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/views/carousel_small.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4356" max-vertical-offset="6182">
-          <caret line="210" column="39" selection-start-line="210" selection-start-column="39" selection-end-line="210" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/views/messages.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.612904" vertical-offset="0" max-vertical-offset="2530">
@@ -949,26 +935,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/views/show_custom.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.096774" vertical-offset="44" max-vertical-offset="1452">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.806452" vertical-offset="704" max-vertical-offset="1716">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/styles/profileme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-100.80769" vertical-offset="723" max-vertical-offset="8602">
-          <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -989,9 +959,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/views/carousel_small.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="29.387096" vertical-offset="5531" max-vertical-offset="6182">
+          <caret line="210" column="39" selection-start-line="210" selection-start-column="39" selection-end-line="210" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/styles/profileme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.923077" vertical-offset="0" max-vertical-offset="10032">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0" vertical-offset="427" max-vertical-offset="4686">
+        <state vertical-scroll-proportion="59.2807" vertical-offset="3863" max-vertical-offset="4686">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#section#1;n#div#0;n#!!top" expanded="true" />
@@ -1001,8 +987,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/views/carousel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3328" vertical-offset="4148" max-vertical-offset="7590">
-          <caret line="198" column="96" selection-start-line="198" selection-start-column="96" selection-end-line="198" selection-end-column="96" />
+        <state vertical-scroll-proportion="-6.368421" vertical-offset="4477" max-vertical-offset="6116">
+          <caret line="220" column="51" selection-start-line="220" selection-start-column="51" selection-end-line="220" selection-end-column="51" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1011,6 +997,24 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#li#0;n#ul#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#li#1;n#ul#0;n#div#3;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/views/show_custom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.8387096" vertical-offset="198" max-vertical-offset="1408">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/views/show_custom_carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5268817" vertical-offset="1373" max-vertical-offset="2200">
+          <caret line="78" column="34" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>

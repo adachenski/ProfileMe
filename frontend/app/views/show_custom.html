@@ -1,11 +1,9 @@
 <div class="container-fluid">
 
-    <div ng-show="showCustomUrl.viewOne" ng-include="'views/show_custom_carousel.html'"></div>
-    <div ng-show="showCustomUrl.viewTwo" ng-include="'views/show_custom_carousel_small.html'"></div>
+    <section ng-show="showCustomUrl.viewOne" ng-include="'views/show_custom_carousel.html'"></section>
+    <section ng-show="showCustomUrl.viewTwo" ng-include="'views/show_custom_carousel_small.html'"></section>
 
-    <section class="row text-banner" id="userDetails">
-        <div ng-bind-html="showCustomUrl.contentMain"></div>
-    </section>
+
 
     <section class="row" id="sports">
         <div class="fill-screen stellar-bg fixed-attachment"

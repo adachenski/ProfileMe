@@ -48,3 +48,48 @@
         </a>
     </div>
 </div>
+
+<div class="row text-banner" id="userDetails">
+    <div ng-bind-html="showCustomUrl.contentMain"></div>
+</div>
+
+<div class="container-fluid block reset-side-padding">
+    <ul class="media-list">
+        <li class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img width="200px" class="media-object"
+                         ng-src="{{showCustomUrl.carouselImgThree || './static/images/no-image-available.jpg'}}"
+                         alt="Select custom image">
+                </a>
+            </div>
+
+            <div class="media-body">
+                <div class="overflow-text media-heading">
+                    <div ng-bind-html="showCustomUrl.carouselImgThreeText"></div>
+                </div>
+
+            </div>
+
+
+        </li>
+
+        <li class="media">
+
+            <div class="media-body">
+                <div class="overflow-text media-heading">
+                    <div ng-bind-html="showCustomUrl.carouselImgTwoText"></div>
+                    </div>
+            </div>
+
+            <div class="media-right">
+                <a href="#">
+                    <img width="200px" class="media-object"
+                         ng-src="{{showCustomUrl.carouselImgTwo || './static/images/no-image-available.jpg'}}"
+                         alt="Select custom image">
+                </a>
+            </div>
+        </li>
+
+    </ul>
+</div>
