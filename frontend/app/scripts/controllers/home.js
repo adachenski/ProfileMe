@@ -46,6 +46,9 @@ angular.module('profileMeApp')
             $scope.bottomMiddleObjectShow = false;
             $scope.bottomRightObjectShow = false;
 
+            $scope.mediaImageTwo = false;
+            $scope.mediaImageThree = false;
+
 
            // $scope.saveSettings1 = function (object) {
            //     customUrlFactory.update({

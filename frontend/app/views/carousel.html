@@ -100,7 +100,7 @@
         border-radius: 10px;
     }
 
-    .media-body>p{
+    .overflow-text{
         max-height: 200px;
         overflow-y: auto;
     }
@@ -187,7 +187,7 @@
                             <a data-toggle="collapse" data-parent="#accordion1" href="#firstLink">
                                 <h4>
                                     <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                                    Image One Settings
+                                    Edit main background IMG above
                                 </h4>
                             </a>
 
@@ -196,19 +196,12 @@
                                     <div class="row">
                                         <div class="col-sm-12">
 
-                                            <h4>Copy and Paste URL for img One</h4>
+                                            <h4>Copy and Paste URL for the main background image</h4>
                                             <input class="form-control" style="width: 100%" type="text"
                                                    ng-model="dataFromDB.carouselImgOne" value="true"/>
 
                                         </div>
 
-                                        <div class="col-sm-12">
-                                            <h4>Edit Text for Image One</h4>
-
-                                            <div class="form-control text-area" text-angular
-                                                 ng-model="dataFromDB.carouselImgOneText">
-                                            </div>
-                                        </div>
                                     </div>
                                 </li>
 
@@ -219,64 +212,25 @@
                             <a data-toggle="collapse" data-parent="#accordion1" href="#secondLink">
                                 <h4>
                                     <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                                    Image Two Settings
+                                    Edit text for the main background image above
                                 </h4>
                             </a>
 
                             <ul id="secondLink" class="collapse">
                                 <li>
                                     <div class="row">
-
                                         <div class="col-sm-12">
-
-                                            <h4>Copy and Paste URL for img Two</h4>
-                                            <input class="form-control" type="text"
-                                                   ng-model="dataFromDB.carouselImgTwo"/>
-                                        </div>
-                                        <div class="col-sm-12">
-
-
-                                            <h4>Edit Text for Image Two</h4>
-
-                                            <div class="form-control text-area"
-                                                 text-angular ng-model="dataFromDB.carouselImgTwoText">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="panel">
-                            <a data-toggle="collapse" data-parent="#accordion1" href="#thirdLink">
-                                <h4>
-                                    <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                                    Image Three Settings
-                                </h4>
-                            </a>
-
-                            <ul id="thirdLink" class="collapse">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-
-                                            <h4>Copy and Paste URL for img Three</h4>
-                                            <input class="form-control" type="text"
-                                                   ng-model="dataFromDB.carouselImgThree"/>
-                                        </div>
-                                        <div class="col-sm-12">
-
-
-                                            <h4>Edit Text for Image Three</h4>
+                                            <h4>Edit Text for the main background image</h4>
 
                                             <div class="form-control text-area" text-angular
-                                                 ng-model="dataFromDB.carouselImgThreeText">
+                                                 ng-model="dataFromDB.carouselImgOneText">
                                             </div>
                                         </div>
                                     </div>
                                 </li>
-
                             </ul>
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -302,4 +256,85 @@
             <div class="form-control text-area" text-angular ng-model="dataFromDB.contentMain"></div>
         </div>
     </div>
+</div>
+
+<div class="container-fluid block reset-side-padding">
+    <ul class="media-list">
+        <li class="media row">
+            <div class="col-md-1">
+
+                <button ng-hide="mediaImageThree" ng-click="mediaImageThree = !mediaImageThree" class="btn btn-block btn-warning">Edit</button>
+                <button ng-show="mediaImageThree" ng-click="mediaImageThree =!mediaImageThree"
+                        class="btn btn-block btn-success">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                    Save
+                </button>
+            </div>
+
+            <div class="col-md-11">
+                <div class="media-left" style="min-width: 180px">
+                    <a href="#">
+                        <img class="media-object" ng-src="{{dataFromDB.carouselImgThree || './static/images/no-image-available.jpg'}}" alt="Select custom image">
+                    </a>
+                    <div class="shake" ng-show="mediaImageThree">
+                        <label >
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            Copy and Paste img url
+                        </label>
+                        <input  class="form-control" type="text" ng-model="dataFromDB.carouselImgThree"/>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div class="shake overflow-text" ng-hide="mediaImageThree">
+                        <div  ng-bind-html="dataFromDB.carouselImgThreeText"></div>
+                    </div>
+
+                    <div ng-show="mediaImageThree" class="shake">
+                        <div class="form-control text-area" text-angular ng-model="dataFromDB.carouselImgThreeText"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </li>
+
+        <li class="media row">
+            <div class="col-md-1">
+
+                <button ng-hide="mediaImageTwo" ng-click="mediaImageTwo = !mediaImageTwo" class="btn btn-block btn-warning">Edit</button>
+                <button ng-show="mediaImageTwo" ng-click="mediaImageTwo =!mediaImageTwo"
+                        class="btn btn-block btn-success">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                    Save
+                </button>
+            </div>
+
+            <div class="col-md-11">
+                <div class="media-body">
+                    <div class="shake overflow-text" ng-hide="mediaImageTwo">
+                        <div  ng-bind-html="dataFromDB.carouselImgTwoText"></div>
+                    </div>
+
+                    <div ng-show="mediaImageTwo" class="shake">
+                        <div class="form-control text-area" text-angular ng-model="dataFromDB.carouselImgTwoText"></div>
+                    </div>
+                </div>
+                <div class="media-right" style="min-width: 180px">
+                    <a href="#">
+                        <img class="media-object" ng-src="{{dataFromDB.carouselImgTwo || './static/images/no-image-available.jpg'}}" alt="Select custom image">
+                    </a>
+                    <div class="shake" ng-show="mediaImageTwo">
+                        <label >
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            Copy and Paste img url
+                        </label>
+                        <input  class="form-control" type="text" ng-model="dataFromDB.carouselImgTwo"/>
+                    </div>
+                </div>
+
+            </div>
+
+        </li>
+
+    </ul>
 </div>

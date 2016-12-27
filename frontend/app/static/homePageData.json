@@ -5,10 +5,12 @@
   "mainBackgroundTextRight":"<h1>Right text</h1><p>Right side random background text from json. </p>",
   "carouselImgOne":"https://wallpaperscraft.com/image/stars_sky_shore_84534_1920x1080.jpg",
   "carouselImgOneText":"<h2>Build Your <u><strong>Own Free</strong></u></h2><h2> Professional Website</h2> <p>Choose from Thousands of Templates</p>",
+
   "carouselImgTwo":"https://image.tmdb.org/t/p/w1280/cqeAgBh9qIQ99stHqSwhrRTezvE.jpg",
-  "carouselImgTwoText":"<h2>Edit text for Image Two..</h2><p>Here you can edit the text for the current image.<p>",
+  "carouselImgTwoText":" <h4 class='media-heading'>Birth</h4><p>Schieble gave birth to Jobs on February 24, 1955, in San Francisco, an chose an adoptive couple for him that was 'Catholic, well-educated, an wealthy.' That couple, however, changed their mind and decided to adopta girl instead.[18] When the baby boy was then placed with the Bay Area bluecollar couple Paul and Clara Jobs, neither of whom had a college education,Schieble refused to sign the adoption papers.[3] She then took the matter tocourt, attempting to have her baby placed with a different family[18] andonly consented to releasing the baby to Paul and Clara after they promisedthat he would attend college.[3] When Jobs was in high school, Clara admitted to his then-girlfriend, 17-year-old Chrisann Brennan.</p>",
   "carouselImgThree":"http://museperk.com/wp-content/uploads/2015/04/vader68sml.jpg",
-  "carouselImgThreeText":"<h1>Edit text for Image three..</h1><p>Here you can edit the text for the current image.<p>",
+
+  "carouselImgThreeText":"<h4 class='media-heading'>Short Intro</h4> Steven Paul 'Steve' Jobs (/ˈdʒɒbz/; February 24, 1955 – October 5, 2011) was an American information technology entrepreneur and inventor. He was the co-founder, chairman, and chief executive officer (CEO) of Apple Inc.; CEO and majority shareholder of Pixar Animation Studios;[2] a member of The Walt Disney Company's board of directors following its acquisition of Pixar; and founder, chairman, and CEO of NeXT Inc. Jobs is widely recognized as a pioneer of the microcomputer revolution of the 1970s and 1980s, along with Apple co-founder Steve Wozniak. Shortly after his death, Jobs's official biographer, Walter Isaacson, described him as a .",
   "bottomLeftObject":"<img src='./static/images/pic.png'/><h2>Orienteering</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.</p>",
   "bottomMiddleObject":"<img src='./static/images/map.png'/><h2>Orienteering</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.</p>",
   "bottomRightObject":"<img src='./static/images/backpack.png'/><h2>Orienteering</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua.</p>",
