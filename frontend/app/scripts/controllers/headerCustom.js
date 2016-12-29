@@ -8,16 +8,17 @@
 
 angular.module('profileMeApp')
     .controller('HeaderCustomController', ['$scope','$stateParams','customUrlFactory',
-        'returnIdFactory','$location','$state',
-        function ($scope,$stateParams,customUrlFactory,returnIdFactory,$location, $state) {
+        'returnIdFactory','$location','$anchorScroll','$state',
+        function ($scope,$stateParams,customUrlFactory,returnIdFactory,$location,$anchorScroll, $state) {
 
            console.log($location.path());
 
 
             $scope.tempUrlId = returnIdFactory.finalUrl;
 
-            $scope.start = function () {
-                $state.go('app');
+            $scope.start23 = function () {
+               // $state.go('app.custom',{id:scopeId});
+                console.log('from custom')
                 $location.hash("userDetails");
                 $anchorScroll();
             };

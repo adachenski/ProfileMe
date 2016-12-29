@@ -28,13 +28,11 @@
                     </a>
                 </li>
 
-                <li>
-                    <a  ng-click="start()">{{headerCustomContent.startButton}}</a>
+                <li ng-hide="isAuthenticated()">
+                    <a  ng-click="start23()">{{headerCustomContent.startButton}}</a>
                 </li>
 
-                <li ng-hide="isAuthenticated()">
-                    <a ui-sref="app.login">Login</a>
-                </li>
+
 
                 <li >
                     <a ui-sref="app.messages({id:'{{tempUrlId}}'})">Messages</a>

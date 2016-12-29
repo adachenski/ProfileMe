@@ -30,7 +30,8 @@
 
 <div class="row peace second-view-background">
     <!--<div data-toggle="modal" data-target="#myModal" class="overlay"><h1>Click to edit content</h1></div>-->
-    <div class="col-md-1"></div>
+    <div class="col-md-1">
+    </div>
     <div class="col-md-5" style="max-height: 250px; overflow: auto">
 
         <section>
@@ -127,6 +128,33 @@
                                                 </ul>
 
                                             </li>
+
+                                            <li class="panel">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#firstLink13">
+                                                    <h4>
+                                                        <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                                        Background Color
+                                                    </h4>
+                                                </a>
+
+                                                <ul id="firstLink13" class="collapse">
+                                                    <li>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+
+                                                                <h4>Change Main background color</h4>
+                                                                <label class="btn btn-block  btn-warning" for="background-color"> Background Color</label>
+                                                                <input style="display: none" class="btn  btn-warning" ng-model="dataFromDB.bodyColor" id="background-color"
+                                                                       type="color"/>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -177,35 +205,75 @@
 
 
     <div class="row">
-        <div class="col-sm-1"></div>
+        <div class="col-sm-1">
+
+        </div>
 
         <div class="col-sm-5 col-xs-6">
+            <button ng-hide="mediaImageTwo" ng-click="mediaImageTwo = !mediaImageTwo"
+                    class="btn btn-block btn-warning">Edit
+            </button>
+            <button ng-show="mediaImageTwo" ng-click="mediaImageTwo =!mediaImageTwo"
+                    class="btn btn-block btn-success">
+                <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                Save
+            </button>
             <div class="rol">
                 <div class="col-xs-12 initial-padding">
                     <img width="100%"
                          ng-src="{{dataFromDB.carouselImgTwo || './static/images/no-image-available.jpg'}}"
                          alt=""/>
+                    <div class="shake" ng-show="mediaImageTwo">
+                        <label>
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            Copy and Paste img url
+                        </label>
+                        <input class="form-control" type="text" ng-model="dataFromDB.carouselImgTwo"/>
+                    </div>
                 </div>
-                <div class="col-xs-12 initial-padding">
+                <div class="col-xs-12 initial-padding shake" ng-hide="mediaImageTwo">
                     <div class="overflow-text" ng-bind-html="dataFromDB.carouselImgTwoText"></div>
+                </div>
+                <div ng-show="mediaImageTwo" class="col-xs-12 initial-padding shake">
+                    <div class="form-control text-area" text-angular ng-model="dataFromDB.carouselImgTwoText"></div>
                 </div>
             </div>
         </div>
         <div class="col-sm-5 col-xs-6" style="background-color: {{dataFromDB.bodyColor}}">
+            <button ng-hide="mediaImageThree" ng-click="mediaImageThree = !mediaImageThree"
+                    class="btn btn-block btn-warning">Edit
+            </button>
+            <button ng-show="mediaImageThree" ng-click="mediaImageThree =!mediaImageThree"
+                    class="btn btn-block btn-success">
+                <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                Save
+            </button>
             <div class="rol">
                 <div class="col-xs-12 initial-padding">
-                    <div class="overflow-text" ng-bind-html="dataFromDB.carouselImgThreeText"></div>
+                    <div ng-hide="mediaImageThree" class="overflow-text" ng-bind-html="dataFromDB.carouselImgThreeText"></div>
+
+                    <div ng-show="mediaImageThree" class="col-xs-12 initial-padding shake">
+                        <div class="form-control text-area" text-angular ng-model="dataFromDB.carouselImgThreeText"></div>
+                    </div>
                 </div>
                 <div class="col-xs-12 initial-padding">
                     <img width="100%"
                          ng-src="{{dataFromDB.carouselImgThree || './static/images/no-image-available.jpg'}}"
                          alt=""/>
+                    <div class="shake" ng-show="mediaImageThree">
+                        <label>
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            Copy and Paste img url
+                        </label>
+                        <input class="form-control" type="text" ng-model="dataFromDB.carouselImgThree"/>
+                    </div>
 
                 </div>
             </div>
         </div>
 
-        <div class="col-xs-1"></div>
+        <div class="col-xs-1">
+        </div>
     </div>
 
 </div>

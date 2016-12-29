@@ -1,0 +1,38 @@
+<footer>
+
+    <div class="navigation-footer-color">
+        <div class="row">
+            <div class="col-sm-2 center-item footer-button">
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="footer-top">
+                        <div ng-bind-html="headerCustomContent.footerTitle"></div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col-sm-4 footer-content">
+
+                        <div ng-bind-html="headerCustomContent.footerLeft" ></div>
+
+                    </div>
+                    <div class="col-sm-4 footer-content">
+                        <div ng-bind-html="headerCustomContent.footerMiddle"></div>
+
+                    </div>
+                    <div class="col-sm-4 footer-content">
+                        <div class="footer-icons">
+                            <div ng-bind-html="headerCustomContent.footerRight"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="footer-top center-item"><img class="logo-footer" ng-src="{{headerCustomContent.logo}}" alt=""/></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+</footer>

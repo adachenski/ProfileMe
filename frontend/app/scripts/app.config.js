@@ -38,6 +38,10 @@ angular.module('profileMeApp')
                     'body-container@': {
                         templateUrl:'views/show_custom.html',
                         controller  : 'ShowCustomUrlController'
+                    },
+                    'footer@': {
+                        templateUrl: 'views/footer_custom.html',
+                        controller:'HeaderCustomController'
                     }
                 }
             })

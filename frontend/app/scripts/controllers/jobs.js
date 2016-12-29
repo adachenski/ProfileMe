@@ -52,7 +52,8 @@ angular.module('profileMeApp')
             };
 
             $scope.preview = function(){
-                $state.go('app.custom',{id:scopeId});
+                var url = $state.href('app.custom',{id:scopeId});
+                window.open(url,'_blank');
             };
 
             $scope.submitUsername = function () {
