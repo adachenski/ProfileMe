@@ -9,7 +9,10 @@ var MessagesSchema = new Schema({
 
     title:String,
     content:String,
-    postedById:String
+    postedById:String,
+    sender:String,
+    voteUp:Number,
+    voteDown:Number
 },{timestamps: true});
 
 var MessageModel = mongoose.model('Messages',MessagesSchema);

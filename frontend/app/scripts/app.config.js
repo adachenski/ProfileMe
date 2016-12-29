@@ -55,6 +55,10 @@ angular.module('profileMeApp')
                     'body-container@': {
                         templateUrl:'views/messages.html',
                         controller  : 'MessageController'
+                    },
+                    'footer@': {
+                        templateUrl: 'views/footer_custom.html',
+                        controller:'HeaderCustomController'
                     }
                 }
             })
