@@ -74,7 +74,7 @@ angular.module('profileMeApp')
                     bottomRightObject: $scope.dataFromDB.bottomRightObject,
                     viewOne:$scope.dataFromDB.viewOne,
                     viewTwo:$scope.dataFromDB.viewTwo,
-                    bodyColor:$scope.dataFromDB.backgroundColor
+                    bodyColor:$scope.dataFromDB.bodyColor
                 }, function (err, numberAffected, rawResponse) {
                     if (err) {
                         $log.debug(err);
