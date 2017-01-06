@@ -19,12 +19,13 @@ angular.module('profileMeApp')
 
             $scope.start = function () {
                 $state.go('app');
-                $location.hash("userDetails");
+                $location.hash("sports");
                 $anchorScroll();
             };
 
+
             $scope.isAuthenticated = authToken.isAuthenticated;
-            console.log($scope.isAuthenticated());
+            console.log('is auth: ' + $scope.isAuthenticated());
 
 
             customUrlFactory.get({})
@@ -63,7 +64,7 @@ angular.module('profileMeApp')
                         //throw 'Error pushing data to server: '+err;
                     }
 
-                    alert('success', 'Awesome! \n', ' Successfully Changed View. ');
+                    alert('success', 'Footer \n', ' Changes Saved. ');
 
                 });
             };
@@ -80,10 +81,7 @@ angular.module('profileMeApp')
                         //throw 'Error pushing data to server: '+err;
                     }
 
-                    alert('success', 'Awesome! \n', ' Successfully Changed View. ');
-
+                    alert('success', 'Header \n', ' Changes Saved. ');
                 });
-
             };
-
         }]);

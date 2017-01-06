@@ -4,8 +4,8 @@
 
 angular.module('profileMeApp')
     .controller('HomeController', ['$scope', 'customUrlFactory', '$http', '$stateParams',
-        '$state', 'HomeModelFactory', '$log','$location','$anchorScroll',
-        function ($scope, customUrlFactory, $http, $stateParams, $state, HomeModelFactory, $log,$location,$anchorScroll) {
+        '$state', 'HomeModelFactory', '$log','$location','$anchorScroll','alert',
+        function ($scope, customUrlFactory, $http, $stateParams, $state, HomeModelFactory, $log,$location,$anchorScroll,alert) {
             var scopeId;
             var username;
           //  $scope.UserSetting = UserSettings.data;
@@ -33,7 +33,9 @@ angular.module('profileMeApp')
                 }
             );
 
-
+            $scope.showAlert = function(){
+                alert('success', 'Header \n', ' Changes Saved. ');
+            };
            //$scope.UserSetting.templateOne = false;
            //$scope.UserSetting.templateTwo = false;
 
