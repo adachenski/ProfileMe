@@ -17,7 +17,7 @@ angular.module('profileMeApp')
                     HomeModelFactory.fetch().then(function(data) {
                         $scope.dataFromJson = data;
 
-                        $http.post('http://localhost:3000/custom', {
+                        $http.post('https://profile-api.mybluemix.net/custom', {
 
                             username:"",
                             contentMain: $scope.dataFromJson.contentMain,
