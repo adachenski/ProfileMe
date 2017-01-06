@@ -1,24 +1,21 @@
 <div class="row block">
 
+    <div style="position: relative" class="col-sm-12 reset-side-padding">
+        <img style="width: 100%; height: auto!important;"
+             ng-src="{{dataFromDB.carouselImgOne || './static/images/no-image-available.jpg'}}"
+             alt="No data">
 
-        <div style="position: relative" class="col-sm-12 reset-side-padding">
-            <img style="width: 100%; height: auto!important;"
-                 ng-src="{{dataFromDB.carouselImgOne || './static/images/no-image-available.jpg'}}"
-                 alt="No data">
-
-            <div class="maint-text-adjust">
-                <div id="inner-maint-text-adjust" ng-bind-html="dataFromDB.carouselImgOneText"></div>
-                <div>
-                    <button class="btn btn-default">Contact Us</button>
-                    <button class="btn btn-danger">Learn more</button>
-                </div>
-            </div>
-            <div class="scroll-down-arrow">
-                <i class="fa fa-arrow-circle-o-down fa-lg" aria-hidden="true"></i>
+        <div class="maint-text-adjust">
+            <div id="inner-maint-text-adjust" ng-bind-html="dataFromDB.carouselImgOneText"></div>
+            <div>
+                <button ng-click="customInfo()" class="hover-hand btn btn-default">Contact Us</button>
+                <button ng-click="customInfo()" class="hover-hand btn btn-danger">About Us</button>
             </div>
         </div>
-
-
+        <div class="scroll-down-arrow">
+            <i ng-click="start()" class="hover-hand fa fa-arrow-circle-o-down fa-lg" aria-hidden="true"></i>
+        </div>
+    </div>
 </div>
 
 
@@ -27,11 +24,11 @@
         <button ng-hide="carouselImagesShow" ng-click="carouselImagesShow = !carouselImagesShow"
                 class="btn btn-block btn-warning">
             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-            Edit Images
+            Edit Above
         </button>
         <button ng-show="carouselImagesShow" ng-click="carouselImagesShow = !carouselImagesShow"
                 class="btn btn-block btn-success">
-            <i class="fa fa-floppy-o" aria-hidden="true"></i> Save Images
+            <i class="fa fa-floppy-o" aria-hidden="true"></i> Save Above
         </button>
     </div>
 
@@ -51,7 +48,6 @@
 
             <i class="fa fa-floppy-o" aria-hidden="true"></i> Save Main
         </button>
-
     </div>
 
 
@@ -105,8 +101,8 @@
                             </li>
                         </ul>
                     </li>
-
                 </ul>
+
             </div>
         </div>
     </div>
@@ -133,9 +129,7 @@
                         class="btn btn-block btn-warning">Edit
                 </button>
                 <button ng-show="mediaImageThree" ng-click="mediaImageThree =!mediaImageThree"
-                        class="btn btn-block btn-success">
-                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
-                    Save
+                        class="btn btn-block btn-success">Save
                 </button>
             </div>
 
@@ -148,7 +142,7 @@
                     </a>
 
                     <div class="shake" ng-show="mediaImageThree">
-                        <label>
+                        <label class="initial-padding ">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             Copy and Paste img url
                         </label>
@@ -178,7 +172,6 @@
                 </button>
                 <button ng-show="mediaImageTwo" ng-click="mediaImageTwo =!mediaImageTwo"
                         class="btn btn-block btn-success">
-                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
                     Save
                 </button>
             </div>
@@ -201,7 +194,7 @@
                     </a>
 
                     <div class="shake" ng-show="mediaImageTwo">
-                        <label>
+                        <label class="initial-padding">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             Copy and Paste img url
                         </label>

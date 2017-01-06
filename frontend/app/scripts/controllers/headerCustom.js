@@ -16,7 +16,7 @@ angular.module('profileMeApp')
 
             $scope.tempUrlId = returnIdFactory.finalUrl;
 
-            $scope.start23 = function () {
+            $scope.startEdited = function () {
                // $state.go('app.custom',{id:scopeId});
                 console.log('from custom')
                 $location.hash("userDetails");

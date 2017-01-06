@@ -97,6 +97,11 @@ ul, ol {
     font-family: Helvetica, Helvetica, Arial, sans-serif;
 }
 
+.hover-hand:hover{
+    cursor:pointer;
+    cursor: hand
+}
+
 .second-view-main-container {
     background-color: #ffffff;
     position: relative;

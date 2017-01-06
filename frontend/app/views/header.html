@@ -160,10 +160,10 @@
                     </a>
                 </li>
 
-                <li>
-                    <a  ng-click="start()">{{headerContent.startButton}}</a>
+                <li class="hover-hand">
+                    <a ng-click="start()">{{headerContent.startButton}}</a>
                 </li>
-                <li>
+                <li ng-show="isAuthenticated()">
                     <a ui-sref="app.jobs">Settings</a>
                 </li>
                 <li ng-hide="isAuthenticated()">
