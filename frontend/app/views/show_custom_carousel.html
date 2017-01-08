@@ -1,62 +1,27 @@
-
 <div class="row block">
 
-        <div style="position: relative" class="col-sm-12 reset-side-padding">
-            <img style="width: 100%; height: auto!important;"
-                 ng-src="{{showCustomUrl.carouselImgOne || './static/images/no-image-available.jpg'}}"
-                 alt="No data">
+    <div style="position: relative" class="col-sm-12 reset-side-padding">
+        <img style="width: 100%; height: auto!important;"
+             ng-src="{{showCustomUrl.carouselImgOne || './static/images/no-image-available.jpg'}}"
+             alt="No data">
 
-            <div class="maint-text-adjust">
-                <div id="inner-maint-text-adjust" ng-bind-html="showCustomUrl.carouselImgOneText"></div>
-                <div> <button class="btn btn-default">Contact Us</button> <button class="btn btn-danger">Learn more</button></div>
-            </div>
-            <div class="scroll-down-arrow">
-                <i class="fa fa-arrow-circle-o-down fa-lg" aria-hidden="true"></i>
+        <div class="maint-text-adjust">
+            <div id="inner-maint-text-adjust" ng-bind-html="showCustomUrl.carouselImgOneText"></div>
+            <div>
+                <button ng-click="customInfoEdited()" class="hover-hand btn btn-default">Contact Us</button>
+                <button ng-click="customInfoEdited()" class="hover-hand btn btn-danger">About Us</button>
             </div>
         </div>
+        <div class="scroll-down-arrow">
+            <i ng-click="startEdited()" class="hover-hand fa fa-arrow-circle-o-down fa-lg" aria-hidden="true"></i>
+        </div>
+    </div>
 
 </div>
 
-<div class="row text-banner" id="userDetails">
+<div class="row text-banner">
     <div ng-bind-html="showCustomUrl.contentMain"></div>
 </div>
-
-<!--<div class="container-fluid block reset-side-padding">-->
-    <!--<ul class="media-list">-->
-        <!--<li class="media">-->
-            <!--<div class="media-left">-->
-                <!--<a href="#">-->
-                    <!--<img width="300px" class="media-object"-->
-                         <!--ng-src="{{showCustomUrl.carouselImgThree || './static/images/no-image-available.jpg'}}"-->
-                         <!--alt="Select custom image">-->
-                <!--</a>-->
-            <!--</div>-->
-            <!--<div class="media-body ">-->
-                <!--<div class="overflow-text media-heading initial-padding">-->
-                    <!--<div ng-bind-html="showCustomUrl.carouselImgThreeText"></div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</li>-->
-
-        <!--<li class="media">-->
-            <!--<div class="media-body">-->
-                <!--<div class="overflow-text media-heading initial-padding">-->
-                    <!--<div ng-bind-html="showCustomUrl.carouselImgTwoText"></div>-->
-                    <!--</div>-->
-            <!--</div>-->
-            <!--<div class="media-right">-->
-                <!--<a href="#">-->
-                    <!--<img width="300px" class="media-object"-->
-                         <!--ng-src="{{showCustomUrl.carouselImgTwo || './static/images/no-image-available.jpg'}}"-->
-                         <!--alt="Select custom image">-->
-                <!--</a>-->
-            <!--</div>-->
-        <!--</li>-->
-    <!--</ul>-->
-<!--</div>-->
-
-
-
 
 <div class="container-fluid block">
 
@@ -67,15 +32,14 @@
             <div class="rol">
 
                 <div class="col-lg-2 col-xs-4 initial-padding">
-                    <img width="100%"   ng-src="{{showCustomUrl.carouselImgTwo || './static/images/no-image-available.jpg'}}" alt=""/>
+                    <img width="100%"
+                         ng-src="{{showCustomUrl.carouselImgTwo || './static/images/no-image-available.jpg'}}" alt=""/>
                 </div>
                 <div class="col-lg-1"></div>
-                <div class="col-lg-9  col-xs-8 initial-padding" >
-                    <div class="overflow-text" ng-bind-html="showCustomUrl.carouselImgTwoText"></div>
+                <div   class="col-lg-9  col-xs-8 initial-padding ">
+                    <div id="" class="overflow-text  style-2" ng-bind-html="showCustomUrl.carouselImgTwoText"></div>
                 </div>
-
             </div>
-
         </div>
 
         <div class="col-sm-12">
@@ -83,16 +47,16 @@
             <div class="rol">
 
                 <div class="col-lg-9 col-xs-8 initial-padding">
-                    <div  class="overflow-text" ng-bind-html="showCustomUrl.carouselImgThreeText"></div>
+                    <div class="overflow-text style-2" ng-bind-html="showCustomUrl.carouselImgThreeText"></div>
                 </div>
                 <div class="col-lg-1"></div>
-                <div class="col-lg-2 col-xs-4 initial-padding" >
-                    <img width="100%"  ng-src="{{showCustomUrl.carouselImgThree || './static/images/no-image-available.jpg'}}" alt=""/>
+                <div class="col-lg-2 col-xs-4 initial-padding">
+                    <img width="100%"
+                         ng-src="{{showCustomUrl.carouselImgThree || './static/images/no-image-available.jpg'}}"
+                         alt=""/>
 
                 </div>
-
             </div>
         </div>
-
     </div>
 </div>

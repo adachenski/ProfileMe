@@ -92,13 +92,10 @@
                                                                          ng-model="dataFromDB.carouselImgOneText">
                                                                     </div>
                                                                 </div>
-
                                                             </div>
                                                         </div>
                                                     </li>
-
                                                 </ul>
-
                                             </li>
 
                                             <li class="panel">
@@ -119,14 +116,10 @@
                                                                        type="text"
                                                                        ng-model="dataFromDB.carouselImgOne"
                                                                        value="true"/>
-
                                                             </div>
-
                                                         </div>
                                                     </li>
-
                                                 </ul>
-
                                             </li>
 
                                             <li class="panel">
@@ -143,17 +136,18 @@
                                                             <div class="col-sm-12">
 
                                                                 <h4>Change Main background color</h4>
-                                                                <label class="btn btn-block  btn-warning" for="background-color"> Background Color</label>
-                                                                <input style="display: none" class="btn  btn-warning" ng-model="dataFromDB.bodyColor" id="background-color"
+                                                                <label class="btn btn-block  btn-warning"
+                                                                       for="background-color"> Background Color</label>
+                                                                <input style="display: none" class="btn  btn-warning"
+                                                                       ng-model="dataFromDB.bodyColor"
+                                                                       id="background-color"
                                                                        type="color"/>
 
                                                             </div>
 
                                                         </div>
                                                     </li>
-
                                                 </ul>
-
                                             </li>
                                         </ul>
                                     </div>
@@ -170,7 +164,7 @@
             </div>
         </section>
     </div>
-    <div class="col-md-6 reset-side-padding" style="min-width: 400px; overflow: hidden">
+    <div class="col-md-6 reset-side-padding">
 
         <img style="width: 100%; height: auto!important; opacity: 0.8"
              ng-src="{{dataFromDB.carouselImgOne || './static/images/no-image-available.jpg'}}"
@@ -180,9 +174,9 @@
 
 <div class="container-fluid block second-view-main-container">
 
-    <div class="row">
+    <div class="row initial-padding">
         <div class="col-sm-1">
-            <button ng-hide="editMain" class="btn  btn-warning button-group"
+            <button ng-hide="editMain" class="btn btn-warning button-group"
                     ng-click="editMain = !editMain">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
             </button>
@@ -193,15 +187,14 @@
             </button>
         </div>
 
-        <div class="col-sm-10  shake" ng-hide="editMain">
+        <div class="col-sm-10 shake" ng-hide="editMain">
             <div ng-bind-html="dataFromDB.contentMain"></div>
         </div>
 
-        <div class="col-sm-10  shake" ng-show="editMain">
+        <div class="col-sm-10 shake" ng-show="editMain">
             <div class="form-control text-area" text-angular ng-model="dataFromDB.contentMain"></div>
         </div>
     </div>
-
 
 
     <div class="row">
@@ -223,8 +216,9 @@
                     <img width="100%"
                          ng-src="{{dataFromDB.carouselImgTwo || './static/images/no-image-available.jpg'}}"
                          alt=""/>
+
                     <div class="shake" ng-show="mediaImageTwo">
-                        <label>
+                        <label class="initial-padding">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             Copy and Paste img url
                         </label>
@@ -250,18 +244,21 @@
             </button>
             <div class="rol">
                 <div class="col-xs-12 initial-padding">
-                    <div ng-hide="mediaImageThree" class="overflow-text" ng-bind-html="dataFromDB.carouselImgThreeText"></div>
+                    <div ng-hide="mediaImageThree" class="overflow-text"
+                         ng-bind-html="dataFromDB.carouselImgThreeText"></div>
 
                     <div ng-show="mediaImageThree" class="col-xs-12 initial-padding shake">
-                        <div class="form-control text-area" text-angular ng-model="dataFromDB.carouselImgThreeText"></div>
+                        <div class="form-control text-area" text-angular
+                             ng-model="dataFromDB.carouselImgThreeText"></div>
                     </div>
                 </div>
                 <div class="col-xs-12 initial-padding">
                     <img width="100%"
                          ng-src="{{dataFromDB.carouselImgThree || './static/images/no-image-available.jpg'}}"
                          alt=""/>
+
                     <div class="shake" ng-show="mediaImageThree">
-                        <label>
+                        <label class="initial-padding">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             Copy and Paste img url
                         </label>

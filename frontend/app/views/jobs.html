@@ -32,9 +32,15 @@
         background-color:#000;
         opacity:0.7;
         z-index: 100;
-        display: block;
+
         color: #ffffff;
+        font-size: 1.6em;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
     .peace:hover > .overlay{
         display: none;
 
@@ -70,15 +76,15 @@
 
         <div class="col-md-3 col-xs-5 ">
 
-            <div class="settings-main-images peace">
-                <div class="overlay"><h1>Select view One</h1></div>
+            <div class="settings-main-images peace hover-hand">
+                <div class="overlay">Select view One</div>
                 <img ng-click="updateViewOne();submitView()" src="./static/images/banner_beauty.jpg" alt=""/>
 
             </div>
         </div>
         <div class="col-md-3 col-xs-5">
-            <div class="settings-main-images peace">
-                <div  class="overlay"><h1>Select view Two</h1></div>
+            <div class="settings-main-images peace hover-hand">
+                <div  class="overlay">Select view Two</div>
                 <img ng-click="updateViewTwo();submitView()" src="./static/images/banner_photography.jpg" alt=""/>
 
             </div>
@@ -87,17 +93,18 @@
 
     </div>
     <div class="row">
-        <div class="col-xs-3"></div>
-        <div class="col-xs-6">
+        <div class="col-md-4 col-xs-2"></div>
+        <div class="col-md-4 col-xs-8">
 
-            <div class=" peace">
-                <div  class="overlay"><h1>Preview</h1></div>
-                <img ng-click="preview()" src="./static/images/banner_photography.jpg" alt=""/>
+            <div class=" peace hover-hand">
+                <div  class="overlay">Preview</div>
+                <img style="width: 100%" ng-click="preview()" src="./static/images/banner_photography.jpg" alt=""/>
 
             </div>
 
         </div>
-        <div class="col-xs-3"></div>
+        <div class="col-md-4 col-xs-2"></div>
     </div>
 
 </div>
+<div style="height: 30px"></div>

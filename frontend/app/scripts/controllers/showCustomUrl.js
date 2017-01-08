@@ -3,9 +3,17 @@
  */
 
 angular.module('profileMeApp')
-    .controller('ShowCustomUrlController',['$scope','$stateParams','customUrlFactory','$sce',
-        function($scope,$stateParams,customUrlFactory,$sce){
+    .controller('ShowCustomUrlController',['$scope','$stateParams','customUrlFactory','$location','$anchorScroll','$sce',
+        function($scope,$stateParams,customUrlFactory,$location,$anchorScroll,$sce){
+            $scope.customInfoEdited = function () {
+                $location.hash("customInfo");
+                $anchorScroll();
+            };
 
+            $scope.startEdited = function () {
+                $location.hash("userDetails");
+                $anchorScroll();
+            };
             $scope.fromCustom= customUrlFactory.get({
                 id: $stateParams.id
             })

@@ -3,8 +3,8 @@
  */
 
 angular.module('profileMeApp')
-    .controller('JobsController', ['$scope', '$http', '$stateParams', '$state', 'API_URL', 'alert', 'customUrlFactory',
-        function ($scope, $http, $stateParams, $state, API_URL, alert, customUrlFactory) {
+    .controller('JobsController', ['$scope', '$http', '$stateParams', '$state', 'API_URL', 'alert', 'customUrlFactory','$window',
+        function ($scope, $http, $stateParams, $state, API_URL, alert, customUrlFactory,$window) {
             var scopeId = $stateParams.id;
             console.log(scopeId);
             var templateTwo;
@@ -45,8 +45,9 @@ angular.module('profileMeApp')
                     if (err) {
                         //throw 'Error pushing data to server: '+err;
                     }
-                    console.log('before');
                     alert('success', 'Awesome! \n',' Successfully Changed View. ');
+                    $state.go('app');
+
                 });
 
             };

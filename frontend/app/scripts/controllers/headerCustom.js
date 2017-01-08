@@ -7,39 +7,28 @@
 'use strict';
 
 angular.module('profileMeApp')
-    .controller('HeaderCustomController', ['$scope','$stateParams','customUrlFactory',
-        'returnIdFactory','$location','$anchorScroll','$state',
-        function ($scope,$stateParams,customUrlFactory,returnIdFactory,$location,$anchorScroll, $state) {
-
-           console.log($location.path());
-
+    .controller('HeaderCustomController', ['$scope', '$stateParams', 'customUrlFactory',
+        'returnIdFactory', '$location', '$anchorScroll',
+        function ($scope, $stateParams, customUrlFactory, returnIdFactory, $location, $anchorScroll) {
 
             $scope.tempUrlId = returnIdFactory.finalUrl;
 
-            $scope.start23 = function () {
-               // $state.go('app.custom',{id:scopeId});
+            $scope.startEdited = function () {
                 console.log('from custom')
-                $location.hash("userDetails");
+                $location.hash("sports");
                 $anchorScroll();
             };
 
             console.log('hi custom header');
-            $scope.fromCustom= customUrlFactory.get({
+            $scope.fromCustom = customUrlFactory.get({
                 id: $stateParams.id
             })
                 .$promise.then(
                 function (response) {
-                    // $scope.deliberatelyTrustDangerousSnippet = function() {
-                    //     return $sce.trustAsHtml(response.mainContent);
-                    // };
-
-                   // console.log($stateParams.id);
                     $scope.headerCustomContent = response;
                 },
                 function (response) {
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
             );
-
-
         }]);

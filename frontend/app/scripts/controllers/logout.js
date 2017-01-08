@@ -3,6 +3,7 @@
  */
 
 angular.module('profileMeApp')
-    .controller('LogoutController',['authToken',function(authToken){
+    .controller('LogoutController',['authToken','$state',function(authToken, $state){
         authToken.removeToken();
+        $state.go('app');
     }]);

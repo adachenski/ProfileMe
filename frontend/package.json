@@ -2,11 +2,18 @@
   "name": "profileme",
   "version": "1.0.0",
   "description": "Profile expouse web-application",
-  "main": "index.js",
+  "main": "./app/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Atanas Dachenski",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "repository": {}
 }

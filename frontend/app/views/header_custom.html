@@ -29,10 +29,8 @@
                 </li>
 
                 <li ng-hide="isAuthenticated()">
-                    <a  ng-click="start23()">{{headerCustomContent.startButton}}</a>
+                    <a class="hover-hand" ng-click="startEdited()">{{headerCustomContent.startButton}}</a>
                 </li>
-
-
 
                 <li >
                     <a ui-sref="app.messages({id:'{{tempUrlId}}'})">Messages</a>

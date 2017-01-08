@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="profileMeApp">
+<html ng-app="profileMeApp" class="ng-cloak">
 <head lang="en">
 
     <meta charset="UTF-8">
     <title>Profile Me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel='stylesheet' href='extenral_modules/textangular/dist/textAngular.css'>
+    <link rel="stylesheet" href="extenral_modules/bower_components/bootstrap/dist/css/bootstrap.css"/>
 
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
-    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="../bower_components/bootstrap-social/bootstrap-social.css"/>
-    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css"/>
+    <link rel="stylesheet" href="extenral_modules/bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="extenral_modules/bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="extenral_modules/bower_components/bootstrap-social/bootstrap-social.css"/>
+    <link rel="stylesheet" href="extenral_modules/bower_components/animate.css/animate.min.css"/>
     <link rel="stylesheet" href="styles/profileme.css"/>
     <link rel="stylesheet" href="styles/login.css"/>
 
@@ -19,32 +19,32 @@
 <body>
 
 
-<div ui-view="header"></div>
+<div ng-cloak ui-view="header"></div>
 
-<div  ng-include="'views/alert.html'"></div>
+<div ng-include="'views/alert.html'"></div>
 
-<div class="ui-view-container">
+<div ng-cloak class="ui-view-container">
     <div ui-view="body-container"></div>
 </div>
 
 
-<div ui-view="footer"></div>
+<div ng-cloak ui-view="footer"></div>
 
 <!-- bower:js -->
-<script src="../bower_components/angular/angular.js" rel="javascript"></script>
-<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js" rel="javascript"></script>
-<script src="../bower_components/angular-resource/angular-resource.min.js" rel="javascript"></script>
-<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../bower_components/angular-animate/angular-animate.js"></script>
+<script src="extenral_modules/bower_components/angular/angular.js" rel="javascript"></script>
+<script src="extenral_modules/bower_components/angular-ui-router/release/angular-ui-router.js"rel="javascript"></script>
+<script src="extenral_modules/bower_components/angular-resource/angular-resource.js" rel="javascript"></script>
+<script src="extenral_modules/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="extenral_modules/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="extenral_modules/bower_components/angular-animate/angular-animate.js"></script>
 <!-- endbower -->
 
 <script rel="javascript" src="scripts/app.js"></script>
 <script rel="javascript" src="scripts/app.config.js"></script>
 
-<script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular-rangy.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular-sanitize.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular.min.js'></script>
+<script src='extenral_modules/textangular/dist/textAngular-rangy.min.js'></script>
+<script src='extenral_modules/textangular/dist/textAngular-sanitize.min.js'></script>
+<script src='extenral_modules/textangular/dist/textAngular.min.js'></script>
 
 <script src="scripts/factory/homeModelFactory.js"></script>
 <script src="scripts/controllers/home.js"></script>
@@ -65,7 +65,6 @@
 <script src="scripts/factory/customUrls.js"></script>
 <script src="scripts/controllers/headerCustom.js"></script>
 <script src="scripts/controllers/showCustomUrl.js"></script>
-<!--<script src="scripts/services/userSettings.js"></script>-->
 <script src="scripts/factory/messagesFactory.js"></script>
 <script src="scripts/controllers/message.js"></script>
 

@@ -1,6 +1,4 @@
 <style>
-
-
     .text-area {
         background-color: #00405f;
         width: 100%;
@@ -18,17 +16,16 @@
     <section ng-show="dataFromDB.viewOne" ng-include="'views/carousel.html'"></section>
 
 
-    <div ng-show="dataFromDB.viewTwo" ng-include="'views/carousel_small.html'"></div>
+    <section ng-show="dataFromDB.viewTwo" ng-include="'views/carousel_small.html'"></section>
 
 
 
-    <section class="row" id="sports">
-        <div class="fill-screen stellar-bg fixed-attachment"
+    <section id="sports">
+        <div  class="fill-screen stellar-bg fixed-attachment"
              data-steller-background-ratio="0.2"
              style="background-image: url({{dataFromDB.mainBackground}})">
             <section class="row activity-section">
                 <div class="activity-element col-md-4" style="color: #ffffff">
-
                     <div>
                         <button ng-hide="middleBackgroundTextLeftShow"
                                 ng-click="middleBackgroundTextLeftShow = !middleBackgroundTextLeftShow"
@@ -195,7 +192,6 @@
             <i class="fa fa-floppy-o" aria-hidden="true"></i> Save all settings
         </button>
     </div>
-
 </div>
 
 <script>
