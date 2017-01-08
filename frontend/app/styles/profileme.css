@@ -102,12 +102,7 @@ ul, ol {
     cursor: hand
 }
 
-.second-view-main-container {
-    background-color: #ffffff;
-    position: relative;
-    top: -60px;
-    width: 90%
-}
+
 
 @media (max-width: 1051px) {
     .overflow-text {
@@ -115,7 +110,14 @@ ul, ol {
         overflow-y: auto;
     }
 }
-
+@media (min-width: 778px) {
+    .second-view-main-container {
+        background-color: #ffffff;
+        position: relative;
+        top: -60px;
+        width: 90%
+    }
+}
 .initial-padding {
     padding: 20px 5px;
 }
@@ -258,7 +260,28 @@ ul, ol {
     width: 100%;
 
 }
+.overflow-text::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+.scrollbar
+{
 
+}
+.overflow-text::-webkit-scrollbar
+{
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+.overflow-text::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #d3d3d3;
+}
 .initial-nav {
     margin-bottom: 0px;
     padding: 30px 15px;
@@ -267,6 +290,9 @@ ul, ol {
     font-size: 1.2em;
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
 .changed-nav {
     margin-bottom: 0px;
     -webkit-transition: all 0.5s;

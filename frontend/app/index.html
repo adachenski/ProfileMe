@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="profileMeApp">
+<html ng-app="profileMeApp" class="ng-cloak">
 <head lang="en">
 
     <meta charset="UTF-8">
@@ -19,21 +19,21 @@
 <body>
 
 
-<div ui-view="header"></div>
+<div ng-cloak ui-view="header"></div>
 
 <div ng-include="'views/alert.html'"></div>
 
-<div class="ui-view-container">
+<div ng-cloak class="ui-view-container">
     <div ui-view="body-container"></div>
 </div>
 
 
-<div ui-view="footer"></div>
+<div ng-cloak ui-view="footer"></div>
 
 <!-- bower:js -->
 <script src="extenral_modules/bower_components/angular/angular.js" rel="javascript"></script>
-<script src="extenral_modules/bower_components/angular-ui-router/release/angular-ui-router.min.js"rel="javascript"></script>
-<script src="extenral_modules/bower_components/angular-resource/angular-resource.min.js" rel="javascript"></script>
+<script src="extenral_modules/bower_components/angular-ui-router/release/angular-ui-router.js"rel="javascript"></script>
+<script src="extenral_modules/bower_components/angular-resource/angular-resource.js" rel="javascript"></script>
 <script src="extenral_modules/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="extenral_modules/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="extenral_modules/bower_components/angular-animate/angular-animate.js"></script>
