@@ -13,6 +13,7 @@ var User = require('./models/User');
 var verify = require('./routes/verify');
 var userSettings = require('./routes/userSettingRouter');
 var messages = require('./routes/messageRouter');
+var myMessage = require('./routes/myMessageRouter');
 var app = express();
 app.use(bodyParser.json());
 app.use(passport.initialize());
@@ -97,6 +98,7 @@ var jobs = [
 app.use('/custom', userSettings);
 
 app.use('/messages',messages);
+app.use('/my-messages',myMessage);
 
 app.get('/jobs',verify.verifyUser, function (req, res, next) {
 

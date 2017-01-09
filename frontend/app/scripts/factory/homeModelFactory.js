@@ -7,7 +7,7 @@ angular.module('profileMeApp').factory('HomeModelFactory', function($timeout, $h
                 });
             }, 30);
         }
-    }
+    };
 
     return homeData;
 });

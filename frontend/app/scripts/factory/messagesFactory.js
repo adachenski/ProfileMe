@@ -16,7 +16,6 @@ angular.module('profileMeApp').factory('messagesFactory',['$resource', 'API_URL'
 
         return $resource(API_URL + "messages/:id",{
             Url: finalUrl
-
         });
        //return $resource(API_URL + "messages/:id", null, {
        //    'update': {

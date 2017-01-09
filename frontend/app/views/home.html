@@ -20,7 +20,7 @@
 
 
 
-    <section id="sports">
+    <section class="row" id="sports">
         <div  class="fill-screen stellar-bg fixed-attachment"
              data-steller-background-ratio="0.2"
              style="background-image: url({{dataFromDB.mainBackground}})">
@@ -29,13 +29,13 @@
                     <div>
                         <button ng-hide="middleBackgroundTextLeftShow"
                                 ng-click="middleBackgroundTextLeftShow = !middleBackgroundTextLeftShow"
-                                class="btn btn-warning">
+                                class="hover-hand btn btn-warning">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             Edit
                         </button>
                         <button ng-show="middleBackgroundTextLeftShow"
                                 ng-click="middleBackgroundTextLeftShow = !middleBackgroundTextLeftShow"
-                                class="btn btn-success">
+                                class="hover-hand btn btn-success">
                             <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
                         </button>
                     </div>
@@ -59,11 +59,11 @@
                 <div class="activity-element col-md-4">
 
                     <button ng-hide="middleBackgroundShow" ng-click="middleBackgroundShow = !middleBackgroundShow"
-                            class="btn btn-warning">
+                            class="hover-hand btn btn-warning">
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Background
                     </button>
                     <button ng-show="middleBackgroundShow" ng-click="middleBackgroundShow =!middleBackgroundShow"
-                            class="btn btn-success">
+                            class="hover-hand btn btn-success">
                         <i class="fa fa-floppy-o" aria-hidden="true"></i>
                         Save Background
                     </button>
@@ -81,12 +81,12 @@
                 <div class="activity-element col-md-4" style="color:#ffffff">
 
                     <div>
-                        <button ng-hide="middleBackgroundTextRightShow" class="btn  btn-warning"
+                        <button ng-hide="middleBackgroundTextRightShow" class="hover-hand btn btn-warning"
                                 ng-click="middleBackgroundTextRightShow = !middleBackgroundTextRightShow">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             Edit
                         </button>
-                        <button ng-show="middleBackgroundTextRightShow" class="btn  btn-success"
+                        <button ng-show="middleBackgroundTextRightShow" class="hover-hand btn btn-success"
                                 ng-click="middleBackgroundTextRightShow = !middleBackgroundTextRightShow">
                             <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
                         </button>
@@ -115,11 +115,11 @@
         <div class="activity-element col-md-4">
 
             <div>
-                <button ng-hide="bottomLeftObjectShow" class="btn  btn-warning button-group"
+                <button ng-hide="bottomLeftObjectShow" class="hover-hand btn btn-warning button-group"
                         ng-click="bottomLeftObjectShow = !bottomLeftObjectShow">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
                 </button>
-                <button ng-show="bottomLeftObjectShow" class="btn  btn-success button-group"
+                <button ng-show="bottomLeftObjectShow" class="hover-hand btn btn-success button-group"
                         ng-click="bottomLeftObjectShow = !bottomLeftObjectShow">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>
                     Save
@@ -140,11 +140,11 @@
         </div>
         <div class="activity-element col-md-4">
             <div>
-                <button ng-hide="bottomMiddleObjectShow" class="btn  btn-warning button-group"
+                <button ng-hide="bottomMiddleObjectShow" class="hover-hand btn btn-warning button-group"
                         ng-click="bottomMiddleObjectShow = !bottomMiddleObjectShow">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
                 </button>
-                <button ng-show="bottomMiddleObjectShow" class="btn  btn-success button-group"
+                <button ng-show="bottomMiddleObjectShow" class="hover-hand btn btn-success button-group"
                         ng-click="bottomMiddleObjectShow = !bottomMiddleObjectShow">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>
                     Save
@@ -164,11 +164,11 @@
 
         <div class="activity-element col-md-4 move-down">
             <div class="button-group">
-                <button ng-hide="bottomRightObjectShow" class="btn  btn-warning static-btn"
+                <button ng-hide="bottomRightObjectShow" class="hover-hand btn btn-warning static-btn"
                         ng-click="bottomRightObjectShow =!bottomRightObjectShow">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
                 </button>
-                <button ng-show="bottomRightObjectShow" class="btn  btn-success static-btn"
+                <button ng-show="bottomRightObjectShow" class="hover-hand btn btn-success static-btn"
                         ng-click="bottomRightObjectShow = !bottomRightObjectShow">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
                 </button>

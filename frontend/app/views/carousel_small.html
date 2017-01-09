@@ -42,8 +42,9 @@
 
             <div class="row">
                 <div class="col-sm-10">
-                    <button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#myModal">
-                        Settings
+                    <button type="button" class="hover-hand btn btn-warning btn-md" data-toggle="modal" data-target="#myModal">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        Edit Section
                     </button>
                 </div>
 
@@ -53,19 +54,22 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Edit Settings</h4>
+                                <h4 class="modal-title">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                    Section Settings
+                                </h4>
                             </div>
                             <div class="modal-body">
 
                                 <button data-toggle="modal" data-target="#myModal" ng-show="carouselImagesShow"
                                         ng-click="carouselImagesShow = !carouselImagesShow"
-                                        class="btn btn-block btn-success">
-                                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Save Images
+                                        class="big-btn-height btn-block btn-success">
+                                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Save Text Image & Background
                                 </button>
-                                <button ng-hide="carouselImagesShow" ng-click="carouselImagesShow = !carouselImagesShow"
-                                        class="btn btn-block btn-warning">
+                                <button  ng-hide="carouselImagesShow" ng-click="carouselImagesShow = !carouselImagesShow"
+                                        class="big-btn-height btn-block btn-warning">
                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                    Edit Text & Images
+                                    Edit Text Image & Background
                                 </button>
                                 <div class="row" ng-show="carouselImagesShow">
                                     <div class="col-sm-12">
@@ -74,8 +78,8 @@
                                             <li class="panel">
                                                 <a data-toggle="collapse" data-parent="#accordion2" href="#initialLink">
                                                     <h4>
-                                                        <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                                                        Text Settings
+                                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                        Text
                                                     </h4>
                                                 </a>
 
@@ -102,7 +106,7 @@
                                                 <a data-toggle="collapse" data-parent="#accordion2" href="#firstLink2">
                                                     <h4>
                                                         <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                                                        Image Settings
+                                                        Image
                                                     </h4>
                                                 </a>
 
@@ -125,8 +129,8 @@
                                             <li class="panel">
                                                 <a data-toggle="collapse" data-parent="#accordion2" href="#firstLink13">
                                                     <h4>
-                                                        <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                                                        Background Color
+                                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                        Background
                                                     </h4>
                                                 </a>
 
@@ -134,11 +138,14 @@
                                                     <li>
                                                         <div class="row">
                                                             <div class="col-sm-12">
-
-                                                                <h4>Change Main background color</h4>
-                                                                <label class="btn btn-block  btn-warning"
-                                                                       for="background-color"> Background Color</label>
-                                                                <input style="display: none" class="btn  btn-warning"
+                                                                <h5>
+                                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                    Change Main background color
+                                                                </h5>
+                                                                <label class="hover-hand btn btn-warning" for="background-color">
+                                                                    Pick Up Color
+                                                                </label>
+                                                                <input style="display: none" class="btn btn-warning"
                                                                        ng-model="dataFromDB.bodyColor"
                                                                        id="background-color"
                                                                        type="color"/>
@@ -176,11 +183,11 @@
 
     <div class="row initial-padding">
         <div class="col-sm-1">
-            <button ng-hide="editMain" class="btn btn-warning button-group"
+            <button ng-hide="editMain" class="hover-hand btn btn-warning button-group"
                     ng-click="editMain = !editMain">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
             </button>
-            <button ng-show="editMain" class="btn  btn-success button-group"
+            <button ng-show="editMain" class="hover-hand btn btn-success button-group"
                     ng-click="editMain = !editMain">
                 <i class="fa fa-floppy-o" aria-hidden="true"></i>
                 Save
@@ -204,10 +211,10 @@
 
         <div class="col-sm-5 col-xs-6">
             <button ng-hide="mediaImageTwo" ng-click="mediaImageTwo = !mediaImageTwo"
-                    class="btn btn-block btn-warning">Edit
+                    class="hover-hand btn btn-block btn-warning">Edit
             </button>
             <button ng-show="mediaImageTwo" ng-click="mediaImageTwo =!mediaImageTwo"
-                    class="btn btn-block btn-success">
+                    class="hover-hand btn btn-block btn-success">
                 <i class="fa fa-floppy-o" aria-hidden="true"></i>
                 Save
             </button>
@@ -235,10 +242,10 @@
         </div>
         <div class="col-sm-5 col-xs-6" style="background-color: {{dataFromDB.bodyColor}}">
             <button ng-hide="mediaImageThree" ng-click="mediaImageThree = !mediaImageThree"
-                    class="btn btn-block btn-warning">Edit
+                    class="hover-hand btn btn-block btn-warning">Edit
             </button>
             <button ng-show="mediaImageThree" ng-click="mediaImageThree =!mediaImageThree"
-                    class="btn btn-block btn-success">
+                    class="hover-hand btn btn-block btn-success">
                 <i class="fa fa-floppy-o" aria-hidden="true"></i>
                 Save
             </button>

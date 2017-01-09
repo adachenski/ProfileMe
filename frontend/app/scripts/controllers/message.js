@@ -10,9 +10,9 @@ angular.module('profileMeApp').controller('MessageController',['$scope','$resour
 
         $scope.messages = messagesFactory.query();
         var x = $scope.messages;
-        for(var mess in x){
-            console.log(mess.title);
-        }
+
+            console.log(x);
+
        // console.log($scope.messages);
 
         $scope.currentMessage = function(message){
@@ -20,14 +20,6 @@ angular.module('profileMeApp').controller('MessageController',['$scope','$resour
             $scope.simgleMessage = messagesFactory.get({message:message});
         };
 
-        //var resultM = $http.get('http://localhost:3000/messages');
-        //resultM.then(function (ress) {
-        //    $scope.messages = ress.data;
-        //    for (var i = 0; i < ress.data.length; i += 1) {
-        //        console.log(ress.data[i].content);
-        //        console.log(ress.data[i].title);
-        //    }
-        //});
 
         $scope.submitMessage = function(){
 

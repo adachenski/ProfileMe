@@ -22,29 +22,29 @@
 <div class="row text-banner">
     <div class="col-md-2 col-md-push-10">
         <button ng-hide="carouselImagesShow" ng-click="carouselImagesShow = !carouselImagesShow"
-                class="btn btn-block btn-warning">
+                class="hover-hand btn btn-block btn-warning">
             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             Edit Above
         </button>
         <button ng-show="carouselImagesShow" ng-click="showAlert(); carouselImagesShow = !carouselImagesShow"
-                class="btn btn-block btn-success">
+                class="hover-hand btn btn-block btn-success">
             <i class="fa fa-floppy-o" aria-hidden="true"></i> Save Above
         </button>
     </div>
 
     <div class="col-md-2 col-md-pull-2 shake center-item" ng-hide="carouselImagesShow">
 
-        <label class="btn btn-block  btn-warning" for="background-color"> Background Color</label>
+        <label class="hover-hand btn btn-block  btn-warning" for="background-color"> Background Color</label>
         <input style="display: none" class="btn  btn-warning" ng-model="dataFromDB.bodyColor" id="background-color"
                type="color"/>
 
     </div>
     <div class="col-md-2 col-md-push-1  shake center-item" ng-hide="carouselImagesShow">
 
-        <button ng-hide="editMain" ng-click="editMain = !editMain" class="btn btn-block btn-warning">
+        <button ng-hide="editMain" ng-click="editMain = !editMain" class="hover-hand btn btn-block btn-warning">
             <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Main
         </button>
-        <button ng-show="editMain" ng-click="editMain = !editMain" class="btn btn-block btn-success">
+        <button ng-show="editMain" ng-click="editMain = !editMain" class="hover-hand btn btn-block btn-success">
 
             <i class="fa fa-floppy-o" aria-hidden="true"></i> Save Main
         </button>
@@ -126,10 +126,10 @@
             <div class="col-md-1">
 
                 <button ng-hide="mediaImageThree" ng-click="mediaImageThree = !mediaImageThree"
-                        class="btn btn-block btn-warning">Edit
+                        class="hover-hand btn btn-block btn-warning">Edit
                 </button>
                 <button ng-show="mediaImageThree" ng-click="mediaImageThree =!mediaImageThree"
-                        class="btn btn-block btn-success">Save
+                        class="hover-hand btn btn-block btn-success">Save
                 </button>
             </div>
 
@@ -168,10 +168,10 @@
             <div class="col-md-1">
 
                 <button ng-hide="mediaImageTwo" ng-click="mediaImageTwo = !mediaImageTwo"
-                        class="btn btn-block btn-warning">Edit
+                        class="hover-hand btn btn-block btn-warning">Edit
                 </button>
                 <button ng-show="mediaImageTwo" ng-click="mediaImageTwo =!mediaImageTwo"
-                        class="btn btn-block btn-success">
+                        class="hover-hand btn btn-block btn-success">
                     Save
                 </button>
             </div>

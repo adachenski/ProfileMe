@@ -13,14 +13,18 @@ messagesRouter.use(bodyParser.json());
 
 messagesRouter.route('/')
 .get(function (req, res, next) {
-
         Messages.find({postedById:req.query.Url})
         .populate('postedBy')
             .sort([['updatedAt', 'descending']])
         .exec(function (err, userSettings) {
-
+                console.log('before Mess');
+                console.log(userSettings);
+                console.log('after Mess');
             if (err) throw err;
+
+
             res.json(userSettings);
+
         });
 })
     .post(function (req, res, next) {
@@ -44,16 +48,7 @@ messagesRouter.route('/')
             }
             res.json(response);
         })
-    });;
-messagesRouter.route('/:messegeId')
-    .get(function (req, res, next) {
-        // console.log(req.decoded.sub);
-        Messages.findById(req.params.messegeId, function (err, userSettings) {
-            if (err) {
-                console.log("Error getting user settings: " + err);
-            }
-            res.json(userSettings);
-        });
-    })
+    });
+
 
 module.exports = messagesRouter;

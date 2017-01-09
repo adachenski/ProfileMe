@@ -3,8 +3,8 @@
  */
 
 angular.module('profileMeApp')
-    .controller('RegisterController', ['$scope','$http', 'alert', 'auth','HomeModelFactory',
-        function ($scope,$http, alert, auth, HomeModelFactory) {
+    .controller('RegisterController', ['$scope','$http', 'alert', 'auth','HomeModelFactory','API_URL',
+        function ($scope,$http, alert, auth, HomeModelFactory, API_URL) {
 
         $scope.submit = function () {
 
@@ -17,7 +17,7 @@ angular.module('profileMeApp')
                     HomeModelFactory.fetch().then(function(data) {
                         $scope.dataFromJson = data;
 
-                        $http.post('https://profile-api.mybluemix.net/custom', {
+                        $http.post(API_URL+'custom', {
 
                             username:"",
                             contentMain: $scope.dataFromJson.contentMain,

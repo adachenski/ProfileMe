@@ -5,7 +5,7 @@
 'use strict';
 //.constant('API_URL','https://profile-me.mybluemix.net/')
 angular.module('profileMeApp')
-    .constant('API_URL','https://profile-api.mybluemix.net/')
+    .constant('API_URL','http://localhost:3000/')
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
         $urlRouterProvider.otherwise('/');
         $stateProvider
@@ -45,8 +45,34 @@ angular.module('profileMeApp')
                     }
                 }
             })
+            .state('app.myMessages',{
+                url:'my-messages/:id',
+                views:{
+                    'body-container@': {
+                        templateUrl:'views/messagesLogged.html',
+                        controller  : 'MyMessageController'
+                    }
+                }
+            })
             .state('app.messages',{
                 url:'custom/:id/messages',
+                views:{
+                    'header@': {
+                        templateUrl: 'views/header_custom.html',
+                        controller:'HeaderCustomController'
+                    },
+                    'body-container@': {
+                        templateUrl:'views/messages.html',
+                        controller  : 'MessageController'
+                    },
+                    'footer@': {
+                        templateUrl: 'views/footer_custom.html',
+                        controller:'HeaderCustomController'
+                    }
+                }
+            })
+            .state('app.messagesId',{
+                url:'custom/:id/messages/:messageId',
                 views:{
                     'header@': {
                         templateUrl: 'views/header_custom.html',

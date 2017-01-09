@@ -39,7 +39,7 @@
                     <li class="panel">
                         <a data-toggle="collapse" data-parent="#accordion-header" href="#firstLink3">
                             <h4>
-                                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                <i class="fa fa-pencil-square" aria-hidden="true"></i>
                                 Position
                             </h4>
                         </a>
@@ -78,7 +78,7 @@
                     <li class="panel">
                         <a data-toggle="collapse" data-parent="#accordion-header" href="#firstLink4">
                             <h4>
-                                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                <i class="fa fa-pencil-square" aria-hidden="true"></i>
                                 Color
                             </h4>
                         </a>
@@ -100,7 +100,7 @@
                     <li class="panel">
                         <a data-toggle="collapse" data-parent="#accordion-header" href="#firstLink5">
                             <h4>
-                                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                <i class="fa fa-pencil-square" aria-hidden="true"></i>
                                 Start Button
                             </h4>
                         </a>
@@ -121,8 +121,14 @@
                 </ul>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-success" ng-click="headerSave()" data-dismiss="modal">Save</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <button type="button" class="hover-hand btn btn-block btn-success" ng-click="headerSave()" data-dismiss="modal">Save</button>
+                    </div>
+                    <div class="col-xs-6">
+                        <button type="button" class="hover-hand btn btn-block btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -145,7 +151,7 @@
                 <img class="logo-header"  ng-src="{{headerContent.logo}}"/>
             </a>
             <a  data-toggle="modal" data-target="#headerModal"
-               class="btn btn-warning reset-margin" href="#/">Header <i class="fa fa-cogs" aria-hidden="true"></i>
+               class="hover-hand btn btn-warning reset-margin" href="#/">Header <i class="fa fa-cogs" aria-hidden="true"></i>
             </a>
 
         </div>
@@ -165,6 +171,9 @@
                 </li>
                 <li ng-show="isAuthenticated()">
                     <a ui-sref="app.jobs">Settings</a>
+                </li>
+                <li >
+                    <a ui-sref="app.myMessages">Messages</a>
                 </li>
                 <li ng-hide="isAuthenticated()">
                     <a ui-sref="app.login">Login</a>

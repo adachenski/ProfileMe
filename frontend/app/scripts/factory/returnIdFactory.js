@@ -14,21 +14,16 @@ angular.module('profileMeApp').factory('returnIdFactory',['$resource', 'API_URL'
 
         var tempUrl = absUrl.slice(firstPart);
         var secondPart = tempUrl.indexOf("message");
-        console.log('second parth '+secondPart);
+        console.log('second part '+secondPart);
         if(secondPart<0){
             secondPart = tempUrl.length+1;
         }
-        console.log(tempUrl);
-        console.log('second parth '+secondPart);
+        //console.log(tempUrl);
+        //console.log('second parth '+secondPart);
         var finalUrlId = tempUrl.slice(0,secondPart-1);
 
         return {
-            finalUrl:finalUrlId,
-
+            finalUrl:finalUrlId
         };
-        //return $resource(API_URL + "messages/:id", null, {
-        //    'update': {
-        //        method: 'PUT'
-        //    }
-        //});
+
     }]);

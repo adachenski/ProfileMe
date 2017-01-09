@@ -12,7 +12,11 @@ var MessagesSchema = new Schema({
     postedById:String,
     sender:String,
     voteUp:Number,
-    voteDown:Number
+    voteDown:Number,
+    postedByLogged: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
 },{timestamps: true});
 
 var MessageModel = mongoose.model('Messages',MessagesSchema);
