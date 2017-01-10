@@ -43,6 +43,7 @@ angular.module('profileMeApp')
                         console.log(data);
                         $scope.headerContent = data;
                     });
+
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
             );

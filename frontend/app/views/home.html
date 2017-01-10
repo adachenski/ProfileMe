@@ -10,8 +10,7 @@
 
 </style>
 
-
-<div class="container-fluid" style="background-color: {{dataFromDB.bodyColor}}">
+<div  class="container-fluid" style="background-color: {{dataFromDB.bodyColor}}">
 
     <section ng-show="dataFromDB.viewOne" ng-include="'views/carousel.html'"></section>
 
@@ -60,7 +59,7 @@
 
                     <button ng-hide="middleBackgroundShow" ng-click="middleBackgroundShow = !middleBackgroundShow"
                             class="hover-hand btn btn-warning">
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Background
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Background
                     </button>
                     <button ng-show="middleBackgroundShow" ng-click="middleBackgroundShow =!middleBackgroundShow"
                             class="hover-hand btn btn-success">

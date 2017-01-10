@@ -27,7 +27,7 @@ angular.module('profileMeApp')
             }
         );
             $scope.messages = myMessageFactory().query();
-        
+
         myMessageFactory.get({})
             .$promise.then(
             function (response) {

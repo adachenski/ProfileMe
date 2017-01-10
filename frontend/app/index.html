@@ -19,21 +19,37 @@
 <body>
 
 
-<div ng-cloak ui-view="header"></div>
+<div  ng-controller="SplashScreenController" ng-show="showContent" ui-view="header"></div>
 
 <div ng-include="'views/alert.html'"></div>
 
-<div ng-cloak class="ui-view-container">
-    <div ui-view="body-container"></div>
+<div  ng-controller="SplashScreenController" ng-show="!showContent"
+      class="login-background parent-splash" ng-hide="isLoading">
+    <div class="child-splash">
+        <div style="color:#ffffff" class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+        <h3>Loading...</h3>
+    </div>
+</div>
+
+<div class="ui-view-container">
+    <div  ng-controller="SplashScreenController" ng-show="showContent"  ui-view="body-container"></div>
 </div>
 
 
-<div ng-cloak ui-view="footer"></div>
+<div  ng-controller="SplashScreenController" ng-show="showContent"  ui-view="footer"></div>
 
 <!-- bower:js -->
+
 <script src="extenral_modules/bower_components/angular/angular.js" rel="javascript"></script>
-<script src="extenral_modules/bower_components/angular-ui-router/release/angular-ui-router.js"rel="javascript"></script>
+<script src="extenral_modules/bower_components/angular-ui-router/release/angular-ui-router.js"
+        rel="javascript"></script>
 <script src="extenral_modules/bower_components/angular-resource/angular-resource.js" rel="javascript"></script>
+
 <script src="extenral_modules/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="extenral_modules/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="extenral_modules/bower_components/angular-animate/angular-animate.js"></script>
@@ -41,7 +57,7 @@
 
 <script rel="javascript" src="scripts/app.js"></script>
 <script rel="javascript" src="scripts/app.config.js"></script>
-
+<script src="scripts/controllers/splashScreenController.js"></script>
 <script src='extenral_modules/textangular/dist/textAngular-rangy.min.js'></script>
 <script src='extenral_modules/textangular/dist/textAngular-sanitize.min.js'></script>
 <script src='extenral_modules/textangular/dist/textAngular.min.js'></script>

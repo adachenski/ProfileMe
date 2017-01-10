@@ -4,15 +4,14 @@
 
 angular.module('profileMeApp')
     .controller('HomeController', ['$scope', 'customUrlFactory', '$http', '$stateParams',
-        '$state', 'HomeModelFactory', '$log','$location','$anchorScroll','alert','returnPostedBy',
-        function ($scope, customUrlFactory, $http, $stateParams, $state, HomeModelFactory, $log,$location,$anchorScroll,alert,returnPostedBy) {
+        '$state', 'HomeModelFactory', '$log','$location','$anchorScroll','alert',
+        function ($scope, customUrlFactory, $http, $stateParams, $state, HomeModelFactory, $log,$location,$anchorScroll,alert) {
             var scopeId;
             var username;
           //  $scope.UserSetting = UserSettings.data;
             customUrlFactory.get({})
                 .$promise.then(
                 function (response) {
-                    $scope.myVar = returnPostedBy.sharedObject;
                     scopeId = response._id;
                     username = response.username;
                     console.log(scopeId);

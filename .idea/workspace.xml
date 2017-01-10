@@ -2,31 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f40ddeae-0b2b-4c93-8b1c-149e2a919ffd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/views/messagesLogged.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/myMessage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/routes/myMessageRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/scripts/factory/myMessagesFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/scripts/factory/returnPostedBy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/views/singleMessage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/models/Messages.js" afterPath="$PROJECT_DIR$/backend/models/Messages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/api.js" afterPath="$PROJECT_DIR$/backend/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/app.config.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/app.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/carousel.html" afterPath="$PROJECT_DIR$/frontend/app/views/carousel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/carousel_small.html" afterPath="$PROJECT_DIR$/frontend/app/views/carousel_small.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/header.html" afterPath="$PROJECT_DIR$/frontend/app/views/header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/splashScreenController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/header.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/header.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/home.html" afterPath="$PROJECT_DIR$/frontend/app/views/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/home.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/factory/homeModelFactory.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/factory/homeModelFactory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/index.html" afterPath="$PROJECT_DIR$/frontend/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/message.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/message.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/routes/messageRouter.js" afterPath="$PROJECT_DIR$/backend/routes/messageRouter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/factory/messagesFactory.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/factory/messagesFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/jobs.html" afterPath="$PROJECT_DIR$/frontend/app/views/jobs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/myMessage.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/myMessage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/styles/profileme.css" afterPath="$PROJECT_DIR$/frontend/app/styles/profileme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/register.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/factory/returnIdFactory.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/factory/returnIdFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/show_custom.html" afterPath="$PROJECT_DIR$/frontend/app/views/show_custom.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Profile Me.iws" />
@@ -51,55 +34,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="messageRouter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/routes/messageRouter.js">
+      <file leaf-file-name="profileme.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/styles/profileme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="1298">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="12395" max-vertical-offset="13090">
+              <caret line="580" column="17" selection-start-line="580" selection-start-column="17" selection-end-line="580" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/scripts/app.config.js">
+      <file leaf-file-name="splashScreenController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/splashScreenController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="2904">
-              <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="286">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding>
-                <element signature="e#0#49#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myMessageRouter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/routes/myMessageRouter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="946">
-              <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1980" max-vertical-offset="3168">
-              <caret line="100" column="10" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messagesLogged.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/views/messagesLogged.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.32258" vertical-offset="1395" max-vertical-offset="2046">
-              <caret line="85" column="2" selection-start-line="85" selection-start-column="2" selection-end-line="122" selection-end-column="10" />
-              <folding>
-                <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
+                <element signature="e#0#48#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -108,50 +59,83 @@
       <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/views/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.4838705" vertical-offset="3463" max-vertical-offset="4312">
-              <caret line="175" column="46" selection-start-line="175" selection-start-column="36" selection-end-line="175" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myMessagesFactory.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/scripts/factory/myMessagesFactory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
-              <caret line="5" column="30" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="30" />
+            <state vertical-scroll-proportion="-2.7419355" vertical-offset="3" max-vertical-offset="1408">
+              <caret line="136" column="5" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
               <folding>
-                <element signature="e#0#48#0" expanded="false" />
+                <element signature="n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="singleMessage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/views/singleMessage.html">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/views/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="946">
-              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+            <state vertical-scroll-proportion="-3.6491227" vertical-offset="1134" max-vertical-offset="4510">
+              <caret line="61" column="81" selection-start-line="61" selection-start-column="81" selection-end-line="61" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="returnIdFactory.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/scripts/factory/returnIdFactory.js">
+      <file leaf-file-name="header.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="704">
-              <caret line="22" column="0" selection-start-line="20" selection-start-column="14" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2024">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myMessage.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/myMessage.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67741936" vertical-offset="132" max-vertical-offset="1232">
-              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+            <state vertical-scroll-proportion="-16.838709" vertical-offset="28" max-vertical-offset="2112">
+              <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="headerCustom.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/headerCustom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="814">
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2288">
+              <caret line="7" column="125" selection-start-line="7" selection-start-column="125" selection-end-line="7" selection-end-column="125" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_custom.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/app/views/show_custom.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20689656" vertical-offset="0" max-vertical-offset="1364">
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="returnPostedBy.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/app/scripts/factory/returnPostedBy.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+              <caret line="5" column="38" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="38" />
               <folding>
                 <element signature="e#0#48#0" expanded="false" />
               </folding>
@@ -167,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frontend/app/views/register.html" />
         <option value="$PROJECT_DIR$/backend/models/HeaderUserSettings.js" />
         <option value="$PROJECT_DIR$/backend/models/HeaderSettings.js" />
         <option value="$PROJECT_DIR$/backend/routes/userSettingRouter.js" />
@@ -180,32 +163,23 @@
         <option value="$PROJECT_DIR$/frontend/app/scripts/services/auth.js" />
         <option value="$PROJECT_DIR$/frontend/bower.json" />
         <option value="$PROJECT_DIR$/frontend/app.js" />
-        <option value="$PROJECT_DIR$/frontend/app/views/footer.html" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/showCustomUrl.js" />
         <option value="$PROJECT_DIR$/frontend/app/views/footer_custom.html" />
         <option value="$PROJECT_DIR$/frontend/app/views/header_custom.html" />
-        <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/headerCustom.js" />
         <option value="$PROJECT_DIR$/frontend/app/views/show_custom_carousel.html" />
         <option value="$PROJECT_DIR$/frontend/app/views/show_custom_carousel_small.html" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/profileme.js" />
-        <option value="$PROJECT_DIR$/frontend/app/views/jobs.html" />
         <option value="$PROJECT_DIR$/frontend/app/views/show_custom.html" />
-        <option value="$PROJECT_DIR$/frontend/app/views/home.html" />
         <option value="$PROJECT_DIR$/frontend/app/views/carousel.html" />
-        <option value="$PROJECT_DIR$/frontend/app/styles/profileme.css" />
         <option value="$PROJECT_DIR$/frontend/app/views/carousel_small.html" />
-        <option value="$PROJECT_DIR$/frontend/app/views/header.html" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/factory/messagesFactory.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/myMassage.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/register.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/jobs.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/factory/returnLoggedIdFactory.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/factory/homeModelFactory.js" />
-        <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/header.js" />
-        <option value="$PROJECT_DIR$/frontend/app/index.html" />
         <option value="$PROJECT_DIR$/backend/models/Messages.js" />
-        <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/home.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/factory/returnIdFactory.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/factory/returnPostedBy.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/message.js" />
@@ -218,6 +192,16 @@
         <option value="$PROJECT_DIR$/frontend/app/scripts/app.config.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/factory/myMessagesFactory.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/myMessage.js" />
+        <option value="$PROJECT_DIR$/frontend/app/views/jobs.html" />
+        <option value="$PROJECT_DIR$/frontend/app/views/footer.html" />
+        <option value="$PROJECT_DIR$/frontend/app/views/header.html" />
+        <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/header.js" />
+        <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/home.js" />
+        <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/splashScreenController.js" />
+        <option value="$PROJECT_DIR$/frontend/app/styles/profileme.css" />
+        <option value="$PROJECT_DIR$/frontend/app/views/home.html" />
+        <option value="$PROJECT_DIR$/frontend/app/index.html" />
+        <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/headerCustom.js" />
       </list>
     </option>
   </component>
@@ -617,7 +601,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22026144" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17254902" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -661,31 +645,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/logout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="286">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/views/footer_custom.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="946">
           <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/views/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.064516" vertical-offset="2719" max-vertical-offset="3872">
-          <caret line="142" column="29" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -741,27 +704,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/views/jobs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.789474" vertical-offset="871" max-vertical-offset="2552">
-          <caret line="109" column="21" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/views/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3168" vertical-offset="0" max-vertical-offset="946">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/views/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="4532">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#0;n#div#0;n#section#2;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -781,16 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/views/show_custom.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="1364">
-          <caret line="2" column="83" selection-start-line="2" selection-start-column="80" selection-end-line="2" selection-end-column="83" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#section#2;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/views/carousel_small.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2762" max-vertical-offset="6336">
@@ -803,14 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.4838705" vertical-offset="427" max-vertical-offset="1122">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/styles/profileme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="11572">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -871,42 +799,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="625" max-vertical-offset="2002">
-          <caret line="41" column="36" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1628">
           <caret line="46" column="49" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/headerCustom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="814">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.774194" vertical-offset="981" max-vertical-offset="1760">
-          <caret line="64" column="44" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/showCustomUrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -927,29 +823,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="110" max-vertical-offset="2310">
-          <caret line="17" column="33" selection-start-line="11" selection-start-column="11" selection-end-line="32" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/views/messages.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.548388" vertical-offset="1860" max-vertical-offset="2684">
           <caret line="98" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/factory/returnPostedBy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#48#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1019,14 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/views/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.4838705" vertical-offset="3463" max-vertical-offset="4312">
-          <caret line="175" column="46" selection-start-line="175" selection-start-column="36" selection-end-line="175" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/routes/myMessageRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="946">
@@ -1043,16 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/app.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="2904">
-          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/scripts/factory/myMessagesFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
@@ -1063,13 +923,148 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/views/jobs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.903226" vertical-offset="352" max-vertical-offset="2530">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="39" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0316547" vertical-offset="4211" max-vertical-offset="5566">
+          <caret line="224" column="14" selection-start-line="224" selection-start-column="14" selection-end-line="224" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/myMessage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67741936" vertical-offset="132" max-vertical-offset="1232">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="1232">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="e#0#48#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/app.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="2904">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/showCustomUrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/views/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.354838" vertical-offset="0" max-vertical-offset="1320">
+          <caret line="132" column="9" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
+          <folding>
+            <element signature="n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/views/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7419355" vertical-offset="3" max-vertical-offset="1408">
+          <caret line="136" column="5" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
+          <folding>
+            <element signature="n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2024">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/factory/returnPostedBy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2288">
+          <caret line="7" column="125" selection-start-line="7" selection-start-column="125" selection-end-line="7" selection-end-column="125" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/splashScreenController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="286">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/styles/profileme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="12395" max-vertical-offset="13090">
+          <caret line="580" column="17" selection-start-line="580" selection-start-column="17" selection-end-line="580" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/views/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6491227" vertical-offset="1134" max-vertical-offset="4510">
+          <caret line="61" column="81" selection-start-line="61" selection-start-column="81" selection-end-line="61" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.838709" vertical-offset="28" max-vertical-offset="2112">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/headerCustom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="814">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/views/show_custom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20689656" vertical-offset="0" max-vertical-offset="1364">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
