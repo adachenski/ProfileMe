@@ -2,64 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f40ddeae-0b2b-4c93-8b1c-149e2a919ffd" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\backend\api.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\backend\models\Messages.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\backend\models\User.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\backend\models\UserSettings.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\backend\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\backend\routes\messageRouter.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\backend\routes\myMessageRouter.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\backend\routes\userSettingRouter.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\backend\routes\verify.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\scripts\factory\returnPostedBy.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\static\images\CustomTwo4.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\static\images\Header_Logo.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\static\images\Open_Book_PNG_Clipart-1061.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\static\images\backpack.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\static\images\banner_beauty.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\static\images\banner_photography.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\static\images\map.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\static\images\nature-forest-industry-rails-large.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\static\images\pic.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\static\images\site-logo-white-70pct.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\views\singleMessage.html" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Administrator\Desktop\ProfileMe\frontend\app\scripts\controllers\splashScreenController.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/splashScreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/services/alert.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/services/alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/app.config.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/app.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/services/auth.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/services/auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/services/authInterceptor.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/services/authInterceptor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/carousel.html" afterPath="$PROJECT_DIR$/frontend/app/views/carousel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/factory/customUrls.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/factory/customUrls.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/footer.html" afterPath="$PROJECT_DIR$/frontend/app/views/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/footer_custom.html" afterPath="$PROJECT_DIR$/frontend/app/views/footer_custom.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/header.html" afterPath="$PROJECT_DIR$/frontend/app/views/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/header.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/headerCustom.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/headerCustom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/header_custom.html" afterPath="$PROJECT_DIR$/frontend/app/views/header_custom.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/home.html" afterPath="$PROJECT_DIR$/frontend/app/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/home.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/factory/homeModelFactory.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/factory/homeModelFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/static/homePageData.json" afterPath="$PROJECT_DIR$/frontend/app/static/homePageData.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/index.html" afterPath="$PROJECT_DIR$/frontend/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/jobs.html" afterPath="$PROJECT_DIR$/frontend/app/views/jobs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/jobs.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/jobs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/login.html" afterPath="$PROJECT_DIR$/frontend/app/views/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/login.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/message.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/message.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/factory/messagesFactory.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/factory/messagesFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/messagesLogged.html" afterPath="$PROJECT_DIR$/frontend/app/views/messagesLogged.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/myMessage.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/myMessage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/factory/myMessagesFactory.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/factory/myMessagesFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/styles/profileme.css" afterPath="$PROJECT_DIR$/frontend/app/styles/profileme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/profileme.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/profileme.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/register.html" afterPath="$PROJECT_DIR$/frontend/app/views/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/register.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/factory/returnIdFactory.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/factory/returnIdFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/showCustomUrl.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/showCustomUrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/show_custom.html" afterPath="$PROJECT_DIR$/frontend/app/views/show_custom.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/show_custom_carousel.html" afterPath="$PROJECT_DIR$/frontend/app/views/show_custom_carousel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/show_custom_carousel_small.html" afterPath="$PROJECT_DIR$/frontend/app/views/show_custom_carousel_small.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Profile Me.iws" />
@@ -91,10 +33,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.config.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/scripts/app.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15558699" vertical-offset="0" max-vertical-offset="2530">
+            <state vertical-scroll-proportion="0.0" vertical-offset="110" max-vertical-offset="2530">
               <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
               <folding>
                 <element signature="e#0#49#0" expanded="false" />
@@ -106,17 +48,24 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="2178">
+            <state vertical-scroll-proportion="2.1290324" vertical-offset="264" max-vertical-offset="2178">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="noUser1.jpg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/app/static/images/noUser1.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="splashScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/scripts/controllers/splashScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="286">
+            <state vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="286">
               <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
               <folding>
                 <element signature="e#0#48#0" expanded="false" />
@@ -125,60 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="noUser1.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/static/images/noUser1.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="no-image-available.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/app/static/images/no-image-available.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/views/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="4246">
-              <caret line="0" column="39" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jobs.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/views/jobs.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1430">
-              <caret line="37" column="169" selection-start-line="37" selection-start-column="169" selection-end-line="37" selection-end-column="169" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homePageData.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/static/homePageData.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="770">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -411,6 +310,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Profile Me" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProfileMe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -528,14 +453,10 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -543,6 +464,10 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -590,19 +515,19 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1484375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25520834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -634,16 +559,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/app/static/images/noUser1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/static/images/no-image-available.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
@@ -665,8 +580,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1430">
           <caret line="37" column="169" selection-start-line="37" selection-start-column="169" selection-end-line="37" selection-end-column="169" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -704,7 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
           <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -740,7 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
           <caret line="12" column="102" selection-start-line="12" selection-start-column="102" selection-end-line="12" selection-end-column="102" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -755,9 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="946">
           <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#48#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -821,7 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.807693" vertical-offset="79" max-vertical-offset="770">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.769231" vertical-offset="0" max-vertical-offset="880">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -851,7 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-35.53846" vertical-offset="792" max-vertical-offset="1980">
           <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -873,7 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.384615" vertical-offset="706" max-vertical-offset="1606">
           <caret line="42" column="68" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -881,7 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="955" max-vertical-offset="1848">
           <caret line="68" column="32" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -933,15 +838,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1430">
           <caret line="37" column="169" selection-start-line="37" selection-start-column="169" selection-end-line="37" selection-end-column="169" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#3;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="false" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/static/images/noUser1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/package.json">
@@ -952,28 +852,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/static/images/Footer_Logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/static/homePageData.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="770">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/static/images/no-image-available.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="2178">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -990,12 +872,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/scripts/app.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15558699" vertical-offset="0" max-vertical-offset="2530">
+        <state vertical-scroll-proportion="0.0" vertical-offset="110" max-vertical-offset="2530">
           <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
           <folding>
             <element signature="e#0#49#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.1290324" vertical-offset="264" max-vertical-offset="2178">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/static/images/Footer_Logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/static/images/no-image-available.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/static/images/noUser1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
