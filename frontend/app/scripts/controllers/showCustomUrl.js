@@ -20,11 +20,7 @@ angular.module('profileMeApp')
                 .$promise.then(
                 function (response) {
 
-                   // $scope.deliberatelyTrustDangerousSnippet = function() {
-                   //     return $sce.trustAsHtml(response.mainContent);
-                   // };
-
-                    console.log(response);
+                    //console.log(response);
                     $scope.showCustomUrl = response;
                 },
                 function (response) {

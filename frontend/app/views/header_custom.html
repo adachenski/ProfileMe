@@ -1,6 +1,5 @@
-
-
-<nav style="background-color: {{headerCustomContent.navbarFooterColor}}!important;"  class="navbar {{headerCustomContent.navbarStatic}}"
+<nav style="background-color: {{headerCustomContent.navbarFooterColor}}!important;"
+     class="navbar {{headerCustomContent.navbarStatic}}"
      role="navigation">
 
     <div class="container-fluid">
@@ -13,8 +12,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#top" >
-                <img class="logo-header"  ng-src="{{headerCustomContent.logo}}"/>
+            <a href="#top">
+                <img class="logo-header" ng-src="{{headerCustomContent.logo}}"/>
             </a>
         </div>
 
@@ -22,7 +21,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a ui-sref="app.custom({id:'{{tempUrlId}}'})"  >
+                    <a ui-sref="app.custom({id:'{{tempUrlId}}'})">
                         <i class="fa fa-home" aria-hidden="false"></i>
                         Home
                     </a>
@@ -32,7 +31,7 @@
                     <a class="hover-hand" ng-click="startEdited()">{{headerCustomContent.startButton}}</a>
                 </li>
 
-                <li >
+                <li>
                     <a ui-sref="app.messages({id:'{{tempUrlId}}'})">Messages</a>
                 </li>
 

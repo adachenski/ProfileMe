@@ -1,35 +1,3 @@
-<style>
-    .small-carousel-left {
-        color: #ffffff;
-    }
-
-    .peace {
-        position: relative;
-
-    }
-
-    .overlay {
-        display: none;
-        color: #ffffff;
-        text-align: center;
-    }
-
-    .peace:hover > .overlay {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        background-color: #000;
-        opacity: 0.6;
-        z-index: 100;
-        display: block;
-    }
-
-
-</style>
-
-
 <div class="row block peace second-view-background">
 
     <div class="col-md-1">
@@ -42,8 +10,8 @@
             <div ng-bind-html="showCustomUrl.carouselImgOneText"></div>
         </div>
         <div class="initial-padding">
-            <button  ng-click="customInfoEdited()" class="btn btn-default">Contact Us</button>
-            <button  ng-click="customInfoEdited()" class="btn btn-danger">Learn more</button>
+            <button  ng-click="customInfoEdited()" class="hover-hand btn btn-default">Contact Us</button>
+            <button  ng-click="customInfoEdited()" class="hover-hand btn btn-danger">Learn more</button>
         </div>
 
     </div>

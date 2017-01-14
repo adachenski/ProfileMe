@@ -2,8 +2,5 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{Profile Me node_modules}" />
-    <file url="file://$PROJECT_DIR$/backend/api.js" libraries="{Node.js Globals}" />
-    <file url="file://$PROJECT_DIR$/backend/routes/myMessageRouter.js" libraries="{Node.js Globals}" />
-    <file url="file://$PROJECT_DIR$/backend/routes/verify.js" libraries="{Node.js Globals}" />
   </component>
 </project>

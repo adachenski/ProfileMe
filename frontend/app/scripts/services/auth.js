@@ -17,7 +17,7 @@ angular.module('profileMeApp')
 
             function authSuccesfull(res) {
                 authToken.setToken(res.token);
-                $state.go('app.jobs');
+                $state.go('app.settings');
             }
 
         }]);

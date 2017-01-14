@@ -1,15 +1,3 @@
-<style>
-    .text-area {
-        background-color: #00405f;
-        width: 100%;
-    }
-    .btn{
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-</style>
-
 <div  class="container-fluid" style="background-color: {{dataFromDB.bodyColor}}">
 
     <section ng-show="dataFromDB.viewOne" ng-include="'views/carousel.html'"></section>
@@ -185,7 +173,7 @@
             <div class="shake" ng-hide="bottomRightObjectShow" ng-bind-html="dataFromDB.bottomRightObject"></div>
         </div>
     </section>
-    <div class="center-item">
+    <div ng-show="isAuthenticated()" class="center-item">
         <button style="padding-top: 5px" ng-click="saveSettings()" class="btn btn-lg btn-success button-group"
                 type="submit">
             <i class="fa fa-floppy-o" aria-hidden="true"></i> Save all settings

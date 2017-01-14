@@ -1,8 +1,8 @@
-angular.module('profileMeApp').factory('HomeModelFactory', function($timeout, $http) {
+angular.module('profileMeApp').factory('HomeModelFactory', function ($timeout, $http) {
     var homeData = {
-        fetch: function() {
-            return $timeout(function() {
-                return $http.get('static/homePageData.json').then(function(response) {
+        fetch: function () {
+            return $timeout(function () {
+                return $http.get('static/homePageData.json').then(function (response) {
                     return response.data;
                 });
             }, 30);

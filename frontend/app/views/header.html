@@ -76,28 +76,6 @@
                     </li>
 
                     <li class="panel">
-                        <a data-toggle="collapse" data-parent="#accordion-header" href="#firstLink4">
-                            <h4>
-                                <i class="fa fa-pencil-square" aria-hidden="true"></i>
-                                Color
-                            </h4>
-                        </a>
-
-                        <ul id="firstLink4" class="collapse">
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-12">
-
-                                        <h4>Change color of the navigation bar</h4>
-                                        <input  style="width: 100%" type="color"
-                                               ng-model="headerContent.navbarFooterColor" />
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="panel">
                         <a data-toggle="collapse" data-parent="#accordion-header" href="#firstLink5">
                             <h4>
                                 <i class="fa fa-pencil-square" aria-hidden="true"></i>
@@ -151,7 +129,8 @@
                 <img class="logo-header"  ng-src="{{headerContent.logo}}"/>
             </a>
             <a  data-toggle="modal" data-target="#headerModal"
-               class="hover-hand btn btn-warning reset-margin" href="#/">Header <i class="fa fa-cogs" aria-hidden="true"></i>
+               class="hover-hand btn btn-warning reset-margin" href="#/">
+                <i class="fa fa-cogs" aria-hidden="true"></i> Header
             </a>
 
         </div>
@@ -170,11 +149,11 @@
                     <a ng-click="start()">{{headerContent.startButton}}</a>
                 </li>
                 <li ng-show="isAuthenticated()">
-                    <a ui-sref="app.jobs">Settings</a>
+                    <a ui-sref="app.settings">Settings</a>
                 </li>
-                <li >
-                    <a ui-sref="app.myMessages">Messages</a>
-                </li>
+                <!--<li >-->
+                    <!--<a ui-sref="app.myMessages">Messages</a>-->
+                <!--</li>-->
                 <li ng-hide="isAuthenticated()">
                     <a ui-sref="app.login">Login</a>
                 </li>

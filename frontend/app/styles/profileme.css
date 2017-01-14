@@ -486,12 +486,65 @@ hr {
         opacity: 0;
     }
 }
+.text-area {
+    background-color: #00405f;
+    width: 100%;
+}
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.settings-top {
+    padding-top: 200px;
+}
 
+.settings-main {
+    text-align: center;
+}
+
+.settings-main-images {
+    max-width: 400px;
+    max-height: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.settings-main-images img {
+    width: 100%;
+}
+.peace{
+    position: relative;
+
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    width:100%;
+    height:100%;
+    left: 0;
+    background-color:#000;
+    opacity:0.7;
+    z-index: 100;
+
+    color: #ffffff;
+    font-size: 1.6em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.peace:hover > .overlay{
+    display: none;
+
+    text-align: center;
+    cursor: pointer !important;
+}
 /*splashsSreen*/
  .sk-folding-cube {
      margin: 20px auto;
-     width: 100px;
-     height: 100px;
+     width: 60px;
+     height: 60px;
      position: relative;
      -webkit-transform: rotateZ(45deg);
      transform: rotateZ(45deg);

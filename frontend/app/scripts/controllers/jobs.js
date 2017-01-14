@@ -3,10 +3,10 @@
  */
 
 angular.module('profileMeApp')
-    .controller('JobsController', ['$scope', '$http', '$stateParams', '$state', 'API_URL', 'alert', 'customUrlFactory','$window',
-        function ($scope, $http, $stateParams, $state, API_URL, alert, customUrlFactory,$window) {
+    .controller('JobsController', ['$scope', '$http', '$stateParams', '$state', 'API_URL', 'alert', 'customUrlFactory', '$window',
+        function ($scope, $http, $stateParams, $state, API_URL, alert, customUrlFactory, $window) {
             var scopeId = $stateParams.id;
-            console.log(scopeId);
+            //console.log(scopeId);
             var templateTwo;
             var templateOne;
 
@@ -15,26 +15,21 @@ angular.module('profileMeApp')
                 function (response) {
                     scopeId = response._id;
                     $scope.jobsContent = response;
-
-
                 },
                 function (response) {
 
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
             );
-            $scope.updateViewOne = function(){
-                templateTwo= true;
-                templateOne= false;
-                //$scope.UserSetting.loseHeader = "";
-                //$scope.UserSetting.findHeader = "";
-                //$scope.UserSetting.steadyHeader = "";
-            }
-            $scope.updateViewTwo = function(){
-                templateTwo= false;
-                templateOne= true;
+            $scope.updateViewOne = function () {
+                templateTwo = true;
+                templateOne = false;
+            };
+            $scope.updateViewTwo = function () {
+                templateTwo = false;
+                templateOne = true;
 
-            }
+            };
             $scope.submitView = function () {
 
                 customUrlFactory.update({id: scopeId}, {
@@ -45,16 +40,16 @@ angular.module('profileMeApp')
                     if (err) {
                         //throw 'Error pushing data to server: '+err;
                     }
-                    alert('success', 'Awesome! \n',' Successfully Changed View. ');
+                    alert('success', 'Awesome! \n', ' Successfully Changed View. ');
                     $state.go('app');
 
                 });
 
             };
 
-            $scope.preview = function(){
-                var url = $state.href('app.custom',{id:scopeId});
-                window.open(url,'_blank');
+            $scope.preview = function () {
+                var url = $state.href('app.custom', {id: scopeId});
+                window.open(url, '_blank');
             };
 
             $scope.submitUsername = function () {

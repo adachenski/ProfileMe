@@ -11,7 +11,7 @@ $(document).ready(function () {
         var distance = $window.scrollTop()
         // Checking if user has scrolled more than 5px to change the height of the navbar
         if (distance > 5 && hasScroled == false) {
-            console.log(distance);
+           // console.log(distance);
             $(".find-header").removeClass("initial-nav").addClass("changed-nav");
             $(".find-header").addClass("navbar-inverse");
             hasScroled = true;
@@ -20,7 +20,7 @@ $(document).ready(function () {
             $(".find-header").removeClass("changed-nav").addClass("initial-nav");
             $(".find-header").removeClass("navbar-inverse");
             hasScroled = false;
-            console.log(distance);
+            //console.log(distance);
         }
     });
 });

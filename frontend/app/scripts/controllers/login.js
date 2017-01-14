@@ -3,17 +3,16 @@
  */
 
 angular.module('profileMeApp')
-    .controller('LoginController', ['$scope',  '$http','API_URL','alert','authToken','auth',
-        function ($scope,  $http,  API_URL,alert, authToken,auth) {
+    .controller('LoginController', ['$scope', '$http', 'API_URL', 'alert', 'authToken', 'auth',
+        function ($scope, $http, API_URL, alert, authToken, auth) {
 
             $scope.submit = function () {
 
                 auth.login($scope.email, $scope.password)
                     .success(function (res) {
-                        alert('success', 'Welcome','Thanks for coming back '+res.user.email+'!');
-                        console.log('good')
+                        alert('success', 'Welcome', 'Thanks for coming back ' + res.user.email + '!');
                     }).error(function (err) {
-                        alert('warning', 'Oops', 'Something went wrong :('+err.message,3000);
+                        alert('warning', 'Oops', 'Something went wrong :(' + err.message, 3000);
                     })
             }
         }

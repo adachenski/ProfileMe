@@ -5,12 +5,11 @@
 
 angular.module('profileMeApp')
     .controller('HeaderController', ['$scope', '$state', 'authToken', '$anchorScroll',
-        '$location', '$stateParams', 'customUrlFactory', 'HomeModelFactory', 'alert',
-        function ($scope, $state, authToken, $anchorScroll, $location, $stateParams,
+        '$location', 'customUrlFactory', 'HomeModelFactory', 'alert',
+        function ($scope, $state, authToken, $anchorScroll, $location,
                   customUrlFactory, HomeModelFactory, alert) {
 
-            var scopeId = $stateParams._id;
-            console.log('scopeId header before get : ' + scopeId);
+            var scopeId = "";
 
             $scope.customInfoTwo = function () {
                 $location.hash("customInfoTwo");
@@ -22,25 +21,21 @@ angular.module('profileMeApp')
                 $location.hash("sports");
                 $anchorScroll();
             };
-
-
             $scope.isAuthenticated = authToken.isAuthenticated;
-            console.log('is auth: ' + $scope.isAuthenticated());
-
+            //console.log('is auth: ' + $scope.isAuthenticated());
 
             customUrlFactory.get({})
                 .$promise.then(
                 function (response) {
                     scopeId = response._id;
-                    console.log('scopeId header after get : ' + scopeId);
+                    //console.log('scopeId header after get : ' + scopeId);
 
                     $scope.headerContent = response;
-
 
                 },
                 function (response) {
                     HomeModelFactory.fetch().then(function (data) {
-                        console.log(data);
+                        // console.log(data);
                         $scope.headerContent = data;
                     });
 
@@ -56,21 +51,18 @@ angular.module('profileMeApp')
                 customUrlFactory.update({id: scopeId}, {
                     footerTitle: $scope.headerContent.footerTitle,
                     footerLeft: $scope.headerContent.footerLeft,
-                    footerMuddle: $scope.headerContent.footerMiddle,
+                    footerMiddle: $scope.headerContent.footerMiddle,
                     footerRight: $scope.headerContent.footerRight
 
                 }, function (err, numberAffected, rawResponse) {
                     if (err) {
                         //throw 'Error pushing data to server: '+err;
                     }
-
                     alert('success', 'Footer \n', ' Changes Saved. ');
-
                 });
             };
 
             $scope.headerSave = function () {
-                console.log(scopeId);
                 customUrlFactory.update({id: scopeId}, {
                     logo: $scope.headerContent.logo,
                     startButton: $scope.headerContent.startButton,

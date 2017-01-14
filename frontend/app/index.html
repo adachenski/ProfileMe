@@ -4,6 +4,10 @@
 
     <meta charset="UTF-8">
     <title>Profile Me</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel='stylesheet' href='extenral_modules/textangular/dist/textAngular.css'>
     <link rel="stylesheet" href="extenral_modules/bower_components/bootstrap/dist/css/bootstrap.css"/>
@@ -26,13 +30,13 @@
 <div  ng-controller="SplashScreenController" ng-show="!showContent"
       class="login-background parent-splash" ng-hide="isLoading">
     <div class="child-splash">
-        <div style="color:#ffffff" class="sk-folding-cube">
+        <div class="sk-folding-cube">
             <div class="sk-cube1 sk-cube"></div>
             <div class="sk-cube2 sk-cube"></div>
             <div class="sk-cube4 sk-cube"></div>
             <div class="sk-cube3 sk-cube"></div>
         </div>
-        <h3>Loading...</h3>
+        <h4>Loading...</h4>
     </div>
 </div>
 
@@ -57,7 +61,7 @@
 
 <script rel="javascript" src="scripts/app.js"></script>
 <script rel="javascript" src="scripts/app.config.js"></script>
-<script src="scripts/controllers/splashScreenController.js"></script>
+<script src="scripts/controllers/splashScreen.js"></script>
 <script src='extenral_modules/textangular/dist/textAngular-rangy.min.js'></script>
 <script src='extenral_modules/textangular/dist/textAngular-sanitize.min.js'></script>
 <script src='extenral_modules/textangular/dist/textAngular.min.js'></script>
@@ -77,7 +81,6 @@
 <script src="scripts/services/authToken.js"></script>
 <script src="scripts/services/authInterceptor.js"></script>
 <script src="scripts/controllers/login.js"></script>
-<script src="scripts/factory/returnPostedBy.js"></script>
 <script src="scripts/factory/returnIdFactory.js"></script>
 <script src="scripts/factory/customUrls.js"></script>
 <script src="scripts/controllers/headerCustom.js"></script>

@@ -14,12 +14,10 @@ angular.module('profileMeApp')
             $scope.tempUrlId = returnIdFactory.finalUrl;
 
             $scope.startEdited = function () {
-                console.log('from custom')
+
                 $location.hash("sports");
                 $anchorScroll();
             };
-
-            console.log('hi custom header');
             $scope.fromCustom = customUrlFactory.get({
                 id: $stateParams.id
             })

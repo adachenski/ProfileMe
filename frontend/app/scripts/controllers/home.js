@@ -4,28 +4,25 @@
 
 angular.module('profileMeApp')
     .controller('HomeController', ['$scope', 'customUrlFactory', '$http', '$stateParams',
-        '$state', 'HomeModelFactory', '$log','$location','$anchorScroll','alert',
-        function ($scope, customUrlFactory, $http, $stateParams, $state, HomeModelFactory, $log,$location,$anchorScroll,alert) {
+        '$state', 'HomeModelFactory', '$log','$location','$anchorScroll','alert','authToken',
+        function ($scope, customUrlFactory, $http, $stateParams, $state, HomeModelFactory, $log,$location,$anchorScroll,alert,authToken) {
             var scopeId;
             var username;
-          //  $scope.UserSetting = UserSettings.data;
+            $scope.isAuthenticated = authToken.isAuthenticated;
             customUrlFactory.get({})
                 .$promise.then(
                 function (response) {
                     scopeId = response._id;
                     username = response.username;
-                    console.log(scopeId);
-                    console.log(response);
+                    //console.log(scopeId);
+                    //console.log(response);
                     $scope.dataFromDB = response;
-                    //$scope.contentMainText = $scope.dataFromDB.mainContent;
-                    //$scope.middleBackgroundImage = $scope.dataFromDB.mainBackground;
+
                 },
                 function (response) {
                     HomeModelFactory.fetch().then(function (data) {
-                        console.log(data);
+                        //console.log(data);
                         $scope.dataFromDB = data;
-                        //$scope.dataFromDB.contentMain = $scope.dataFromFile.contentMain;
-                        //$scope.middleBackgroundImage = $scope.dataFromFile.middleBackgroundImage;
                     });
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
@@ -34,8 +31,6 @@ angular.module('profileMeApp')
             $scope.showAlert = function(){
                 alert('success', 'Header \n', ' Changes Saved. ');
             };
-           //$scope.UserSetting.templateOne = false;
-           //$scope.UserSetting.templateTwo = false;
 
             $scope.editMain = false;
             $scope.carouselImagesShow = false;
@@ -58,11 +53,6 @@ angular.module('profileMeApp')
                 $location.hash("userDetails");
                 $anchorScroll();
             };
-           // $scope.saveSettings1 = function (object) {
-           //     customUrlFactory.update({
-           //         id: scopeId
-           //     }, {contentMain: object});
-           // };
 
             $scope.saveSettings = function () {
 
@@ -83,16 +73,12 @@ angular.module('profileMeApp')
                     viewOne:$scope.dataFromDB.viewOne,
                     viewTwo:$scope.dataFromDB.viewTwo,
                     bodyColor:$scope.dataFromDB.bodyColor
-                }, function (err, numberAffected, rawResponse) {
-                    if (err) {
-                        $log.debug(err);
-                        //throw 'Error pushing data to server: '+err;
+                }, function (rawResponse, numberAffected) {
+                    if (rawResponse) {
+                        //$log.debug(rawResponse);
                     }
-                    console.log('before');
-                    console.log(numberAffected);
-                    console.log(rawResponse);
-                    console.log('before');
                 });
+                alert('success', 'Custom Preview \n', ' Changes Saved. ');
                 $state.go('app.custom', {id: scopeId});
             };
         }]);
