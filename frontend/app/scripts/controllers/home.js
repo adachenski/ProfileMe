@@ -8,6 +8,12 @@ angular.module('profileMeApp')
         function ($scope, customUrlFactory, $http, $stateParams, $state, HomeModelFactory, $log,$location,$anchorScroll,alert,authToken) {
             var scopeId;
             var username;
+           var randomNumber = function() {
+               //need to get number between 84000 and 84880 for nature background
+                return 84000+Math.floor((Math.random() * 880) + 1);
+
+            };
+
             $scope.isAuthenticated = authToken.isAuthenticated;
             customUrlFactory.get({})
                 .$promise.then(
@@ -21,8 +27,12 @@ angular.module('profileMeApp')
                 },
                 function (response) {
                     HomeModelFactory.fetch().then(function (data) {
-                        //console.log(data);
+
                         $scope.dataFromDB = data;
+                        $scope.dataFromDB.carouselImgOne ="https://wallpaperscraft.com/image/_"+ randomNumber()+"_1366x768.jpg";
+                        $scope.dataFromDB.carouselImgThree ="https://wallpaperscraft.com/image/_"+ randomNumber()+"_320x180.jpg";
+                        $scope.dataFromDB.carouselImgTwo ="https://wallpaperscraft.com/image/_"+ randomNumber()+"_320x180.jpg";
+
                     });
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
