@@ -105,10 +105,13 @@ ul, ol {
 
 .hover-hand:hover{
     cursor:pointer;
-    cursor: hand
+    cursor: hand;
 }
 
-
+.overflow-text {
+    max-height: 300px;
+    overflow-y: auto;
+}
 
 @media (max-width: 1051px) {
     .overflow-text {
@@ -116,6 +119,7 @@ ul, ol {
         overflow-y: auto;
     }
 }
+
 @media (min-width: 778px) {
     .second-view-main-container {
         background-color: #ffffff;

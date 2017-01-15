@@ -14,7 +14,9 @@
             <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Enter a valid E-mail!</p>
 
             <input type="password" name="password" ng-model="password"
-                   class="form-control" placeholder="Password" required>
+                   class="form-control" placeholder="Password" required minlength="6">
+
+            <p class="help-block" ng-show="register.password.$dirty && register.password.$invalid">• minimum length 6 symbols!</p>
 
             <div id="remember" class="checkbox">
                 <label>

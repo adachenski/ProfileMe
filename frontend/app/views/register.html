@@ -12,13 +12,13 @@
                 <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Enter a valid E-mail!</p>
 
                 <input type="password" name="password" ng-model="password"
-                       class="form-control" placeholder="Password" required>
+                       class="form-control" placeholder="Password" required minlength="6">
 
                 <input type="password" name="password_confirm" ng-model="password_confirm"
-                       class="form-control" placeholder="Confirm Password"  compare-register-passwords="password" required>
+                       class="form-control" placeholder="Confirm Password"  compare-register-passwords="password" required minlength="6">
 
                 <p class="text-danger " ng-show="register.password_confirm.$dirty && register.password_confirm.$invalid">
-                    please match the passwords</p>
+                    • please match the passwords <br>• minimum length 6 symbols</p>
                 <div id="remember" class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> Remember me
