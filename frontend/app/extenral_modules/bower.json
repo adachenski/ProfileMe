@@ -23,6 +23,7 @@
     "bootstrap-social": "^5.0.0",
     "jquery": "^3.1.1",
     "animate.css": "^3.5.2",
-    "angular-animate": "1.5.8"
+    "angular-animate": "1.5.8",
+    "segoe-fonts": "^1.0.1"
   }
 }

@@ -1,9 +1,19 @@
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../extenral_modules/bower_components/segoe-fonts/fonts/light/segoeuil.eot');
+    src: url('../extenral_modules/bower_components/segoe-fonts/fonts/light/segoeuil.eot?#iefix') format('embedded-opentype'),
+    url('../extenral_modules/bower_components/segoe-fonts/fonts/light/segoeuil.woff') format('woff'),
+    url('../extenral_modules/bower_components/segoe-fonts/fonts/light/segoeuil.svg#SegoeUI') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 html, body {
     padding: 0;
     margin: 0;
     height: 100%;
     position: relative;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Segoe UI Light', 'Segoe', 'Segoe UI', 'SegoeUI-Light-final', Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 16px;
 }
 
 .big-btn-height{
@@ -38,6 +48,18 @@ html, body {
 
 .maint-text-adjust > div > button {
     border-radius: 20px;
+}
+
+@media (max-width: 767px){
+    p{
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}
+
+p{
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 @media screen and (max-width: 767px) {
@@ -100,7 +122,7 @@ ul, ol {
 
 .second-view-background {
     background: linear-gradient(135deg, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
-    font-family: Helvetica, Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 .hover-hand:hover{
